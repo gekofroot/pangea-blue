@@ -89,7 +89,7 @@ def main():
     
     MAIN_WINDOW = Tk()
     MAIN_WINDOW.geometry(f"{window_width}x{window_height}")
-    MAIN_WINDOW.title("window title")
+    MAIN_WINDOW.title("Pangea Blue")
     
     countries = []
     regions = [
