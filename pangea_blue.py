@@ -476,9 +476,8 @@ def main():
         
         # select country
         shuffle(countries)
-        #country_name = choice(countries)
-        country_name = "St. Country-Name Name"
-        #correct_guess_increment = ""
+        country_name = choice(countries)
+        correct_guess_increment = ""
         
         # reconfigure widgets
         get_letter_guess.configure(state=NORMAL)
