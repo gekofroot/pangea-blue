@@ -476,8 +476,9 @@ def main():
         
         # select country
         shuffle(countries)
-        country_name = choice(countries)
-        correct_guess_increment = ""
+        #country_name = choice(countries)
+        country_name = "St. Country-Name Name"
+        #correct_guess_increment = ""
         
         # reconfigure widgets
         get_letter_guess.configure(state=NORMAL)
@@ -501,33 +502,19 @@ def main():
         
         # insert punctuation
         init_count = 0
+        punc_type = [" ", "-", "\'", "."]
         for letter in country_name:
-            if " " == letter:
-                correct_guess_list[init_count] = " "
-                correct_letters = ""
-                numbers_guessed += 1
-                for item in correct_guess_list:
-                    correct_letters += item
-            elif "-" == letter:
-                correct_guess_list[init_count] = "-"
-                numbers_guessed += 1
-                correct_letters = ""
-                for item in correct_guess_list:
-                    correct_letters += item
-            elif "\'" == letter:
-                correct_guess_list[init_count] = "\'"
-                numbers_guessed += 1
-                correct_letters = ""
-                for item in correct_guess_list:
-                    correct_letters += item
-            elif "." == letter:
-                correct_guess_list[init_count] = "."
-                numbers_guessed += 1
-                correct_letters = ""
-                for item in correct_guess_list:
-                    correct_letters += item
+            count = 0
+            for item in range(len(punc_type)):
+                if punc_type[count] == letter:
+                    correct_guess_list[init_count] = punc_type[count]
+                    correct_letters = ""
+                    numbers_guessed += 1
+                    for item in correct_guess_list:
+                        correct_letters += item
+                count += 1
             init_count += 1
-    
+
         display_current_completion.configure(text=(f"{correct_letters}"), fg=current_fg, bg=current_ac)
     
     def size_toggle(width, height, get_font, font_size_2):
@@ -749,31 +736,17 @@ def main():
     
     # insert punctuation
     init_count = 0
+    punc_type = [" ", "-", "\'", "."]
     for letter in country_name:
-        if " " == letter:
-            correct_guess_list[init_count] = " "
-            correct_letters = ""
-            numbers_guessed += 1
-            for item in correct_guess_list:
-                correct_letters += item
-        elif "-" == letter:
-            correct_guess_list[init_count] = "-"
-            numbers_guessed += 1
-            correct_letters = ""
-            for item in correct_guess_list:
-                correct_letters += item
-        elif "\'" == letter:
-            correct_guess_list[init_count] = "\'"
-            numbers_guessed += 1
-            correct_letters = ""
-            for item in correct_guess_list:
-                correct_letters += item
-        elif "." == letter:
-            correct_guess_list[init_count] = "."
-            numbers_guessed += 1
-            correct_letters = ""
-            for item in correct_guess_list:
-                correct_letters += item
+        count = 0
+        for item in range(len(punc_type)):
+            if punc_type[count] == letter:
+                correct_guess_list[init_count] = punc_type[count]
+                correct_letters = ""
+                numbers_guessed += 1
+                for item in correct_guess_list:
+                    correct_letters += item
+            count += 1
         init_count += 1
     
     display_current_completion = Label(text=(f"{correct_letters}"), font=FONT, fg=FG, bg=AC, bd=BD - 2, relief=RLF_2)
