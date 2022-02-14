@@ -272,11 +272,35 @@ def main():
         random_region()
         play_again()
 
+    # insert punctuation
+    def insert_punctuation(name):
+        """inserts puncuation where needed"""
+        
+        global correct_letters
+        global numbers_guessed
+        global correct_guess_list
+
+        init_count = 0
+        puncuation_type = [" ", "-", "\'", "."]
+        for letter in name:
+            count = 0
+            for item in range(len(punctuation_type)):
+                if punc_type[count] == letter:
+                    correct_guess_list[init_count] = punctuation_type[count]
+                    correct_letters = ""
+                    numbers_guessed += 1
+                    for item in correct_guess_list:
+                        correct_letters += item
+                count += 1
+            init_count += 1
+        return name
+    insert_punctuation(country_name)
+
     
     def letter_entered():
         """
-        once input has been recieved,
-        determine whether or not input data occurs in country name
+        run once input has been recieved through button or return key
+        determine whether or not entry occurs in country name
         """
         
         # globals
@@ -300,7 +324,6 @@ def main():
         global letters_correct
         global letters_incorrect
 
-        correct_guess_increment = ""
         correct_guess_container.configure(bg=current_ac)
         incorrect_guess_container.configure(bg=current_ac)
 
@@ -365,7 +388,6 @@ def main():
                     # letter is correct
                     if user_guess in country_name:
                         if user_guess not in correct_letters:
-                            correct_guess_increment += user_guess
                             correct_guess += user_guess
                             letters_correct += 1
                             stats_letters_correct.configure(text=(f"Correct\nLetters\n\n{letters_correct}"))
@@ -477,7 +499,6 @@ def main():
         # select country
         shuffle(countries)
         country_name = choice(countries)
-        correct_guess_increment = ""
         
         # reconfigure widgets
         get_letter_guess.configure(state=NORMAL)
@@ -500,19 +521,7 @@ def main():
             correct_letters += item
         
         # insert punctuation
-        init_count = 0
-        punctuation_type = [" ", "-", "\'", "."]
-        for letter in country_name:
-            count = 0
-            for item in range(len(punctuation_type)):
-                if punctuation_type[count] == letter:
-                    correct_guess_list[init_count] = punctuation_type[count]
-                    correct_letters = ""
-                    numbers_guessed += 1
-                    for item in correct_guess_list:
-                        correct_letters += item
-                count += 1
-            init_count += 1
+        insert_punctuation(country_name)
 
         display_current_completion.configure(text=(f"{correct_letters}"), fg=current_fg, bg=current_ac)
     
@@ -732,21 +741,6 @@ def main():
     
     display_correct_guess = Label(text="+", font=("Monospace", 20), fg=FG, bg=BG, bd=BD, relief=RLF_3)
     correct_guess_container = Label(font=FONT, fg=FG, bg=AC, bd=BD - 2, relief=SUNKEN)
-    
-    # insert punctuation
-    init_count = 0
-    punctuation_type = [" ", "-", "\'", "."]
-    for letter in country_name:
-        count = 0
-        for item in range(len(punctuation_type)):
-            if punctuation_type[count] == letter:
-                correct_guess_list[init_count] = punctuation_type[count]
-                correct_letters = ""
-                numbers_guessed += 1
-                for item in correct_guess_list:
-                    correct_letters += item
-            count += 1
-        init_count += 1
     
     display_current_completion = Label(text=(f"{correct_letters}"), font=FONT, fg=FG, bg=AC, bd=BD - 2, relief=RLF_2)
     display_incorrect_guess = Label(text=f"-", font=("Monospace", 20), fg=FG, bg=BG, bd=BD, relief=RLF_3)
