@@ -299,8 +299,8 @@ def main():
     
     def letter_entered():
         """
-        run once input has been recieved through button or return key
-        determine whether or not entry occurs in country name
+        once input has been recieved,
+        determine whether or not input data occurs in country name
         """
         
         # globals
