@@ -275,8 +275,8 @@ def main():
     
     def letter_entered():
         """
-        run once input has been recieved through button or return key
-        determine whether or not entry occurs in country name
+        once input has been recieved,
+        determine whether or not input data occurs in country name
         """
         
         # globals
@@ -502,12 +502,12 @@ def main():
         
         # insert punctuation
         init_count = 0
-        punc_type = [" ", "-", "\'", "."]
+        punctuation_type = [" ", "-", "\'", "."]
         for letter in country_name:
             count = 0
-            for item in range(len(punc_type)):
-                if punc_type[count] == letter:
-                    correct_guess_list[init_count] = punc_type[count]
+            for item in range(len(punctuation_type)):
+                if punctuation_type[count] == letter:
+                    correct_guess_list[init_count] = punctuation_type[count]
                     correct_letters = ""
                     numbers_guessed += 1
                     for item in correct_guess_list:
@@ -736,12 +736,12 @@ def main():
     
     # insert punctuation
     init_count = 0
-    punc_type = [" ", "-", "\'", "."]
+    punctuation_type = [" ", "-", "\'", "."]
     for letter in country_name:
         count = 0
-        for item in range(len(punc_type)):
-            if punc_type[count] == letter:
-                correct_guess_list[init_count] = punc_type[count]
+        for item in range(len(punctuation_type)):
+            if punctuation_type[count] == letter:
+                correct_guess_list[init_count] = punctuation_type[count]
                 correct_letters = ""
                 numbers_guessed += 1
                 for item in correct_guess_list:
