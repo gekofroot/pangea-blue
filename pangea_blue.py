@@ -55,12 +55,12 @@ def main():
 
     # variables
     WCBG = "#77ff77"
-    FONT=("Monospace", 14)
+    FONT=("Helvetica", 14)
     font_size = 14
     FG="#000000"
-    BG="#ffeedd"
-    AC="#fffedd"
-    AC_2="#fffeee"
+    BG="#eeeeee"
+    AC="#ffffff"
+    AC_2="#ffffff"
     BD=4
     RLF=GROOVE
     RLF_2=RAISED
@@ -77,7 +77,17 @@ def main():
     increment_guess = 0
     numbers_guessed = 0
     games_played = 0
-    highest_streak = 0
+    
+    # retrieve high score
+    with open("high_score.txt", "r") as high_score:
+        hs_txt = high_score.read()
+        if hs_txt == 0:
+            highest_streak = 0
+            high_score.close()
+        else:
+            highest_streak = int(hs_txt)
+            high_score.close()
+    
     current_streak = 0
     current_percentage = 0
     correct_total = 0
@@ -274,18 +284,18 @@ def main():
 
     # insert punctuation
     def insert_punctuation(name):
-        """inserts puncuation where needed"""
+        """inserts punctuation where needed"""
         
         global correct_letters
         global numbers_guessed
         global correct_guess_list
 
         init_count = 0
-        puncuation_type = [" ", "-", "\'", "."]
+        punctuation_type = [" ", "-", "\'", "."]
         for letter in name:
             count = 0
             for item in range(len(punctuation_type)):
-                if punc_type[count] == letter:
+                if punctuation_type[count] == letter:
                     correct_guess_list[init_count] = punctuation_type[count]
                     correct_letters = ""
                     numbers_guessed += 1
@@ -349,11 +359,9 @@ def main():
             stats_highest_streak.configure(text=(f"Streak\n\n{highest_streak}"))
             stats_current_percentage.configure(text=(f"Win\nPercentage\n\n{current_percentage:.2f}"))
             get_letter_guess.configure(disabledbackground=current_ac, state=DISABLED)
-            letter_guess_button.configure(text="", command="", state=DISABLED)
+            letter_guess_button.configure(text="Play Again", command=play_again)
             sleep(1)
             display_user_message.configure(text=(f"{country_name}"), fg="#000000", bg="#ffbb99")
-            play_again_message.configure(text="play again", activebackground="#ccddff", state=NORMAL)
-            quit_game_message.configure(text="quit", activebackground="#ccddff", state=NORMAL)
         else:
             # ensure valid input
             if user_guess in invalid_characters:
@@ -367,7 +375,7 @@ def main():
                     display_user_message.configure(text=(f"[  {user_guess}  ]\nonly one character allowed per entry"), font=10, fg="#ff4400", bg="#ffffff")
                     get_letter_guess.delete(0, END)
                 elif len(user_guess) == 1:
-                    display_user_message.configure(text="", font=("Monospace", font_size), fg=current_fg, bg=current_bg)
+                    display_user_message.configure(text="", font=("Helvetica", font_size), fg=current_fg, bg=current_bg)
                     
                     # check if user guess is the beginning of country name
                     if  user_guess.capitalize() == country_name[0]:
@@ -414,8 +422,14 @@ def main():
                             if numbers_guessed == len(country_name):
                                 games_played += 1
                                 current_streak += 1
-                                if current_streak >= highest_streak:
+
+                                # update highest streak / update high score
+                                if current_streak > highest_streak:
                                     highest_streak = current_streak
+                                    with open("high_score.txt", "w") as high_score:
+                                        print(f"{highest_streak}", file=high_score)
+                                        high_score.close()
+                                
                                 correct_total += 1
                                 current_percentage = (correct_total / games_played) * 100
                                 show_streak.configure(text=(f"Streak: {current_streak}"))
@@ -424,11 +438,9 @@ def main():
                                 stats_incorrect_out_of.configure(text=(f"Losses \n\n{incorrect_total} / {games_played}"))
                                 stats_current_percentage.configure(text=(f"Win\nPercentage\n\n{current_percentage:.2f} %"))
                                 get_letter_guess.configure(disabledbackground=current_ac, state=DISABLED)
-                                letter_guess_button.configure(text="", command="", state=DISABLED)
+                                letter_guess_button.configure(text="Play Again", command=play_again)
                                 display_user_message.configure(text="")
                                 display_current_completion.configure(activeforeground="#ffffff", fg="#000000", bg=WCBG)
-                                play_again_message.configure(text="play again", activebackground="#ccddff", state=NORMAL)
-                                quit_game_message.configure(text="quit", activebackground="#ccddff", state=NORMAL)
                         else: 
                             # repeat correct guess
                             correct_guess_container.configure(bg=WCBG)
@@ -455,8 +467,14 @@ def main():
                             # guess limit reached
                             if increment_guess > 4:
                                 games_played += 1
+                                
+                                # update highest streak / update high score
                                 if current_streak > highest_streak:
                                     highest_streak = current_streak
+                                    with open("hs.txt", "w") as hs_txt:
+                                        print(f"{highest_streak}", file=hs_txt)
+                                        hs_txt.close()
+                                
                                 current_streak = 0
                                 incorrect_total += 1
                                 current_percentage = (correct_total / games_played) * 100
@@ -466,11 +484,9 @@ def main():
                                 stats_incorrect_out_of.configure(text=(f"Losses\n\n{incorrect_total} / {games_played}"))
                                 stats_current_percentage.configure(text=(f"Win\nPercentage\n\n{current_percentage:.2f} %"))
                                 get_letter_guess.configure(disabledbackground=current_ac, state=DISABLED)
-                                letter_guess_button.configure(text="", state=DISABLED)
+                                letter_guess_button.configure(text="Play Again", command=play_again)
                                 sleep(1)
                                 display_user_message.configure(text=(f"{country_name}"), fg="#000000", bg="#ffbb99")
-                                play_again_message.configure(text="play again", activebackground="#ccddff", state=NORMAL)
-                                quit_game_message.configure(text="quit", activebackground="#ccddff", state=NORMAL)
                         else:
                             # repeat correct guess
                             correct_guess_container.configure(bg=WCBG)
@@ -503,12 +519,10 @@ def main():
         # reconfigure widgets
         get_letter_guess.configure(state=NORMAL)
         stats_button.configure(bg=current_ac_2)
-        letter_guess_button.configure(text="", bg=current_ac_2, state=NORMAL, relief=RLF_2, command=letter_entered)
+        letter_guess_button.configure(text="Enter", bg=current_ac_2, command=letter_entered)
         correct_guess_container.configure(text="")
         incorrect_guess_container.configure(text="")
         display_user_message.configure(text="", fg=current_fg, bg=current_bg)
-        play_again_message.configure(text="", bg=current_ac_2, state=DISABLED)
-        quit_game_message.configure(text="", bg=current_ac_2, state=DISABLED)
         get_letter_guess.delete(0, END)
 
         # initialize correct guess list
@@ -535,7 +549,7 @@ def main():
         global font_size
         
         font_size = get_font
-        FONT=("Monospace", font_size)
+        FONT=("Helvetica", font_size)
         window_width = width
         window_height = height
         MAIN_WINDOW.geometry(f"{window_width}x{window_height}")
@@ -552,14 +566,14 @@ def main():
 
         display_user_message.configure(font=FONT)
         
-        display_correct_guess.configure(font=("Monospace", font_size_2))
-        display_incorrect_guess.configure(font=("Monospace", font_size_2))
+        display_correct_guess.configure(font=("Helvetica", font_size_2))
+        display_incorrect_guess.configure(font=("Helvetica", font_size_2))
         correct_guess_container.configure(font=FONT)
         incorrect_guess_container.configure(font=FONT)
-        show_streak.configure(font=("Monospace", font_size))
+        show_streak.configure(font=("Helvetica", font_size))
 
-        play_again_message.configure(font=FONT)
-        quit_game_message.configure(font=FONT)
+        bottom_left_label.configure(font=FONT)
+        bottom_right_label.configure(font=FONT)
         
         display_region.place(x=0, y=0, width=x_pos * 2, height=y_pos)
         
@@ -576,9 +590,9 @@ def main():
         correct_guess_container.place(x=0, y=y_pos * 6, width=x_pos, height=y_pos)
         incorrect_guess_container.place(x=x_pos, y=y_pos * 6, width=x_pos, height=y_pos)
 
-        play_again_message.place(x=0, y=y_pos * 7, width=(window_width / 3), height=y_pos)
+        bottom_left_label.place(x=0, y=y_pos * 7, width=(window_width / 3), height=y_pos)
         show_streak.place(x=window_width / 3, y=y_pos * 7, width=(window_width / 3), height=y_pos)
-        quit_game_message.place(x=(window_width / 3) * 2, y=y_pos * 7, width=(window_width / 3), height=y_pos) 
+        bottom_right_label.place(x=(window_width / 3) * 2, y=y_pos * 7, width=(window_width / 3), height=y_pos) 
         
         MAIN_WINDOW.update()
     
@@ -613,8 +627,8 @@ def main():
         display_incorrect_guess.configure(fg=FG)
         incorrect_guess_container.configure(fg=FG)
         display_user_message.configure(fg=FG)
-        play_again_message.configure(fg=FG)
-        quit_game_message.configure(fg=FG)
+        bottom_left_label.configure(fg=FG)
+        bottom_right_label.configure(fg=FG)
         guide_frame.configure(fg=FG)
         stats_frame.configure(fg=FG)
         stats_highest_streak.configure(fg=FG)
@@ -626,6 +640,7 @@ def main():
         stats_letters_correct.configure(fg=FG)
         stats_letters_incorrect.configure(fg=FG)
         guide_window_close.configure(fg=FG)
+        stats_button.configure(fg=FG)
 
     def set_bg_colour(colour):
         """sets background colour"""
@@ -645,8 +660,8 @@ def main():
         display_incorrect_guess.configure(bg=BG)
         incorrect_guess_container.configure(bg=BG)
         display_user_message.configure(bg=BG)
-        play_again_message.configure(bg=BG)
-        quit_game_message.configure(bg=BG)
+        bottom_left_label.configure(bg=BG)
+        bottom_right_label.configure(bg=BG)
         guide_frame.configure(bg=BG)
         stats_frame.configure(bg=BG)
         stats_window_close.configure(bg=BG)
@@ -684,8 +699,8 @@ def main():
 
         stats_button.configure(bg=AC_2)
         letter_guess_button.configure(bg=AC_2)
-        play_again_message.configure(bg=AC_2)
-        quit_game_message.configure(bg=AC_2)
+        bottom_left_label.configure(bg=AC_2)
+        bottom_right_label.configure(bg=AC_2)
 
     def colour_get(fg, bg, ac, ac_2):
         """set foreground/background and primary/secondary accent colours"""
@@ -706,7 +721,7 @@ def main():
         set_accent_colour_b(ac_2)
 
     def select_colour_samba():
-        colour_get("#ffffff", "#ff5555", "#ff4444", "#ff6666")
+        colour_get("#ffffff", "#8a0000", "#8a0000", "#ffeeee")
 
     def select_colour_dune():
         colour_get("#000000", "#ffffbb", "#ffffcc", "#ffffdd")
@@ -715,61 +730,67 @@ def main():
         colour_get("#000000", "#ddffcc", "#eeffdd", "#eeffee")
 
     def select_colour_cobalt():
-        colour_get("#ffffff", "#5555ee", "#4444ff", "#4455ff")
+        colour_get("#ffffff", "#1420c8", "#0410b7", "#eeeeff")
 
     def select_colour_black():
         colour_get("#ffffff", "#000000", "#000000", "#000000")
 
-    def select_colour_cream():
-        colour_get("#000000", "#eeeeee", "#ffffee", "#ffffff")
-
     def select_colour_default():
-        colour_get("#000000", "#ffeedd", "#fffedd", "#fffeee")
+        colour_get("#000000", "#eeeeee", "#ffffff", "#ffffff")
     
     def exit_cmd():
+        """save current high score and exit"""
+
+        global highest_streak
+        
+        # update highest streak / update high score
+        if current_streak > highest_streak:
+            highest_streak = current_streak
+            with open("hs.txt", "w") as hs_txt:
+                print(f"{highest_streak}", file=hs_txt)
+                hs_txt.close()
         sys.exit()
 
     # widgets
     display_region = Label(text="All Regions", font=FONT, fg=FG, bg=BG, bd=4, relief=RLF_2, justify=CENTER)
     
-    stats_button = Button(text="",font=FONT, fg=FG, bg=AC_2, activebackground="#ccddff", bd=BD, relief=RLF_2,
+    stats_button = Button(text="Stats",font=FONT, fg=FG, bg=AC_2, activebackground="#ccddff", bd=BD, relief=RLF_2,
             command=stats_show)
 
     get_letter_guess = Entry(font=FONT, fg=FG, bg=AC, bd=BD, relief=SUNKEN, justify=CENTER)
-    letter_guess_button = Button(text="",font=FONT, fg=FG, bg=AC_2, activebackground="#ccddff", bd=BD, relief=RLF_2,
+    letter_guess_button = Button(text="Enter",font=FONT, fg=FG, bg=AC_2, activebackground="#ccddff", bd=BD, relief=RLF_2,
             command=letter_entered)
     
-    display_correct_guess = Label(text="+", font=("Monospace", 20), fg=FG, bg=BG, bd=BD, relief=RLF_3)
+    display_correct_guess = Label(text="+", font=("Helvetica", 20), fg=FG, bg=BG, bd=BD, relief=RLF_3)
     correct_guess_container = Label(font=FONT, fg=FG, bg=AC, bd=BD - 2, relief=SUNKEN)
     
     display_current_completion = Label(text=(f"{correct_letters}"), font=FONT, fg=FG, bg=AC, bd=BD - 2, relief=RLF_2)
-    display_incorrect_guess = Label(text=f"-", font=("Monospace", 20), fg=FG, bg=BG, bd=BD, relief=RLF_3)
+    display_incorrect_guess = Label(text=f"-", font=("Helvetica", 20), fg=FG, bg=BG, bd=BD, relief=RLF_3)
     incorrect_guess_container = Label(font=FONT, fg=FG, bg=AC, bd=BD - 2, relief=SUNKEN)
     
     display_user_message = Label(text="", font=FONT, fg=FG, bg=BG, bd=2, relief=RLF_2)
     
-    play_again_message = Button(font=FONT, fg=FG, bg=AC_2, bd=BD, relief=RLF_2, state=DISABLED, disabledforeground=FG,
-            command=play_again)
+    bottom_left_label = Label(font=FONT, fg=FG, bg=AC_2, bd=BD, relief=RLF_2, disabledforeground=FG)
     
-    show_streak = Label(text=(f"Streak: {current_streak}"), font=("Monospace", 10), fg=FG, bg=AC, bd=BD - 2, relief=RLF_2)
-    quit_game_message = Button(font=FONT, fg=FG, bg=AC_2, bd=BD, relief=RLF_2, state=DISABLED, disabledforeground=BG,
-            command=exit_cmd)
+    show_streak = Label(text=(f"Streak: {current_streak}"), font=("Helvetica", 10), fg=FG, bg=AC, bd=BD - 2, relief=RLF_2)
+    bottom_right_label = Label(font=FONT, fg=FG, bg=AC_2, bd=BD, relief=RLF_2, activebackground="#ccddff")
     
     guide_frame = LabelFrame(MAIN_WINDOW, text="Guide", font=FONT, fg=FG, bg=BG, bd=BD - 2, relief=RIDGE)
     guide_text = "Objective:\nAttemp to guess country name. \nProgress window lights up green once all letters have been guessed correctly. \nCountry name is displayed in red after five incorrect guesses. \n\n"
     guide_text_2 = "Buttons:\nLeft Button: Show Stats\nRight Button: Enter\n\nHotkeys:\nCtrl + S: Shuffle Countries \nCtrl + A: Shuffle Regions \nReturn: Enter \nCtrl + T: Show Stats \nCtrl + Alt + T: Close Stats \nCtlr + H: Show Guide \nCtrl + Alt + H: Close Guide \nCtrl + Q: Exit"
-    guide_window = Message(guide_frame, text=(f"{guide_text}{guide_text_2}"), width=window_width - 20, font=("Monospace", 10), fg=FG, bg="#dddddd", bd=BD - 2, relief=RLF_3, justify=CENTER)
-    guide_window_close = Button(guide_frame, text=(f"Close"), font=("Monospace", 10), fg=FG, bg=BG, bd=BD, relief=RLF_2, activebackground="#ccddff", 
+    guide_window = Message(guide_frame, text=(f"{guide_text}{guide_text_2}"), width=window_width - 20, font=("Helvetica", 10), fg=FG, bg="#dddddd", bd=BD - 2, relief=RLF_3, justify=CENTER)
+    guide_window_close = Button(guide_frame, text=(f"Close"), font=("Helvetica", 10), fg=FG, bg=BG, bd=BD, relief=RLF_2, activebackground="#ccddff", 
             command=close_guide_show)
 
     stats_frame = LabelFrame(MAIN_WINDOW, text="Stats", font=FONT, fg=FG, bg=BG, bd=BD - 2, relief=GROOVE)
-    stats_highest_streak = Label(stats_frame, text=(f"Highest\nStreak\n\n{current_streak}"),font=("Monospace", 10), fg=FG, bg=AC, bd=BD, relief=RLF_2)
-    stats_current_percentage = Label(stats_frame, text=(f"Win\nPercentage\n\n{current_percentage:.0f} %"), font=("Monospace", 10), fg=FG, bg=AC, bd=BD, relief=RLF_2)
-    stats_correct_out_of = Label(stats_frame, text=(f"Wins\n\n{correct_out_of} / {games_played}"), font=("Monospace", 10), fg=FG, bg=AC, bd=BD, relief=RLF_2)
-    stats_incorrect_out_of = Label(stats_frame, text=(f"Losses\n\n{incorrect_out_of} / {games_played}"), font=("Monospace", 10), fg=FG, bg=AC, bd=BD, relief=RLF_2)
-    stats_letters_correct = Label(stats_frame, text=(f"Correct\nLetters\n\n{letters_correct}"), font=("Monospace", 10), fg=FG, bg=AC, bd=BD, relief=RLF_2)
-    stats_letters_incorrect = Label(stats_frame, text=(f"Incorrect\nLetters\n\n{letters_incorrect}"), font=("Monospace", 10), fg=FG, bg=AC, bd=BD, relief=RLF_2)
-    stats_window_close = Button(stats_frame, text=(f"Close"), font=("Monospace", 10), fg=FG, bg=BG, bd=BD, relief=RLF_2, activebackground="#ccddff", command=close_stats_show)
+    
+    stats_highest_streak = Label(stats_frame, text=(f"Highest\nStreak\n\n{highest_streak}"),font=("Helvetica", 10), fg=FG, bg=AC, bd=BD, relief=RLF_2)
+    stats_current_percentage = Label(stats_frame, text=(f"Win\nPercentage\n\n{current_percentage:.0f} %"), font=("Helvetica", 10), fg=FG, bg=AC, bd=BD, relief=RLF_2)
+    stats_correct_out_of = Label(stats_frame, text=(f"Wins\n\n{correct_out_of} / {games_played}"), font=("Helvetica", 10), fg=FG, bg=AC, bd=BD, relief=RLF_2)
+    stats_incorrect_out_of = Label(stats_frame, text=(f"Losses\n\n{incorrect_out_of} / {games_played}"), font=("Helvetica", 10), fg=FG, bg=AC, bd=BD, relief=RLF_2)
+    stats_letters_correct = Label(stats_frame, text=(f"Correct\nLetters\n\n{letters_correct}"), font=("Helvetica", 10), fg=FG, bg=AC, bd=BD, relief=RLF_2)
+    stats_letters_incorrect = Label(stats_frame, text=(f"Incorrect\nLetters\n\n{letters_incorrect}"), font=("Helvetica", 10), fg=FG, bg=AC, bd=BD, relief=RLF_2)
+    stats_window_close = Button(stats_frame, text=(f"Close"), font=("Helvetica", 10), fg=FG, bg=BG, bd=BD, relief=RLF_2, activebackground="#ccddff", command=close_stats_show)
 
     # place widgets
     x_pos = window_width / 2
@@ -790,9 +811,9 @@ def main():
     correct_guess_container.place(x=0, y=y_pos * 6, width=x_pos, height=y_pos)
     incorrect_guess_container.place(x=x_pos, y=y_pos * 6, width=x_pos, height=y_pos)
 
-    play_again_message.place(x=0, y=y_pos * 7, width=(window_width / 3), height=y_pos)
+    bottom_left_label.place(x=0, y=y_pos * 7, width=(window_width / 3), height=y_pos)
     show_streak.place(x=(window_width / 3), y=y_pos * 7, width=(window_width / 3), height=y_pos)
-    quit_game_message.place(x=(window_width / 3) * 2, y=y_pos * 7, width=(window_width / 3), height=y_pos) 
+    bottom_right_label.place(x=(window_width / 3) * 2, y=y_pos * 7, width=(window_width / 3), height=y_pos) 
     
     guide_frame.place(x=0, y=0, width=x_pos * 2, height=y_pos * 8)
     guide_frame.lower()
@@ -887,7 +908,6 @@ def main():
     colourscheme_menu.add_command(label="Mint", command=select_colour_mint)
     colourscheme_menu.add_command(label="Cobalt", command=select_colour_cobalt)
     colourscheme_menu.add_command(label="Black", command=select_colour_black)
-    colourscheme_menu.add_command(label="Cream", command=select_colour_cream)
     colourscheme_menu.add_separator()
     colourscheme_menu.add_command(label="Default", command=select_colour_default)
     settings_menu.add_cascade(label="Colorscheme", menu=colourscheme_menu)
