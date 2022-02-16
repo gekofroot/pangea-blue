@@ -1,19 +1,3 @@
-#    Pangea Blue is a minimal hangman clone based around country names.
-#    Copyright (C) 2022 gekofroot
-#
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as published
-#    by the Free Software Foundation, either version 3 of the License, or
-#    any later version.
-#
-#    This program is distributed WITHOUT ANY WARRANTY; 
-#    See the GNU Affero General Public License for more details.
-#
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program. If not, see <https://www.gnu.org/licenses/>.
-
-
-
 
 # country lists
 # North America
@@ -76,27 +60,27 @@ countries_eu = [
         ]
 
 countries_northern_europe = [
-    "United Kingdom", "Sweden", "Denmark", 
-    "Finland", "Norway", "Ireland", "Lithuania", 
-    "Latvia", "Estonia", "Iceland",
+        "United Kingdom", "Sweden", "Denmark", 
+        "Finland", "Norway", "Ireland", "Lithuania", 
+        "Latvia", "Estonia", "Iceland",
     ]
 
 countries_southern_europe = [
-    "Turkey", "Italy", "Spain", "Greece", "Portugal",
-    "Serbia", "Croatia", "Bosnia and Herzegovina", "Albania",
-    "Slovenia", "North Macedonia", "Montenegro", "Malta", "Andorra",
-    "San Marino", "Holy See",
+        "Turkey", "Italy", "Spain", "Greece", "Portugal",
+        "Serbia", "Croatia", "Bosnia and Herzegovina", "Albania",
+        "Slovenia", "North Macedonia", "Montenegro", "Malta", "Andorra",
+        "San Marino", "Holy See",
     ]
 
 countries_eastern_europe = [
-    "Russia", "Ukraine", "Poland", "Romania", 
-    "Czech Republic", "Hungary", "Belarus", "Bulgaria", 
-    "Slovakia", "Moldova",
+        "Russia", "Ukraine", "Poland", "Romania", 
+        "Czech Republic", "Hungary", "Belarus", "Bulgaria", 
+        "Slovakia", "Moldova",
     ]
 
 countries_western_europe = [
-    "Germany", "France", "Netherlands", "Belgium", "Austria",
-    "Switzerland", "Luxembourg", "Liechtenstein", "Monaco",
+        "Germany", "France", "Netherlands", "Belgium", "Austria",
+        "Switzerland", "Luxembourg", "Liechtenstein", "Monaco",
     ]
 
 region_europe = []
@@ -214,3 +198,30 @@ oceanian_countries = [
 for group in oceanian_countries:
     for country in group:
         region_oceania.append(country)
+
+regions = [
+        region_europe, region_america, 
+        region_asia, region_africa, region_oceania,
+        ]
+
+country_names = [
+        'Antigua and Barbuda', 'Aruba', 'Bahamas', 'Barbados', 'Cayman Islands', 'Cuba', 'Dominica', 'Dominican Republic', 'Grenada', 'Haiti', 
+        'Jamaica', 'St. Kitts and Nevis', 'St. Lucia', 'St. Vincent and The Grenadines', 'Trinidad and Tobago', 'Belize', 'Bermuda', 'Canada', 
+        'Costa Rica', 'El Salvador', 'GuatemalaHaiti', 'Honduras', 'Mexico', 'Nicaragua', 'Panama', 'United States', 'Guatemala', 'Argentina', 
+        'Bolivia', 'Brazil', 'Chile', 'Colombia', 'Ecuador', 'Guyana', 'Paraguay', 'Peru', 'Suriname', 'Uruguay', 'Venezuela', 'Columbia', 
+        'Germany', 'United Kingdom', 'France', 'Italy', 'Spain', 'Poland', 'Romania', 'Netherlands', 'Belgium', 'Czech Republic', 'Greece', 
+        'Portugal', 'Sweden', 'Hungary', 'Austria', 'Bulgaria', 'Denmark', 'Finland', 'Slovakia', 'Ireland', 'Croatia', 'Lithuania', 'Slovenia', 
+        'Latvia', 'Estonia', 'Cyprus', 'Luxembourg', 'Malta', 'Norway', 'Iceland', 'Turkey', 'Serbia', 'Bosnia and Herzegovina', 'Albania', 
+        'North Macedonia', 'Montenegro', 'Andorra', 'San Marino', 'Holy See', 'Russia', 'Ukraine', 'Belarus', 'Moldova', 'Switzerland', 
+        'Liechtenstein', 'Monaco', 'India', 'Pakistan', 'Bangladesh', 'Afghanistan', 'Nepal', 'Sri Lanka', 'Bhutan', 'Maldives', 'Indonesia', 
+        'Phillipines', 'Vietnam', 'Thailand', 'Burma', 'Malaysia', 'Cambodia', 'Laos', 'Singapore', 'Timor-Leste', 'Brunei', 'Egypt', 'Iran', 
+        'Iraq', 'Saudi Arabia', 'Yemen', 'Syria', 'Jordan', 'United Arab Emirates', 'Israel', 'Lebanon', 'Oman', 'Palestine', 'Kuwait', 'Qatar', 
+        'Bahrain', 'China', 'Japan', 'South Korea', 'North Korea', 'Mongolia', 'Azerbaijan', 'Georgia', 'Armenia', 'Uzbekistan', 'Kazakhstan', 
+        'Tajikstan', 'Kyrgyzstan', 'Turkmenistan', 'Algeria', 'Sudan', 'Morocco', 'Tunisia', 'South Sudan', 'Libya', 'South Africa', 'Namibia', 
+        'Botswana', 'Lesotho', 'Swaziland', 'Democratic Republic of the Congo', 'Angola', 'Camaroon', 'Chad', 'Central African Republic', 
+        'Republic of the Congo', 'Gabon', 'Equatorial Guinea', 'Sao Tome and Principe', 'Ethiopia', 'Tanzania', 'Kenya', 'Uganda', 'Mozambique', 
+        'Madagascar', 'Malawi', 'Zambia', 'Somalia', 'Zimbabwe', 'Rwanda', 'Burundi', 'Eritrea', 'Mauritius', 'Djibouti', 'Comoros', 
+        'Seychelles', 'Nigeria', 'Ghaman', "Cote d'lvoire", 'Niger', 'Burkina Faso', 'Mali', 'Senegal', 'Guinea', 'Benin', 'Sierra Leone', 
+        'Togo', 'Liberia', 'Mauritania', 'Gambia', 'Guinea-Bissau', 'Cape Verde', 'Papua New Guinea', 'Fiji', 'Solomon Islands', 'Vanuatu', 
+        'Kirbati', 'Federated States of Micronesia', 'Marshall Islands', 'Palau', 'Nauru', 'New Zealand', 'Samoa', 'Tonga', 'Tuvalu',
+        ]

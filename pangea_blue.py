@@ -1,4 +1,3 @@
-#    Pangea Blue is a minimal hangman clone based around country names.
 #    Copyright (C) 2022 gekofroot
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -21,9 +20,11 @@ from os import sys
 from time import sleep
 from tkinter import *
 from countries import *
+from variables import *
+from country_facts import *
 
 def main():
-
+    
     # globals
     global WCBG
     global FONT
@@ -52,32 +53,8 @@ def main():
     global incorrect_out_of
     global letters_correct
     global letters_incorrect
+    global current_country
 
-    # variables
-    WCBG = "#77ff77"
-    FONT=("Helvetica", 14)
-    font_size = 14
-    FG="#000000"
-    BG="#eeeeee"
-    AC="#ffffff"
-    AC_2="#ffffff"
-    BD=4
-    RLF=GROOVE
-    RLF_2=RAISED
-    RLF_3=FLAT
-    current_fg=FG
-    current_bg=BG
-    current_ac=AC
-    current_ac_2=AC_2
-    window_width = 400
-    window_height = 400
-    correct_letters = ""
-    correct_guess = ""
-    incorrect_guess = ""
-    increment_guess = 0
-    numbers_guessed = 0
-    games_played = 0
-    
     # retrieve high score
     with open("high_score.txt", "r") as high_score:
         hs_txt = high_score.read()
@@ -88,24 +65,11 @@ def main():
             highest_streak = int(hs_txt)
             high_score.close()
     
-    current_streak = 0
-    current_percentage = 0
-    correct_total = 0
-    incorrect_total = 0
-    correct_out_of = 0
-    incorrect_out_of = 0
-    letters_correct = 0
-    letters_incorrect = 0
-    
     MAIN_WINDOW = Tk()
     MAIN_WINDOW.geometry(f"{window_width}x{window_height}")
     MAIN_WINDOW.title("Pangea Blue")
     
     countries = []
-    regions = [
-            region_europe, region_america, region_asia, 
-            region_africa, region_oceania,
-            ]
 
     # select random country
     for group in regions:
@@ -124,6 +88,19 @@ def main():
         correct_letters += item
     
     #functions
+    def get_hint():
+        
+        hint_shown = []
+        count = 0
+        for country in country_names:
+            if country_name == country_names[count]:
+                if len(country_facts[count]) > 0:
+                    info = choice(country_facts[count])
+                    show_hint.configure(text=info)
+                else:
+                    show_hint.configure(text="no available data at this time...")
+            count += 1
+
     def guide_show():
         """open user guide"""
 
@@ -441,6 +418,7 @@ def main():
                                 letter_guess_button.configure(text="Play Again", command=play_again)
                                 display_user_message.configure(text="")
                                 display_current_completion.configure(activeforeground="#ffffff", fg="#000000", bg=WCBG)
+                                show_hint.configure(text="")
                         else: 
                             # repeat correct guess
                             correct_guess_container.configure(bg=WCBG)
@@ -487,6 +465,7 @@ def main():
                                 letter_guess_button.configure(text="Play Again", command=play_again)
                                 sleep(1)
                                 display_user_message.configure(text=(f"{country_name}"), fg="#000000", bg="#ffbb99")
+                                show_hint.configure(text="")
                         else:
                             # repeat correct guess
                             correct_guess_container.configure(bg=WCBG)
@@ -515,7 +494,7 @@ def main():
         # select country
         shuffle(countries)
         country_name = choice(countries)
-        
+
         # reconfigure widgets
         get_letter_guess.configure(state=NORMAL)
         stats_button.configure(bg=current_ac_2)
@@ -523,6 +502,7 @@ def main():
         correct_guess_container.configure(text="")
         incorrect_guess_container.configure(text="")
         display_user_message.configure(text="", fg=current_fg, bg=current_bg)
+        show_hint.configure(text="")
         get_letter_guess.delete(0, END)
 
         # initialize correct guess list
@@ -641,6 +621,9 @@ def main():
         stats_letters_incorrect.configure(fg=FG)
         guide_window_close.configure(fg=FG)
         stats_button.configure(fg=FG)
+        show_hint.configure(fg=FG)
+        show_hint_button.configure(fg=FG)
+        show_hint_title.configure(fg=FG)
 
     def set_bg_colour(colour):
         """sets background colour"""
@@ -666,6 +649,9 @@ def main():
         stats_frame.configure(bg=BG)
         stats_window_close.configure(bg=BG)
         guide_window_close.configure(bg=BG)
+        show_hint.configure(bg=BG)
+        show_hint_title.configure(bg=BG)
+        show_hint_button.configure(bg=BG)
     
     def set_accent_colour(colour):
         """sets primary accent colour"""
@@ -751,7 +737,7 @@ def main():
                 hs_txt.close()
         sys.exit()
 
-    # widgets
+    # widgets a
     display_region = Label(text="All Regions", font=FONT, fg=FG, bg=BG, bd=4, relief=RLF_2, justify=CENTER)
     
     stats_button = Button(text="Stats",font=FONT, fg=FG, bg=AC_2, activebackground="#ccddff", bd=BD, relief=RLF_2,
@@ -792,17 +778,24 @@ def main():
     stats_letters_incorrect = Label(stats_frame, text=(f"Incorrect\nLetters\n\n{letters_incorrect}"), font=("Helvetica", 10), fg=FG, bg=AC, bd=BD, relief=RLF_2)
     stats_window_close = Button(stats_frame, text=(f"Close"), font=("Helvetica", 10), fg=FG, bg=BG, bd=BD, relief=RLF_2, activebackground="#ccddff", command=close_stats_show)
 
+    # widgets b
+    show_hint_title = Label(text="Hint", font=FONT, fg=FG, bg=BG, bd=BD, relief=RLF_2)
+    show_hint = Label(font=FONT, fg=FG, bg=BG, bd=BD, relief=RLF_2, padx=100, wraplength=500)
+    show_hint_button = Button(text="Show Hint", font=FONT, fg=FG, bg=AC, bd=BD, relief=RLF_2, activebackground="#ccddff",
+            command=get_hint)
+
     # place widgets
-    x_pos = window_width / 2
+    #main_window
+    x_pos = 700 / 2
     y_pos = window_height / 8
 
     display_region.place(x=0, y=0, width=x_pos * 2, height=y_pos)
     
     display_current_completion.place(x=0, y=y_pos, width=x_pos * 2, height=y_pos * 2)
     
-    stats_button.place(x=0, y=y_pos * 3, width=window_width / 3, height=y_pos)
-    get_letter_guess.place(x=window_width / 3, y=y_pos * 3, width=window_width / 3, height=y_pos)
-    letter_guess_button.place(x=(window_width / 3) * 2, y=y_pos * 3, width=window_width / 3, height=y_pos)
+    stats_button.place(x=0, y=y_pos * 3, width=700 / 3, height=y_pos)
+    get_letter_guess.place(x=700 / 3, y=y_pos * 3, width=700 / 3, height=y_pos)
+    letter_guess_button.place(x=(700 / 3) * 2, y=y_pos * 3, width=700 / 3, height=y_pos)
 
     display_user_message.place(x=0, y=y_pos * 4, width=x_pos * 2, height=y_pos)
     
@@ -811,9 +804,9 @@ def main():
     correct_guess_container.place(x=0, y=y_pos * 6, width=x_pos, height=y_pos)
     incorrect_guess_container.place(x=x_pos, y=y_pos * 6, width=x_pos, height=y_pos)
 
-    bottom_left_label.place(x=0, y=y_pos * 7, width=(window_width / 3), height=y_pos)
-    show_streak.place(x=(window_width / 3), y=y_pos * 7, width=(window_width / 3), height=y_pos)
-    bottom_right_label.place(x=(window_width / 3) * 2, y=y_pos * 7, width=(window_width / 3), height=y_pos) 
+    bottom_left_label.place(x=0, y=y_pos * 7, width=(700 / 3), height=y_pos)
+    show_streak.place(x=(700 / 3), y=y_pos * 7, width=(700 / 3), height=y_pos)
+    bottom_right_label.place(x=(700 / 3) * 2, y=y_pos * 7, width=(700 / 3), height=y_pos) 
     
     guide_frame.place(x=0, y=0, width=x_pos * 2, height=y_pos * 8)
     guide_frame.lower()
@@ -833,6 +826,16 @@ def main():
     stats_letters_incorrect.place(x=x_pos, y=(window_height / 4) * 2, width=x_pos, height=window_height / 4)
     
     stats_window_close.place(x=0, y=(window_height / 4) * 3, width=x_pos * 2, height=(window_height / 4) - 20)
+    
+    # window b
+    show_hint_title.place(x=700, y=0, width=500, height=70)
+    show_hint.place(x=700, y=70, width=500, height=window_height- 140)
+    show_hint_button.place(x=700, y=window_height - 70, width=500, height=70)
+
+
+    #display_bar
+    x_pos = 500
+    y_pos = window_height
 
     # set menu
     top_menu = Menu(MAIN_WINDOW)
