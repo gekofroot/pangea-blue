@@ -342,14 +342,14 @@ def main():
         else:
             # ensure valid input
             if user_guess in invalid_characters:
-                display_user_message.configure(text=(f"[  {user_guess}  ]\nentry must be a letter"), font=10, fg="#ff4400", bg="#ffffff")
+                display_user_message.configure(text=(f"[  {user_guess}  ]\nentry must be a letter"), font=10, fg="#ff0000", bg="#ffffff")
                 get_letter_guess.delete(0, END)
             else:
                 user_guess = user_guess.strip()
 
                 # ensure one character per entry
                 if len(user_guess) > 1:
-                    display_user_message.configure(text=(f"[  {user_guess}  ]\nonly one character allowed per entry"), font=10, fg="#ff4400", bg="#ffffff")
+                    display_user_message.configure(text=(f"[  {user_guess}  ]\nonly one character allowed per entry"), font=10, fg="#ff0000", bg="#ffffff")
                     get_letter_guess.delete(0, END)
                 elif len(user_guess) == 1:
                     display_user_message.configure(text="", font=("Helvetica", font_size), fg=current_fg, bg=current_bg)
@@ -707,7 +707,7 @@ def main():
         set_accent_colour_b(ac_2)
 
     def select_colour_samba():
-        colour_get("#ffffff", "#8a0000", "#8a0000", "#ffeeee")
+        colour_get("#ffffff", "#240000", "#240000", "#ffeeee")
 
     def select_colour_dune():
         colour_get("#000000", "#ffffbb", "#ffffcc", "#ffffdd")
@@ -716,7 +716,7 @@ def main():
         colour_get("#000000", "#ddffcc", "#eeffdd", "#eeffee")
 
     def select_colour_cobalt():
-        colour_get("#ffffff", "#1420c8", "#0410b7", "#eeeeff")
+        colour_get("#ffffff", "#000037", "#000046", "#eeeeff")
 
     def select_colour_black():
         colour_get("#ffffff", "#000000", "#000000", "#000000")
@@ -780,7 +780,7 @@ def main():
 
     # widgets b
     show_hint_title = Label(text="Hint", font=FONT, fg=FG, bg=BG, bd=BD, relief=RLF_2)
-    show_hint = Label(font=FONT, fg=FG, bg=BG, bd=BD, relief=RLF_2, padx=100, wraplength=500)
+    show_hint = Label(font=FONT, fg=FG, bg=BG, bd=BD, relief=RLF_2, padx=100, wraplength=300)
     show_hint_button = Button(text="Show Hint", font=FONT, fg=FG, bg=AC, bd=BD, relief=RLF_2, activebackground="#ccddff",
             command=get_hint)
 
@@ -844,9 +844,9 @@ def main():
     # scale menu
     window_scale_menu = Menu(settings_menu)
     window_scale_menu.add_command(label="400x400  (default)", command=toggle_size_a)
-    window_scale_menu.add_command(label="600x400", command=toggle_size_b)
-    window_scale_menu.add_command(label="700x700", command=toggle_size_c)
-    window_scale_menu.add_command(label="1200x700", command=toggle_size_d)
+    #window_scale_menu.add_command(label="600x400", command=toggle_size_b)
+    #window_scale_menu.add_command(label="700x700", command=toggle_size_c)
+    #window_scale_menu.add_command(label="1200x700", command=toggle_size_d)
     settings_menu.add_cascade(label="Window Scale", menu=window_scale_menu)
     
     # shuffle menu
