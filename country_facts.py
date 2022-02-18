@@ -3,25 +3,102 @@
 
 antigua_and_barbuda_facts = [] 
 
-aruba_facts = ["Famous for its white sand beaches.", "Does not utilize daylight savings time.", "National colours include blue, yellow, red and white.", ]
+aruba_facts = [
+        "Famous for its white sand beaches.", 
+        "Does not utilize daylight savings time.", 
+        "National colours include blue, yellow, red and white.", 
+        ]
 
-bahamas_facts = ["Exists right on the edge of the Bermuda Triangle.", "National colours include aquamarine, yellow, black.", "Drive on the left."] 
+bahamas_facts = [
+        "Exists right on the edge of the Bermuda Triangle.", 
+        "National colours include aquamarine, yellow, black.", 
+        "Drive on the left."
+        ] 
 
-barbados_facts = ["Island nation.", "Has never been successfully invaded by a foreign power.", "The land of flying fish.", "Grapefruit is a hybrid fruit invented here."] 
+barbados_facts = [
+        "Island nation.", 
+        "Has never been successfully invaded by a foreign power.", 
+        "The land of flying fish.",
+        "Grapefruit is a hybrid fruit invented here."
+        ] 
 
 cayman_islands_facts = [] 
 
-cuba_facts = ["The largest island in the Caribbean.", "Fidel Castro was born here.", "Coca-Cola cannot be bought or sold here.", "Island resembles a crocodile.", "Highest doctor to patient ratio in the world.", "17th largest island in the world.", "Recipes are passed down from generation to generation, typically not written down.", "Traditional to burn dolls at New Years Eve.", "A long and narrow island.", "Has banned the sale of incandescent lighting.", "National colours include red, white, and blue.", "National symbol is the royal palm."] 
+cuba_facts = [
+        "The largest island in the Caribbean.", 
+        "Fidel Castro was born here.", 
+        "Coca-Cola cannot be bought or sold here.", 
+        "Island resembles a crocodile.", 
+        "Highest doctor to patient ratio in the world.", 
+        "17th largest island in the world.", 
+        "Recipes are passed down from generation to generation, typically not written down.", 
+        "Traditional to burn dolls at New Years Eve.", 
+        "A long and narrow island.", 
+        "Has banned the sale of incandescent lighting.", 
+        "National colours include red, white, and blue.", 
+        "National symbol is the royal palm."
+        ] 
 
 dominica_facts = [] 
 
-dominican_republic_facts = ["The second largest island in the Caribbean.", "Popular destination for weddings and honeymoons.", "Produce excellent rum", "Drinking during the day, at night and on Sundays is completely normal.", "Coffee, sugar, and tobbacco are the islands main sources of income.", "Capital of the country is the oldest city in the new world.", "The climate of this country is known as an \"endless summer\".", "Coffee is thier national drink.", "Baseball is thier national sport.", "The site of the first permanent European settlement in the Americas.", "Headquarters for the pirates of the Caribbean.", "Most visited destination in the Caribbean.", "Before independence, the country was known as Santo Domingo.", "The only country in the world to produce a rare blue variety of the silicate mineral pectolite.", "The Breadbasket of the Caribbean.", "Home to Lake Enriquillo - the largest lake and the lowest elevation in the Caribbean.", "There are over 300 bird species within the country borders.", "National symbol - the palmchat.", "National colours include red, white and blue."] 
+dominican_republic_facts = [
+        "The second largest island in the Caribbean.", 
+        "Popular destination for weddings and honeymoons.", 
+        "Produce excellent rum.", 
+        "Drinking during the day, at night and on Sundays is completely normal.", 
+        "Coffee, sugar, and tobbacco are the islands main sources of income.", 
+        "Capital of the country is the oldest city in the new world.", 
+        "The climate of this country is known as an \"endless summer\".", 
+        "Coffee is thier national drink.", 
+        "Baseball is thier national sport.", 
+        "The site of the first permanent European settlement in the Americas.", 
+        "Headquarters for the pirates of the Caribbean.", 
+        "Most visited destination in the Caribbean.", 
+        "Before independence, the country was known as Santo Domingo.", 
+        "The only country in the world to produce a rare blue variety of the silicate mineral pectolite.", 
+        "The Breadbasket of the Caribbean.", 
+        "Home to Lake Enriquillo - the largest lake and the lowest elevation in the Caribbean.", 
+        "There are over 300 bird species within the country borders.", 
+        "National symbol - the palmchat.", 
+        "National colours include red, white and blue."
+        ] 
 
-grenada_facts = ["The Spice Isle.", "The Island of Spice.", "The Grenada dove, a critically endangered species, is the national bird of this country.", "Home of the worlds first underwater sculpture park.", "Home to all three types of cocoa in the world.", "National colours include red, yellow and green.", ] 
+grenada_facts = [
+        "The Spice Isle.", 
+        "The Island of Spice.", 
+        "The Grenada dove, a critically endangered species, is the national bird of this country.", 
+        "Home of the worlds first underwater sculpture park.", 
+        "Home to all three types of cocoa in the world.", 
+        "National colours include red, yellow and green.",
+        ] 
 
-haiti_facts = ["The second oldest independent nation in the Western Hemisphere after the United States.", "Has the most mountains of any Caribbean nation.", "National colours include blue and red.", "National symbols are the Hispaniolan trogon and the hibiscus flower."] 
+haiti_facts = [
+        "The second oldest independent nation in the Western Hemisphere after the United States.", 
+        "Has the most mountains of any Caribbean nation.", 
+        "National colours include blue and red.", 
+        "National symbols are the Hispaniolan trogon and the hibiscus flower."
+        ] 
 
-jamaica_facts = ["Famous for cultivating sugar cane, bananas, and mangos, none of which are indigenous.", "Produces Blue Mountain Coffee, a highly sought-after and expensive coffee. One of the rarest coffees in the world.", "Home to over 200 species of exotic orchid, 73 of which are indegenous.", "Home to natural mineral baths and hot springs that are thought to have therapeutic properties.", "AT&T copied this countrys telephone system.", "Cranberry is a sought-after luxury good here.", "The first commercial producer of bananas in the Western world.", "Home to the fastest man in the world.", "The fairest isle that eyes ever beheld.", "Home to Milk River Bath, known to be the most radioactive mineral spa in the world.", "Its cuisine is a melting pot of many culinary influences.", "The largest English-speaking island in the Caribbean.", "The first Caribbean country to gain independence from the United Kingdom.", "The first Western country outside of Europe and North America to construct railway lines.", "The first English-speaking Caribbean country to qualify for the World Cup.", "Tourists are required to pay a $22 departure tax when leaving the country.", "Bob Marley.", "National colours include green, yellow and black.", "National symbols include the green-and-black streamertail, and the Guaiacum officinale."] 
+jamaica_facts = [
+        "Famous for cultivating sugar cane, bananas, and mangos, none of which are indigenous.", 
+        "Produces Blue Mountain Coffee, a highly sought-after and expensive coffee. One of the rarest coffees in the world.", 
+        "Home to over 200 species of exotic orchid, 73 of which are indegenous.", 
+        "Home to natural mineral baths and hot springs that are thought to have therapeutic properties.", 
+        "AT&T copied this countrys telephone system.", 
+        "Cranberry is a sought-after luxury good here.", 
+        "The first commercial producer of bananas in the Western world.", 
+        "Home to the fastest man in the world.", 
+        "The fairest isle that eyes ever beheld.", 
+        "Home to Milk River Bath, known to be the most radioactive mineral spa in the world.", 
+        "Its cuisine is a melting pot of many culinary influences.", "The largest English-speaking island in the Caribbean.", 
+        "The first Caribbean country to gain independence from the United Kingdom.", 
+        "The first Western country outside of Europe and North America to construct railway lines.", 
+        "The first English-speaking Caribbean country to qualify for the World Cup.", 
+        "Tourists are required to pay a $22 departure tax when leaving the country.", 
+        "Bob Marley.", 
+        "National colours include green, yellow and black.", 
+        "National symbols include the green-and-black streamertail, and the Guaiacum officinale."
+        ] 
 
 st_kitts_and_nevis_facts = [] 
 
@@ -32,10 +109,12 @@ st_vincent_and_the_grenadines_facts = []
 trinidad_and_tobago_facts = [] 
 
 belize_facts = [
-        "Borders Mexico and Guatemala.", "The Jewel in the heart of the Caribbean basin.",
+        "Borders Mexico and Guatemala.", 
+        "The Jewel in the heart of the Caribbean basin.",
         "A country located on the eastern coast of Central America.", "It has an area of 22,966 square km.", 
         "The country recently passed a legislation decriminalizing marijuana possession of up to 10 grams.",
-        "Under the Shade I flourish.", "The national flower of Belize is the black orchid, a true black beauty indeed.", 
+        "Under the Shade I flourish.", 
+        "The national flower of Belize is the black orchid, a true black beauty indeed.", 
         "The culinary traditions are a mix of various cultures like French, Spanish, American, Caribbean, Mexican, etc.", 
         "This small country is home to 900+ Mayan ruins.", 
         "The Caribbean country was a colony of the British Empire and a vital source of timber.", 
@@ -50,7 +129,8 @@ belize_facts = [
 bermuda_facts = [] 
 
 canada_facts = [
-        "Responsible for 77 percent of all maple syrup production.", "Made up of 10 provinces.", 
+        "Responsible for 77 percent of all maple syrup production.", 
+        "Made up of 10 provinces.", 
         "Home to Manatoulin Island - the largest fresh water island in the world.",
         "Kanata.", "Owns one seventh of the worlds supply of fresh water.",
         ]
@@ -79,7 +159,6 @@ el_salvador_facts = [
         "The name of the country translates to 'the Savior.'",
         ]
 
-
 guatemalahaiti_facts = [] 
 
 honduras_facts = [
@@ -90,8 +169,11 @@ honduras_facts = [
         ]
 
 mexico_facts = [
-        "Winners of the 1970 World Cup.", "Winners of the 1986 World Cup.", "Use four time zones.", "home of the cesear salad.",
-        "Bordered by the United State, Guatemala and Belize.",
+        "Winners of the 1970 World Cup.", 
+        "Winners of the 1986 World Cup.", 
+        "Use four time zones.", 
+        "home of the cesear salad.",
+        "Bordered by the United States, Guatemala and Belize.",
         "Shares maritime borders with Cuba and Honduras.",
         "The site of several advanced Amerindian civilizations - including the Olmec, Toltec, Teotihuacan, Zapotec, Maya, and Aztec.",
         "Home to the Mayans and Aztecs some 13,000 years ago.",
@@ -100,7 +182,7 @@ mexico_facts = [
         "Has the world's largest population of Spanish speakers at 121 million in 2015.",
         "Artists in the country can pay their taxes using artwork.",
         "Domesticator of Popcorn.",
-        "34th Mexican president ruled for less than 60 minutes before quitting.",
+        "Thier 34th president ruled for less than 60 minutes before quitting.",
         "Dahlia is thier national flower.",
         "Almost 34% of its land area is covered with forest.",
         ]
@@ -128,12 +210,23 @@ panama_facts = [
         ]
 
 united_states_facts = [
-        "Winners of the 1950 World Cup.", "One of the first countrys to gain independence from a European power.", 
-        "Both owns and operates the Global Positioning System.", "Third most populated country in the world behind China and India.", 
-        "Home to the worlds largest airforce.", "First black president.", "Largest producer of nuclear power.", 
+        "Winners of the 1950 World Cup.", 
+        "One of the first countrys to gain independence from a European power.", 
+        "Both owns and operates the Global Positioning System.", 
+        "Third most populated country in the world behind China and India.", 
+        "Home to the worlds largest airforce.", 
+        "First black president.", 
+        "Largest producer of nuclear power.", 
         ]
 
-guatemala_facts = ["national bird - The Quetzal.", "Home to the deepest lake in Central America.", "Home to Tajumulco Volcano, the highest point in Central America.", "has over 30 volcanoes.", "Worlds leading producer of Jade.", "National instrument - the marimba."] 
+guatemala_facts = [
+        "national bird - The Quetzal.", 
+        "Home to the deepest lake in Central America.", 
+        "Home to Tajumulco Volcano, the highest point in Central America.", 
+        "has over 30 volcanoes.", 
+        "Worlds leading producer of Jade.", 
+        "National instrument - the marimba."
+        ] 
 
 argentina_facts = [
         "Winners of the 1978 World Cup."
@@ -175,7 +268,8 @@ bolivia_facts = [
         ]
 
 brazil_facts = [
-        "Winners of the 1950 World Cup.", "Winners of the 2014 World Cup.",
+        "Winners of the 1950 World Cup.", 
+        "Winners of the 2014 World Cup.",
         "The largest country in both South America and Latin America.",
         "Its ten bordering countries are Uruguay, Argentina, Paraguay, Peru, Bolivia, Colombia, Venezuela, Guyana, Suriname and French Guiana.",
         "Before its discovery by the Portuguese, South American Indians had been living in the region for thousands of years.",
@@ -200,7 +294,7 @@ brazil_facts = [
         "The largest number of species of mammals, plants and freshwater fish are found in here.",
         "Tropical climate.",
         "The fifth largest country by population behind China, India, U.S., and Indonesia.",
-    ]
+        ]
 
 chile_facts = [
         "Its three bordering countries are Argentina, Peru, and Bolivia.", "The longest country in the world.",
@@ -223,12 +317,11 @@ ecuador_facts = [
         "Founded in 1532 by the Spanish, who drove out the Incans to claim it.",
         "The only country in the world named after a geographical feature." ,
         "One of only two South American countries that do not share a border with Brazil.",
-        "Ecuador is the world's largest exporter of bananas, exporting 2.7 billion worth of them annually (23.3% of total banana exports, 2016).",
+        "The world's largest exporter of bananas, exporting 2.7 billion worth of them annually (23.3% of total banana exports, 2016).",
         "Provides the majority of the world's balsa wood.",
         "The flags three colors are yellow for the country's diversity, blue for its sea and sky, and red for the blood of the fighters who won their independence.",
         "Charles Darwin made his famous Voyage of the USS Beagle to the Galapagos Islands in 1835. He based his theory of evolution largely on the discoveries and observations he made in the islands.",
         ]
-
 
 guyana_facts = [
         "The third-smallest country on the mainland South America.",
@@ -320,7 +413,7 @@ france_facts = [
         "Notre Dame.",
         "Highest consumption of alcohol per year.",
         "The largest country in the European Union.",
-        "esembles the shape of a hexagon.",
+        "Resembles the shape of a hexagon.",
         "The hexagon.",
         "Leads all other European countries in total sales of electric cars.",
         "Inventor of the parachute, the hot air balloon, the motion picture camera, the bicycle and inflatable tires for cars are all French inventions.",
@@ -372,7 +465,17 @@ poland_facts = [
         "Nicolaus Copernicus - credited with discovering that the earth revolves around the sun and not the other way around.",
         ]
 
-romania_facts = [] 
+romania_facts = [
+        "Its five land bordering countries are Bulgaria, Hungary, Moldova, Serbia, and Ukraine.",
+        "The Carpathian Mountains, also known as the Transylvanian Alps, make up around a third of the country.",
+        "The Scarisoara glacier is underneath the Bihor Mountains. More the 3,500 years old, it is Europe's second largest underground glacier.",
+        "Forests cover approximately one quarter of the country, with oak, elm, maple, beech, ash and linden as well as conifers like pine, fir, spruce and larch filling them.",
+        "Almost 34,000 different species of animals can be found in the country, including deer, lynx, wolves, the largest of all chamois species and over 6,000 European brown bears, the last remaining in the continent.",
+        "The name comes from the Latin word \"Romanus\" or citizen of Rome, a legacy from the days when the Romans controlled ancient Dacia.",
+        "Its language is a romance language, like those of Greece, Germany, France, Spain, and Turkey.",
+        "The flag consists of blue, yellow and red vertical stripes.",
+        "Situated halfway between the North Pole and the equator.",
+        ]
 
 netherlands_facts = [
         "Its land bordering countries are Slovenia, Austria, Switzerland, and France.",
@@ -446,7 +549,18 @@ czech_republic_facts = [
 
 greece_facts = [] 
 
-portugal_facts = [] 
+portugal_facts = [
+        "Spain is its only land bordering country.",
+        "One of the oldest nations in Europe.",
+        "Named after its 2nd largest city, Porto.",
+        "Inventor of he Green lane toll pay system and pre-paid mobile phone card.",
+        "Sintra.",
+        "Home to the largest artificial underwater park in the world - The Ocean Revival Underwater Park.",
+        "Home to - the University of Coimbra, established in Lisbon in 1290, one of the oldest universities in continuous operation in the world.",
+        "Country of tiles.",
+        "Wine is its most famous export.",
+        "The majority of the towns in the country have at least one cinema.",
+        ]
 
 sweden_facts = [
         "Winners of the 1958 World Cup.",
@@ -490,10 +604,16 @@ hungary_facts = [
         ]
 
 austria_facts = [
-        "The country's capital and largest city is Vienna.", "Its eight bordering countries are the Czech Republic, Germany, Hungary, Italy, Liechtenstein, Slovakia, Slovenia, and Switzerland.", 
-        "A landlocked country.", "Its terrain is highly mountainous.", "A great power in Europe during the 17^th and the 18^th century.", 
-        "Occupied by many Celtic tribes in pre-Roman times.", "Became independent on October 26, 1955.", 
-        "The country where first postcards were issued.", "Mozart.", "Mozartkugel", 
+        "The country's capital and largest city is Vienna.", 
+        "Its eight bordering countries are the Czech Republic, Germany, Hungary, Italy, Liechtenstein, Slovakia, Slovenia, and Switzerland.", 
+        "A landlocked country.", 
+        "Its terrain is highly mountainous.", 
+        "A great power in Europe during the 17^th and the 18^th century.", 
+        "Occupied by many Celtic tribes in pre-Roman times.", 
+        "Became independent on October 26, 1955.", 
+        "The country where first postcards were issued.", 
+        "Mozart.", 
+        "Mozartkugel", 
         "The Viennese Clock Museum is the place where more than 1,000 clocks are kept.", 
         "Home to one of the world's major libraries. The library has a collection dating back to the 14th century and today, it houses more than 2.5 million books. The Library was formerly the court library to the Habsburgs.", 
         "Austria has sworn itself to a neutral position since the World Wars.", "The highest point of the country is at 3,798 m - Grossglockner", 
@@ -501,13 +621,16 @@ austria_facts = [
         "Thier corn yields on average are higher than in the United States of America and they reject the use of biotechnology for the production of crops.", 
         "The first country in the world to register the first organic farm (1927) and also the first country to establish national regulations for organic farming.", 
         "Has 9 federal states - Vienna, Burgenland, Carinthia, Lower Austria, Upper Austria, Salzburg, Styria, Tyrol, and Vorarlberg.", 
-        "Extends 360 miles from east to west.", "The country meets over 70% of its electricity needs by means of renewable energy sources.", 
+        "Extends 360 miles from east to west.", 
+        "The country meets over 70% of its electricity needs by means of renewable energy sources.", 
         "The country lies at the center of the European traffic between east and west along the great Danubian trade route between north and south.", 
         "The country shares its longest border with Germany which is approximately 800 kilometers long.", 
         "The Port of Vienna is the largest Austrian river port and one of the largest ports on the Danube River, with a total annual traffic capacity of around 12 million tonnes of cargo.", 
         "Soccer, volleyball, basketball, ballet and dancing, are among the most popular sports activities in the country.", 
-        "Vienna is the capital and the largest city in the country.", "One of the 26 Schengen countries.", 
-        "One of the winter sports capital of Europe.", "Famous for historic cities, villages and magnificent scenery of the Alps.", 
+        "Vienna is the capital and the largest city in the country.", 
+        "One of the 26 Schengen countries.", 
+        "One of the winter sports capital of Europe.", 
+        "Famous for historic cities, villages and magnificent scenery of the Alps.", 
         "Home to Danube River - Europe's second-longest river after the Volga River. It is the only river in the world which flows through ten countries.", 
         "2/3^rds of the country is covered by woods and meadows. Forests account for 2/5^th of the country. One of the most densely forested countries in central Europe.", 
         "Home to the largest ice cave system in the world- Eisriesenwelt.", 
@@ -516,7 +639,8 @@ austria_facts = [
         "The Danube River which is 2,860 km long is the chief waterway of the country.", "Home of the Ibex.", 
         "In some parts of the country, it rains almost more than 200 times a year.", "Exports around 30% of the wine produced in the country.", 
         "Austria is one of the richest countries per capita in the world.", 
-        "The Zwentendorf Nuclear Power Plant, situated near Vienna, Austria, is the only reactor in the world which has been completely built, but mothballed before it was ever put into operation.", "Most of the taxis here are Mercedes.", 
+        "The Zwentendorf Nuclear Power Plant, situated near Vienna, Austria, is the only reactor in the world which has been completely built, but mothballed before it was ever put into operation.", 
+        "Most of the taxis here are Mercedes.", 
         "There are a total of 21 Nobel Prize winners from here.",
         ]
 
@@ -532,7 +656,18 @@ bulgaria_facts = [
         "An ancient March 1st tradition celebrates the passing of winter.",
         ]
 
-denmark_facts = [] 
+denmark_facts = [
+        "Has the third oldest monarchy in Europe.",
+        "Remained neutral during the World War II.,"
+        "The first European country to abolish slavery.",
+        "The southernmost of the Scandinavian nations (these include Denmark, Norway, and Sweden).",
+        "Football thier national sport.",
+        "Hosts the largest 4^th July celebration outside the U.S.",
+        "Lego.",
+        "Copenhagen's Noma.",
+        "The country also has the world's leading turbine industry.",
+        "The country has one of the highest fertility rates in the European Union.",
+        ]
 
 finland_facts = [
         "Borders the Baltic Sea.",
@@ -552,41 +687,186 @@ slovakia_facts = []
 
 ireland_facts = [] 
 
-croatia_facts = [] 
+croatia_facts = [
+        "Its five land bordering countries are Bosnia and Herzegovina, Hungary, Montenegro, Serbia, and Slovenia.",
+        "Was once a kingdom in 925 under the kingship of Tomislav, the first king of the country.",
+        "The country also has a system of lakes with distinctive colors including mint green, grey or blue.",
+        "The Sea Organ." ,
+        "A rich country in biodiversity.",
+        "There is a museum in here dedicated to Frogs doing some people work.",
+        ]
 
 lithuania_facts = [] 
 
-slovenia_facts = [] 
+slovenia_facts = [ 
+        "With a narrow coastline, it shares its land borders with four countries - Austria, Croatia, Hungary, and Italy.",
+        "It is mostly a mountainous country.",
+        "In 1995, archaeologists dug up the Divje Babe Flute, which is a flute made of the femur of a bear.",
+        ]
 
-latvia_facts = [] 
+latvia_facts = [
+        "Its land bordering countries are Estonia, Russia, Belarus and Lithuania.",
+        "A very old oak tree dating back to the times of Pharaoh, was found in here during an excavation project.",
+        "Its forests are often called \"green gold.\"",
+        "The country is home to a large variety of deciduous tree species including - oak, aspen, birch, black and white alder and others.",
+        "The region has a large number of coniferous tree species such as pine and fir.",
+        "The first country to produce citric acid from molasses, a spin-off of sugar production.",
+        "Contains more than 12,000 rivers.",
+        "More than one third of the land area is covered by forests.",
+        "Home to Venta Rapid - the widest waterfall in Europe. The hight of the waterfall changes depending on the water level in the river.",
+        ]
 
-estonia_facts = [] 
+estonia_facts = [
+        "Its three bordering countries are Latvia, Russia, and Finland.",
+        "The country has the highest number of startups per capita in Europe.",
+        "Adopted the Euro on January 1, 2011.",
+        "The birthplace of the first Christmas tree.",
+        "The name of the country comes from the \"Ests\" the settlers in the region.",
+        "The country is also the first country in the world to have implemented a flat tax system.",
+        "Among the cleanest places on the planet earth to breath.",
+        "Almost 50% of its territory is covered with forests and 22% is under agriculture.",
+        "Also belongs to the group of countries with the largest density of large predators in Europe including wolves, lynxes and brown bears.",
+        "The birthplace of Skype.",
+        "The least populous state of the European Union.",
+        ]
 
 cyprus_facts = [] 
 
-luxembourg_facts = [] 
+luxembourg_facts = [
+        "Home to the Ardennes - a region of steep-sided valleys carved by beautiful rivers and covered in dense forests.",
+        "One of the world's major business and financial centers." ,
+        "We want to remain what we are.",
+        "The country is divided into four geographical and cultural regions.",
+        "The cuisine is heavily influenced by French and German cuisine, with more recent influences from their Italian and Portuguese immigrants.",
+        "A Grand Duchy ruled by a Grand Duke and its Parliament, the only one in the world.",
+        ]
 
-malta_facts = [] 
+malta_facts = [ 
+        "The name of the island nation is supposedly derived from a Greek word meaning \"honey.\"",
+        "The island has an endemic species of bee, which produces a unique type of honey for which the island is very well known.",
+        "For the country's bravery in the Second World War, it was awarded the George Cross by King George VI of the United Kingdom.",
+        "Malta is also home to some of the oldest free-standing structures of the world - the seven Megalithic Temples.",
+        "The country is believed to have been inhabited since the early Neolithic period of 5000 BC.",
+        "A British colony for more than 150 years. During that time, it was used as a submarine base by British forces.",
+        "The British launched attacks on the Italian navy from the island.",
+        "It was also a part of the Holy Roman Empire for 72 years.",
+        "Among the world's smallest and most densely populated countries.",
+        "People in the country drive on the left-hand side of the road.",
+        ]
 
-norway_facts = [] 
+norway_facts = [
+        "It has four bordering countries that are Sweden, Finland, Russia, and Denmark.",
+        "The country has an extensive coastline facing the North Atlantic Ocean.",
+        "Introduced Salmon Sushi to Japan in the 80s.",
+        "Originally called \"Nordweg\" meaning the \"Northern Way.\"",
+        "Has won more winter Olympics than any other country in the world.",
+        "Vikings originated from this country.",
+        "Football is the favorite sport in the country.",
+        "\"Allemannsretten\" is a term which says that every man and woman in the country has the right of public access.",
+        "The country is famous for some of its greatest waterfalls.",
+        "Home to Vinnufossen - the world's sixth tallest and Europe's highest waterfalls.",
+        "The least likely to be affected by climate change.",
+        "A very long country." ,
+        "Has one of the longest coastlines in the world.",
+        "The country has the largest glacier in mainland Europe - Jostedalsbreen.",
+        "Home to Hornindalsvatnet - Europe's deepest lake.",
+        "Home to the longest road tunnel in the world - the Laerdal tunnel. It is 24.5 km long and it takes on an average 20 minutes to pass through the tunnel.",
+        "The country enjoys four seasons.",
+        "During the winter season in Northern part of the country, the sun never rises and they have polar nights. While during the summer season in the same region, the sun never sets.",
+        "Warm Gulf Stream keeps the climate of the country milder than what one would expect.",
+        "Famous for reindeers, polar bears, whale meat, waffles, trolls, fish, Vikings...",
+        "More than 2/3^rd of the country is mountainous. There are almost 300 mountain peaks that are above 2,000 meters.",
+        "Nearly 70% of the country is uninhabited.",
+        ]
 
-iceland_facts = [] 
+iceland_facts = [ 
+        "A country of geothermal pools and northern lights, volcanoes, and glaciers.",
+        "Gained its independence in 1918.",
+        "The last land in Europe to be settled and populated. It is the youngest country in the world in terms of land form.",
+        "The 18th largest island in the world and Europe's second largest island after Great Britain.",
+        "The Reykjanes lava fields are a geothermal wonder and a beautiful place where lighthouses outnumber villages." ,
+        "About 30 percent of the country is lava fields.",
+        "Home of the famous Blue Lagoon.",
+        "Home to Vatnajokull glacier - the largest ice cap in Europe.",
+        "Has the most active volcano area in the world with a volcano erupting, on average, every five years.",
+        "The island's location makes it geologically very young and active.",
+        "Responsible for more than a third of all the fresh lava on earth in the last six hundred years.",
+        "Many volcanoes.",
+        "Parts of the country are often shaken by tremors and earthquakes of varying intensity. Volcanic eruptions and earthquakes follow each other.",
+        "The most eco-friendly country in the world in terms of their energy sources. Thirty percent of their electricity is of geothermal origin and the rest is generated by hydro power.",
+        "The fishing industry accounts for the vast majority of their exports and 40 percent of the nation's economy and 31 percent comes from manufacturing unwrought aluminum.",
+        "Descendants from the Norwegian Vikings founders and native Celtic populations of Scotland and Ireland who were captured and brought as slaves to the island.",
+        "The most sparsely populated nation in Europe, with less than three inhabitants per square kilometer.",
+        "The nation's official language is descended Old Norse.",
+        ]
 
-turkey_facts = [] 
+turkey_facts = [ 
+        "It has eight bordering countries that are Syria, Iraq, Iran, Armenia, Azerbaijan, Georgia, Bulgaria and Greece.",
+        "It is filled with ancient monuments, underground cities, palaces, and ruins.",
+        "Home to the oldest recognized human settlement.",
+        "The first signs of writing were found in here in 1950 B.C. when clay tablets were found in the Assyrian ruins.",
+        "The first Neolithic paintings found on man-made walls were discovered here.",
+        "Home to the world's most precious silk carpet.",
+        "Home to the first ever university known to man.",
+        "The Cotton Palace or \"Pamukkale\" is a beautiful complex with unique mineral springs.",
+        ]
 
-serbia_facts = [] 
+serbia_facts = [ 
+        "It has ten bordering countries that are Hungary, Romania, Bulgaria, Macedonia, Croatia, Montenegro, Albania, Kosovo, Bosnia, and Herzegovina.",
+        "There are two lakes in this country named Vlasina and Semetes where islands float on the lakes' surfaces.",
+        "Serbia is a landlocked country.",
+        "Formed a union with Montenegro in 1992, and split up again in 2006 to become independent.",
+        ]
 
 bosnia_and_herzegovina_facts = [] 
 
-albania_facts = [] 
+albania_facts = [
+        "Its five bordering countries are Montenegro, Serbia, Kosovo, the Republic of Macedonia, and Greece.",
+        "People from the country hang stuffed animals and objects from half-completed homes and buildings to ward off evil spirits.",
+        "Albania provides free primary and secondary education.",
+        "Shqiperi, a name given by its people.",
+        "Thier national and ethnic symbol - the eagle.",
+        "Its current flag bears a black, double-headed eagle on a red background.",
+        "The villages of Xarre and Mount Dajt were found to contain the first traces of human presence in the country.",
+        "The largest exporter of cannabis in Europe.",
+        "A country of mountains. The country is covered by 70% mountains within its territory.",
+        ]
 
 north_macedonia_facts = [] 
 
-montenegro_facts = [] 
+montenegro_facts = [
+        "Its land bordering countries are Croatia, Bosnia and Herzegovina, Serbia, Kosovo, Albania and the Adriatic Sea.",
+        "Declared its independence from Serbia on June 3, 2006.",
+        "The country got its name from the dark mountain forests that cover the land. The name breaks down into two words, `monte' and `negro' (black, mountain), and dates back to the 15^th century.",
+        "The country has 117 beaches along the Adriatic coast.",
+        "The country's flag features a golden lion.",
+        "The Tara (Drina) River.",
+        "About 60% of the country is more than 1000 meters above sea level, with the tallest peak - Bobotov Kuk in the Durmitor Mountains - at 2,522 meters.",
+        "Serbia, Italy, Germany, Croatia, and Hungary are its major trade partners.",
+        "Tourism, steel making, aluminum and food processing represent its major industries.",
+        "Home to the Tsar's Bridge.",
+        ]
 
-andorra_facts = [] 
+andorra_facts = [
+        "A landlocked country in southwestern Europe.",
+        "Witnesses the world's most prestigious cycle race - the Tour De France.",
+        "It is a principality (a territory ruled by a prince).",
+        "Hoem to Andorra la Vella, the highest capital city in Europe with an elevation of 1,023 meters.",
+        "Not an official member of the European Union.",
+        "One theory suggests that its name may be derived from Arabic al-durra, meaning, \"The Pearl.\"",
+        "Andorra was occupied by France in 1933.",
+        "The country served as an important smuggling route between Vichy, France, and Spain during World War II.",
+        "Andorra became a member of the UN and Council of Europe in 1993.",
+        "The president of France and the Bishop of Urgell serve as co-princes for the country. Note that it is the world's only co-principality.",
+        ]
 
-san_marino_facts = [] 
+san_marino_facts = [ 
+        "Did not participate in World War I and World War II, and remained neutral.",
+        "Geographically it is the third smallest state in Europe.",
+        "Surrounded on all sides by Italy.",
+        "One of the most densely populated countries in the world.",
+        "People of this country are known as Sammarinese.",
+        ]
 
 holy_see_facts = [] 
 
@@ -594,29 +874,152 @@ russia_facts = [
         "Winners of the 2018 World Cup.",
         ] 
 
-ukraine_facts = [] 
+ukraine_facts = [
+        "Its seven land bordering countries are Poland, Slovakia, Hungary, Romania, Moldova, Russia, and Belarus.",
+        "\"O Sole Mio\" the world-famous song was composed in the country.",
+        "Home to several archaeological sites that were previously Neanderthal settlements.",
+        ]
 
-belarus_facts = [] 
+belarus_facts = [
+        "A landlocked country in Eastern Europe.",
+        "Its five land bordering countries are Latvia, Lithuania, Poland, Russia, and Ukraine." ,
+        "White Russia.",
+        "Gained its independence on December 26th, 1991.",
+        "The conomy is mainly dependent on the agriculture and manufacturing industries.",
+        "Russia is thier largest political and economic partner. Accounting for some 48% of thier external trade.",
+        "Ice hockey is one of the country's most popular sports.",
+        "Minsk.",
+        "The country's capital has had to rebuild itself several times, as it has burned down 18 times in its history. Extensive bombing during World War II caused heavy damage to the city's architecture.",
+        "Hero city.",
+        ]
 
 moldova_facts = [] 
 
 switzerland_facts = [
         "Winners of the 1954 World Cup.",
+        "Its five land bordering countries are Austria, Liechtenstein, France, Italy, and Germany.",
+        "Slightly less than twice the size of New Jersey.",
+        "Highest consumption of chocolates per capital in the world.",
+        "Producer of half of the luxury watches produced in the world.",
+        "Tissot, TAG Heuer, Rolex, Patek Philippe, and Longines...",
+        "Has enough underground bunker capacity that it can hide its entire population in case of a nuclear war.",
+        "Invented milk chocolate in 1875.",
+        "The World Wide Web was invented here by Tim Berners Lee.",
+        "Inventor of the first waterproof watch.",
+        "The only country in the world to have built an airplane that is powered by solar energy.",
+        "Solar Impulse 2.",
+        "Not involved in any of the two world wars.",
         ] 
 
 liechtenstein_facts = [] 
 
-monaco_facts = [] 
+monaco_facts = [
+        "Surrounded by France on three sides and the remaining part of the country is bordered by the Mediterranean Sea.",
+        "Monaco is the only country in the world with Human Development Index above 1.",
+        "Fishes are the only natural resource the country has.",
+        ]
 
-india_facts = [] 
+india_facts = [
+        "It has seven land bordering countries that are Pakistan, Afghanistan, China, Nepal, Bhutan, Bangladesh, and Myanmar.",
+        "It shares maritime border with Sri Lanka, Thailand, Maldives and Indonesia.",
+        "Its name is derived from the river Indus. It is a valley around which people settled in earlier times.",
+        "The world's oldest, largest and continuous civilization - the Indus Valley civilization.",
+        "One of the largest democracies in the world.",
+        "Has the largest postal system in the world with more than 150,000 post offices.",
+        "Hoem to the world's only floating post office on Dal Lake, Sri Nagar.",
+        "Has more than 300,000 active mosques.",
+        "The second largest pool of engineers and scientists come from here.",
+        "The second largest English speaking country in the world.",
+        "The only country to have an entire ocean named after it.",
+        "Has the fastest growing telecom market and cheapest telecom tariff in the world.",
+        "Navi Mumbai, a planned satellite township of Mumbai, is the largest planned city in the world.",
+        "Its space program is among the top five space programs in the world despite having budget constraints.",
+        "The 7^th largest country in the world and the largest democracy.",
+        "The world's largest milk producer.",
+        "Leads the world with the largest number of films.",
+        "The largest wholesale spice market of Asia exists here.",
+        "Its road network is the world's second largest.",
+        "Mahatma Gandhi is known as The Father of the Nation.",
+        "\"Zero\" in the number system was invented by a mathematician named Aryabhatta.",
+        "Inventor of Chess.",
+        "One of the few countries tp have built a super computer indigenously.",
+        "Yoga originated from here.",
+        "Calculus, Trigonometry, and Algebra originated here.",
+        "The National Flag is a horizontal tricolour with deep saffron at the top, white in the middle and dark green at the bottom in equal proportion.",
+        "Developer of the decimal system and place value system.",
+        "Snakes and ladders - the game, was invented here in the 13^th century by a poet saint Gyandev.",
+        "Home to Takshila - the first-ever university in the world.",
+        "The place of origin of Buddhism and Jainism.",
+        "Home to the Baily Bridge - highest bridge in the world.",
+        ]
 
-pakistan_facts = [] 
+pakistan_facts = [ 
+        "Its four bordering countries are India, Afghanistan, Iran, and China.",
+        "Sialkot, located here, is the world's largest producer of handsewn footballs.",
+        "The world's first Islamic country to attain nuclear power.",
+        "Home to the highest paved international road - The Karakoram Highway (KKH).",
+        "Home to the largest canal-based irrigation system in the world.",
+        "Has the world's largest ambulance network.",
+        "Land of the pure.",
+        "The country got their independence at midnight of 14-15 August 1947.",
+        "Queen Elizabeth II was the Queen of this country until 1956.",
+        "The national drink of this country is sugarcane juice. Also known as \"roh\.",
+        "Home to K-2 (Chagori) - second highest mountain peak in the world.",
+        "Has one of the oldest civilizations in history, Mehrgarh, dating back to 6000 B.C.",
+        "Home to the Khewra Salt Mine - the second largest and oldest salt mine in the world.",
+        "Home to the only fertile desert in the world - the Tharparkar desert.",
+        "Home to the world's longest glacial system outside the polar regions - the Biafo Glacier.",
+        "Home to the largest earth-filled dam in the world - Tarbela Dam.",
+        ]
 
-bangladesh_facts = [] 
+bangladesh_facts = [
+        "A remarkable South Asian country filled with many waterways and lush greenery." ,
+        "Its fertile plains, including Meghna, Padma, and Jamuna, and the famous river delta dot its landscape.",
+        "Attained its independence in 1971 after a nine-month war with Pakistan.",
+        "My Golden Bengal.",
+        "The country has a dark green flag similar to that of Pakistan but with a red circle placed slightly off its center to represent the country's bloodshed while fighting for independence. The dark green color symbolizes the country's rich vegetation and the Islamic faith.",
+        "Shares land borders with Myanmar and India." ,
+        "China, Bhutan, and Nepal do not have land borders with Bangladesh but they are near it.",
+        "The most populous and largest of the 10 most densely populated countries in the world.",
+        "Home to Mahasthangarh - the oldest city. The archaeological site has a history that dates back to around 300 BCE.",
+        "A renowned tea-producing country, and it's rated among the top 10 largest tea producers globally.",
+        "It's estimated that around 3% of global tea is from here.",
+        "Jackfruit is the national fruit native to parts of southeast and south Asia." ,
+        "Banana is the most popular and common fruit.",
+        "The national animal is the Royal Bengal Tiger.",
+        "The rich vegetarian diet also means that this is one of the least obese countries globally.",
+        "Home to the city of mosques." ,
+        "This is a largely flat country with a low-lying landscape. As a result, it is frequently subjected to annual flooding, especially when the snow melts from the Himalayas.",
+        "Its landscape consists of 67% of arable land, forests and woodland account for 16%, while meadows and pastures account for 4% of the land.",
+        "It has many historical and archaeological sites with a history dating back to around the 3rd century BC.",
+        "There are over 700 rivers found here, with the most scenic ones including Meghna, Jamuna, and the Padma.",
+        "The Ganges - Brahmaputra-Meghna form the most populous and largest delta system globally.",
+        "It has more than 8,000 km of inland waterways.",
+        "The national game is Kabbadi." ,
+        "However, cricket and football are the most popular sports, and the country has risen to become one of the most popular cricket teams globally.",
+        "It's considered a sign of immaturity if you smile too much.",
+        "This country is known as the \"playground of seasons\" since it has six seasons: summer, autumn, winter, spring, late autumn, and monsoon.",
+        "11.1% of the country is forested. Out of this number, almost 30% is categorized as primary forest.",
+        "This country has four main types of forests: sal forest, hill forest, mangrove forest, and mangrove plantation.",
+        "Has the fifth largest number of green jobs on earth. Solar panels power a considerable part of the national grid.",
+        ]
 
 afghanistan_facts = [] 
 
-nepal_facts = [] 
+nepal_facts = [
+        "A landlocked country in South Asia.",
+        "It has two bordering countries that are India and China.",
+        "Through all its history of border expansion and contraction, it has never been colonized and ruled by foreigners.",
+        "Home to the highest lake on earth (Tilicho at 4,800 meters/3 miles) and the deepest lake on earth (Shey Phoksundo).",
+        "Home to eight of the top ten tallest mountains on earth in addition to Mount Everest.",
+        "Extreme variations in altitude.",
+        "Has more birds than the continents of North Africa and Europe combined.",
+        "Home to eight percent of the bird species of the world.",
+        "Home to over 650 different species of butterflies as well as the world's largest moth (the Atlas moth) and some of its largest wild honeybees.",
+        "Home to the snow leopard, the red panda, and the one horned rhino.",
+        "Its national flag is the only one in the world that isn't a rectangle or a square.",
+        "The Elephant polo game originated here.",
+        ]
 
 sri_lanka_facts = [
         "Resembles a tear-drop.",
@@ -739,7 +1142,8 @@ south_sudan_facts = []
 
 libya_facts = [] 
 
-south_africa_facts = ["Winners of the 2010 World Cup.",
+south_africa_facts = [
+        "Winners of the 2010 World Cup.",
         ] 
 
 namibia_facts = [] 

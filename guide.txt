@@ -1,0 +1,21 @@
+Objective:
+Attemp to guess country name. 
+Progress window lights up green once all letters have been guessed correctly. 
+Country name is displayed in red after five incorrect guesses. 
+
+Buttons:
+Left Button: Show Stats
+Right Button: Enter
+
+Hotkeys:
+Ctrl + S: Shuffle Countries
+Ctrl + A: Shuffle Regions
+Ctrl + RIGHT: Previous Hint
+Ctrl + UP: Random Hint
+Ctrl + LEFT: Next Hint
+Return: Enter
+Ctrl + T: Show Stats
+Ctrl + Alt + T: Close Stats
+Ctlr + H: Show Guide
+Ctrl + Alt + H: Close Guide
+Ctrl + Q: Exit

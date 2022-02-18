@@ -15,7 +15,7 @@
 
 
 # import modules
-from random import choice, shuffle
+from random import choice, shuffle, randint
 from os import sys
 from time import sleep
 from tkinter import *
@@ -54,6 +54,8 @@ def main():
     global letters_correct
     global letters_incorrect
     global current_country
+    global index_count
+    global shown_hint
 
     # retrieve high score
     with open("high_score.txt", "r") as high_score:
@@ -77,7 +79,19 @@ def main():
             countries.append(country)
     shuffle(countries)    
     country_name = choice(countries)
-
+    
+    # show initial hint
+    def show_first_hint():
+        count = 0
+        for country in country_names:
+            if country_name == country_names[count]:
+                if len(country_facts[count]) > 0:
+                    info = country_facts[count][index_count]
+                    show_hint.configure(text=info)
+                else:
+                    show_hint.configure(text="no available data at this time...")
+            count += 1
+    
     # initialize list
     correct_guess_list = []
     for number in range(len(country_name)):
@@ -88,14 +102,66 @@ def main():
         correct_letters += item
     
     #functions
-    def get_hint():
+    # get next hint
+    def get_next_hint():
         
-        hint_shown = []
+        global index_count
         count = 0
+        
         for country in country_names:
             if country_name == country_names[count]:
                 if len(country_facts[count]) > 0:
-                    info = choice(country_facts[count])
+                    if index_count == len(country_facts[count]) - 1:
+                        index_count = 0
+                    else:
+                        index_count += 1
+                    info = country_facts[count][index_count]
+                    show_hint.configure(text=info)
+                else:
+                    show_hint.configure(text="no available data at this time...")
+            count += 1
+    
+    # get previous hint
+    # mod
+    def get_prev_hint():
+        
+        global index_count
+        count = 0
+
+        for country in country_names:
+            if country_name == country_names[count]:
+                if len(country_facts[count]) > 0:
+                    if index_count == 0:
+                        index_count = len(country_facts[count]) - 1
+                    else:
+                        index_count - 1
+                        index_count -= 1
+                    info = country_facts[count][index_count]
+                    show_hint.configure(text=info)
+                else:
+                    show_hint.configure(text="no available data at this time...")
+            count += 1
+    
+    # get random hint
+    def get_random_hint(): 
+        
+        global index_count
+        global shown_hint
+        count = 0
+        
+        for country in country_names:
+            if country_name == country_names[count]:
+                if len(country_facts[count]) > 0:
+                    if len(shown_hint) == len(country_facts[count]):
+                        del shown_hint[:-1]
+                    index_count = randint(0, len(country_facts[count]) -1)
+                    info = country_facts[count][index_count]
+                    if info in shown_hint:
+                        while info in shown_hint:
+                            index_count = randint(0, len(country_facts[count]) -1)
+                            info = country_facts[count][index_count]
+                    
+                    shown_hint.append(info)
                     show_hint.configure(text=info)
                 else:
                     show_hint.configure(text="no available data at this time...")
@@ -418,7 +484,6 @@ def main():
                                 letter_guess_button.configure(text="Play Again", command=play_again)
                                 display_user_message.configure(text="")
                                 display_current_completion.configure(activeforeground="#ffffff", fg="#000000", bg=WCBG)
-                                show_hint.configure(text="")
                         else: 
                             # repeat correct guess
                             correct_guess_container.configure(bg=WCBG)
@@ -465,13 +530,13 @@ def main():
                                 letter_guess_button.configure(text="Play Again", command=play_again)
                                 sleep(1)
                                 display_user_message.configure(text=(f"{country_name}"), fg="#000000", bg="#ffbb99")
-                                show_hint.configure(text="")
                         else:
                             # repeat correct guess
                             correct_guess_container.configure(bg=WCBG)
                             display_user_message.configure(text=(f"[ {user_guess} ]"))
                             get_letter_guess.delete(0, END)
     
+    # reconfigure/reset neccessary widgets/variables"""
     def play_again():
         """reconfigure/reset neccessary widgets/variables"""
         
@@ -484,13 +549,15 @@ def main():
         global correct_guess_list
         global numbers_guessed
         global increment_guess
+        global index_count
 
         correct_letters = ""
         correct_guess = ""
         incorrect_guess = ""
         increment_guess = 0
         numbers_guessed = 0
-        
+        index_count = 0
+
         # select country
         shuffle(countries)
         country_name = choice(countries)
@@ -518,6 +585,16 @@ def main():
         insert_punctuation(country_name)
 
         display_current_completion.configure(text=(f"{correct_letters}"), fg=current_fg, bg=current_ac)
+        
+        count = 0
+        for country in country_names:
+            if country_name == country_names[count]:
+                if len(country_facts[count]) > 0:
+                    info = country_facts[count][index_count]
+                    show_hint.configure(text=info)
+                else:
+                    show_hint.configure(text="no available data at this time...")
+            count += 1
     
     def size_toggle(width, height, get_font, font_size_2):
         """resize main window"""
@@ -622,7 +699,9 @@ def main():
         guide_window_close.configure(fg=FG)
         stats_button.configure(fg=FG)
         show_hint.configure(fg=FG)
-        show_hint_button.configure(fg=FG)
+        prev_hint_button.configure(fg=FG)
+        random_hint_button.configure(fg=FG)
+        next_hint_button.configure(fg=FG)
         show_hint_title.configure(fg=FG)
 
     def set_bg_colour(colour):
@@ -651,7 +730,9 @@ def main():
         guide_window_close.configure(bg=BG)
         show_hint.configure(bg=BG)
         show_hint_title.configure(bg=BG)
-        show_hint_button.configure(bg=BG)
+        prev_hint_button.configure(bg=BG)
+        random_hint_button.configure(bg=BG)
+        next_hint_button.configure(bg=BG)
     
     def set_accent_colour(colour):
         """sets primary accent colour"""
@@ -707,7 +788,7 @@ def main():
         set_accent_colour_b(ac_2)
 
     def select_colour_samba():
-        colour_get("#ffffff", "#240000", "#240000", "#ffeeee")
+        colour_get("#ffffff", "#240000", "#240000", "#140000")
 
     def select_colour_dune():
         colour_get("#000000", "#ffffbb", "#ffffcc", "#ffffdd")
@@ -716,13 +797,13 @@ def main():
         colour_get("#000000", "#ddffcc", "#eeffdd", "#eeffee")
 
     def select_colour_cobalt():
-        colour_get("#ffffff", "#000037", "#000046", "#eeeeff")
+        colour_get("#ffffff", "#000037", "#000046", "#eeee37")
 
     def select_colour_black():
         colour_get("#ffffff", "#000000", "#000000", "#000000")
 
     def select_colour_default():
-        colour_get("#000000", "#eeeeee", "#ffffff", "#ffffff")
+        colour_get("#ffffff", "#000000", "#000000", "#000000")
     
     def exit_cmd():
         """save current high score and exit"""
@@ -758,14 +839,13 @@ def main():
     
     bottom_left_label = Label(font=FONT, fg=FG, bg=AC_2, bd=BD, relief=RLF_2, disabledforeground=FG)
     
-    show_streak = Label(text=(f"Streak: {current_streak}"), font=("Helvetica", 10), fg=FG, bg=AC, bd=BD - 2, relief=RLF_2)
+    show_streak = Label(text=(f"Streak: {current_streak}"), font=FONT, fg=FG, bg=AC, bd=BD - 2, relief=RLF_2)
     bottom_right_label = Label(font=FONT, fg=FG, bg=AC_2, bd=BD, relief=RLF_2, activebackground="#ccddff")
     
     guide_frame = LabelFrame(MAIN_WINDOW, text="Guide", font=FONT, fg=FG, bg=BG, bd=BD - 2, relief=RIDGE)
-    guide_text = "Objective:\nAttemp to guess country name. \nProgress window lights up green once all letters have been guessed correctly. \nCountry name is displayed in red after five incorrect guesses. \n\n"
-    guide_text_2 = "Buttons:\nLeft Button: Show Stats\nRight Button: Enter\n\nHotkeys:\nCtrl + S: Shuffle Countries \nCtrl + A: Shuffle Regions \nReturn: Enter \nCtrl + T: Show Stats \nCtrl + Alt + T: Close Stats \nCtlr + H: Show Guide \nCtrl + Alt + H: Close Guide \nCtrl + Q: Exit"
-    guide_window = Message(guide_frame, text=(f"{guide_text}{guide_text_2}"), width=window_width - 20, font=("Helvetica", 10), fg=FG, bg="#dddddd", bd=BD - 2, relief=RLF_3, justify=CENTER)
-    guide_window_close = Button(guide_frame, text=(f"Close"), font=("Helvetica", 10), fg=FG, bg=BG, bd=BD, relief=RLF_2, activebackground="#ccddff", 
+    guide_text = open("guide.txt", "r")
+    guide_window = Message(guide_frame, text=(f"{guide_text.read()}"), width=window_width - 20, font=("Helvetica", 10), fg="#000000", bg="#dddddd", bd=BD - 2, relief=RLF_3, justify=CENTER)
+    guide_window_close = Button(guide_frame, text=(f"Close"), font=FONT, fg=FG, bg=BG, bd=BD, relief=RLF_2, activebackground="#ccddff", 
             command=close_guide_show)
 
     stats_frame = LabelFrame(MAIN_WINDOW, text="Stats", font=FONT, fg=FG, bg=BG, bd=BD - 2, relief=GROOVE)
@@ -776,13 +856,18 @@ def main():
     stats_incorrect_out_of = Label(stats_frame, text=(f"Losses\n\n{incorrect_out_of} / {games_played}"), font=("Helvetica", 10), fg=FG, bg=AC, bd=BD, relief=RLF_2)
     stats_letters_correct = Label(stats_frame, text=(f"Correct\nLetters\n\n{letters_correct}"), font=("Helvetica", 10), fg=FG, bg=AC, bd=BD, relief=RLF_2)
     stats_letters_incorrect = Label(stats_frame, text=(f"Incorrect\nLetters\n\n{letters_incorrect}"), font=("Helvetica", 10), fg=FG, bg=AC, bd=BD, relief=RLF_2)
-    stats_window_close = Button(stats_frame, text=(f"Close"), font=("Helvetica", 10), fg=FG, bg=BG, bd=BD, relief=RLF_2, activebackground="#ccddff", command=close_stats_show)
+    stats_window_close = Button(stats_frame, text=(f"Close"), font=FONT, fg=FG, bg=BG, bd=BD, relief=RLF_2, activebackground="#ccddff", command=close_stats_show)
 
     # widgets b
     show_hint_title = Label(text="Hint", font=FONT, fg=FG, bg=BG, bd=BD, relief=RLF_2)
     show_hint = Label(font=FONT, fg=FG, bg=BG, bd=BD, relief=RLF_2, padx=100, wraplength=300)
-    show_hint_button = Button(text="Show Hint", font=FONT, fg=FG, bg=AC, bd=BD, relief=RLF_2, activebackground="#ccddff",
-            command=get_hint)
+    show_first_hint()
+    prev_hint_button = Button(text="Previous", font=FONT, fg=FG, bg=AC, bd=BD, relief=RLF_2, activebackground="#ccddff",
+            command=get_prev_hint)
+    next_hint_button = Button(text="Next", font=FONT, fg=FG, bg=AC, bd=BD, relief=RLF_2, activebackground="#ccddff",
+            command=get_next_hint)
+    random_hint_button = Button(text="Random", font=FONT, fg=FG, bg=AC, bd=BD, relief=RLF_2, activebackground="#ccddff",
+            command=get_random_hint)
 
     # place widgets
     #main_window
@@ -808,30 +893,31 @@ def main():
     show_streak.place(x=(700 / 3), y=y_pos * 7, width=(700 / 3), height=y_pos)
     bottom_right_label.place(x=(700 / 3) * 2, y=y_pos * 7, width=(700 / 3), height=y_pos) 
     
-    guide_frame.place(x=0, y=0, width=x_pos * 2, height=y_pos * 8)
-    guide_frame.lower()
-    guide_window.place(x=0, y=0, width=x_pos * 2, height=y_pos * 7)
-    guide_window_close.place(x=0, y=(y_pos * 7) - 20, width=x_pos * 2, height=y_pos)
-
-    stats_frame.place(x=0, y=0, width=x_pos * 2, height=y_pos * 8)
-    stats_frame.lower()
-    
-    stats_highest_streak.place(x=0, y=0, width=x_pos, height=window_height / 4)
-    stats_current_percentage.place(x=x_pos, y=0, width=x_pos, height=window_height / 4)
-    
-    stats_correct_out_of.place(x=0, y=window_height / 4, width=x_pos, height=window_height / 4)
-    stats_incorrect_out_of.place(x=x_pos, y=window_height / 4, width=x_pos, height=window_height / 4)
-    
-    stats_letters_correct.place(x=0, y=(window_height / 4) * 2, width=x_pos, height=window_height / 4)
-    stats_letters_incorrect.place(x=x_pos, y=(window_height / 4) * 2, width=x_pos, height=window_height / 4)
-    
-    stats_window_close.place(x=0, y=(window_height / 4) * 3, width=x_pos * 2, height=(window_height / 4) - 20)
-    
     # window b
     show_hint_title.place(x=700, y=0, width=500, height=70)
     show_hint.place(x=700, y=70, width=500, height=window_height- 140)
-    show_hint_button.place(x=700, y=window_height - 70, width=500, height=70)
+    prev_hint_button.place(x=700, y=window_height - 70, width=500 / 3, height=70)
+    next_hint_button.place(x=(700) + (500 / 3), y=window_height - 70, width=500 / 3, height=70)
+    random_hint_button.place(x=(700) + (500 / 3) * 2, y=window_height - 70, width=500 / 3, height=70)
 
+    guide_frame.place(x=700, y=0, width=500, height=y_pos * 8)
+    guide_frame.lower()
+    guide_window.place(x=0, y=0, width=500, height=y_pos * 7)
+    guide_window_close.place(x=0, y=(y_pos * 7) - 20, width=500, height=y_pos)
+    
+    stats_frame.place(x=700, y=0, width=x_pos * 2, height=y_pos * 8)
+    stats_frame.lower()
+    
+    stats_highest_streak.place(x=0, y=0, width=500 / 2, height=window_height / 4)
+    stats_current_percentage.place(x=500 / 2, y=0, width=500 / 2, height=window_height / 4)
+    
+    stats_correct_out_of.place(x=0, y=window_height / 4, width=500 / 2, height=window_height / 4)
+    stats_incorrect_out_of.place(x=500 / 2, y=window_height / 4, width=500 / 2, height=window_height / 4)
+    
+    stats_letters_correct.place(x=0, y=(window_height / 4) * 2, width=500 / 2, height=window_height / 4)
+    stats_letters_incorrect.place(x=500 / 2, y=(window_height / 4) * 2, width=500 / 2, height=window_height / 4)
+    
+    stats_window_close.place(x=0, y=(window_height / 4) * 3, width=500, height=(window_height / 4) - 20)
 
     #display_bar
     x_pos = 500
@@ -843,11 +929,11 @@ def main():
     
     # scale menu
     window_scale_menu = Menu(settings_menu)
-    window_scale_menu.add_command(label="400x400  (default)", command=toggle_size_a)
+    #window_scale_menu.add_command(label="400x400  (default)", command=toggle_size_a)
     #window_scale_menu.add_command(label="600x400", command=toggle_size_b)
     #window_scale_menu.add_command(label="700x700", command=toggle_size_c)
     #window_scale_menu.add_command(label="1200x700", command=toggle_size_d)
-    settings_menu.add_cascade(label="Window Scale", menu=window_scale_menu)
+    #settings_menu.add_cascade(label="Window Scale", menu=window_scale_menu)
     
     # shuffle menu
     shuffle_menu = Menu(settings_menu)
@@ -921,7 +1007,7 @@ def main():
     # about menu
     about_menu = Menu(top_menu)
     about_menu.add_command(label="Guide", command=guide_show, accelerator="Ctrl+H")
-    about_menu.add_command(label="Stats", command=stats_show, accelerator="Alt+S")
+    about_menu.add_command(label="Stats", command=stats_show, accelerator="Ctrl+T")
     top_menu.add_cascade(label="About", menu=about_menu)
     
     MAIN_WINDOW.config(menu=top_menu)
@@ -950,6 +1036,15 @@ def main():
 
     def callback_close_stats(event):
         close_stats_show()
+    
+    def callback_previous_hint(event):
+        get_prev_hint()
+    
+    def callback_random_hint(event):
+        get_random_hint()
+    
+    def callback_next_hint(event):
+        get_next_hint()
 
     MAIN_WINDOW.bind("<Control-KeyPress-s>", callback_play_again)
     MAIN_WINDOW.bind("<Control-KeyPress-q>", callback_exit)
@@ -959,6 +1054,9 @@ def main():
     MAIN_WINDOW.bind("<Control-Alt-KeyPress-h>", callback_close_guide)
     MAIN_WINDOW.bind("<Control-KeyPress-t>", callback_open_stats)
     MAIN_WINDOW.bind("<Control-Alt-KeyPress-t>", callback_close_stats)
+    MAIN_WINDOW.bind("<Control-KeyPress-Right>", callback_previous_hint)
+    MAIN_WINDOW.bind("<Control-KeyPress-Up>", callback_random_hint)
+    MAIN_WINDOW.bind("<Control-KeyPress-Left>", callback_next_hint)
 
     # mainloop
     MAIN_WINDOW.mainloop()
