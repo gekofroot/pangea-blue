@@ -89,7 +89,7 @@ def main():
                     info = country_facts[count][index_count]
                     show_hint.configure(text=info)
                 else:
-                    show_hint.configure(text="no available data at this time...")
+                    show_hint.configure(text="not available data at this time...")
             count += 1
     
     # initialize list
