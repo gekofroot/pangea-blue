@@ -57,6 +57,10 @@ def main():
     global index_count
     global shown_hint
 
+    MAIN_WINDOW = Tk()
+    MAIN_WINDOW.geometry(f"{window_width}x{window_height}")
+    MAIN_WINDOW.title("Pangea Blue")
+    
     # retrieve high score
     with open("high_score.txt", "r") as high_score:
         hs_txt = high_score.read()
@@ -66,10 +70,6 @@ def main():
         else:
             highest_streak = int(hs_txt)
             high_score.close()
-    
-    MAIN_WINDOW = Tk()
-    MAIN_WINDOW.geometry(f"{window_width}x{window_height}")
-    MAIN_WINDOW.title("Pangea Blue")
     
     countries = []
 
@@ -172,22 +172,38 @@ def main():
 
         guide_frame.lift()
         stats_frame.lower()
+        hint_frame.lower()
 
     def close_guide_show():
         """close user guide"""
         
         guide_frame.lower()
+        hint_frame.lift()
     
     def stats_show():
         """show stats window"""
         
         stats_frame.lift()
         guide_frame.lower()
-
+        hint_frame.lower()
+    
     def close_stats_show():
         """close stats window"""
 
         stats_frame.lower()
+        hint_frame.lift()
+    
+    def hint_show():
+        """open user guide"""
+        
+        hint_frame.lift()
+        guide_frame.lower()
+        stats_frame.lower()
+
+    def close_hint_show():
+        """close user guide"""
+        
+        hint_frame.lower()
     
     # set regions
     def region_get(reg, reg_name):
@@ -611,8 +627,15 @@ def main():
         window_height = height
         MAIN_WINDOW.geometry(f"{window_width}x{window_height}")
         
+        # main window
         x_pos = window_width / 2
         y_pos = window_height / 8
+
+        # widgets b
+        guide_window.configure(width=window_width - 40)
+        prev_hint_button.configure(text="Prev.")
+        next_hint_button.configure(text="Next")
+        random_hint_button.configure(text="Rand.")
 
         display_region.configure(font=FONT)
         
@@ -651,23 +674,121 @@ def main():
         show_streak.place(x=window_width / 3, y=y_pos * 7, width=(window_width / 3), height=y_pos)
         bottom_right_label.place(x=(window_width / 3) * 2, y=y_pos * 7, width=(window_width / 3), height=y_pos) 
         
+        # window b
+        hint_frame.place(x=0, y=0, width=400, height=y_pos * 8)
+        hint_frame.lower()
+        show_hint.place(x=0, y=0, width=400, height=window_height- 90)
+        prev_hint_button.place(x=0, y=window_height - 90, width=400 / 4, height=70)
+        next_hint_button.place(x=(0) + (400 / 4), y=window_height - 90, width=400 / 4, height=70)
+        random_hint_button.place(x=(0) + (400 / 4) * 2, y=window_height - 90, width=400 / 4, height=70)
+        close_hint_button.place(x=(0) + (400 / 4) * 3, y=window_height - 90, width=400 / 4, height=70)
+
+        guide_frame.place(x=0, y=0, width=400, height=y_pos * 8)
+        guide_frame.lower()
+        guide_window.place(x=0, y=0, width=400, height=y_pos * 7)
+        guide_window_close.place(x=0, y=(y_pos * 7) - 20, width=400, height=y_pos)
+        
+        stats_frame.place(x=0, y=0, width=x_pos * 2, height=y_pos * 8)
+        stats_frame.lower()
+        
+        stats_highest_streak.place(x=0, y=0, width=400 / 2, height=window_height / 4)
+        stats_current_percentage.place(x=400 / 2, y=0, width=400 / 2, height=window_height / 4)
+        
+        stats_correct_out_of.place(x=0, y=window_height / 4, width=400 / 2, height=window_height / 4)
+        stats_incorrect_out_of.place(x=400 / 2, y=window_height / 4, width=400 / 2, height=window_height / 4)
+        
+        stats_letters_correct.place(x=0, y=(window_height / 4) * 2, width=400 / 2, height=window_height / 4)
+        stats_letters_incorrect.place(x=400 / 2, y=(window_height / 4) * 2, width=400 / 2, height=window_height / 4)
+        
+        stats_window_close.place(x=0, y=(window_height / 4) * 3, width=400, height=(window_height / 4) - 20)
+        
         MAIN_WINDOW.update()
     
+    def size_toggle_b(width, height, get_font, font_size_2):
+        """resize main window"""
+        
+        # globals
+        global font
+        global window_width
+        global window_height
+        global font_size
+        
+        font_size = get_font
+        FONT=("Helvetica", font_size)
+        window_width = width
+        window_height = height
+        MAIN_WINDOW.geometry(f"{window_width}x{window_height}")
+        
+        guide_window.configure(width=window_width - 20)
+        ## place widgets
+        #main_window
+        x_pos = 700 / 2
+        y_pos = window_height / 8
+
+        display_region.place(x=0, y=0, width=x_pos * 2, height=y_pos)
+        
+        display_current_completion.place(x=0, y=y_pos, width=x_pos * 2, height=y_pos * 2)
+        
+        stats_button.place(x=0, y=y_pos * 3, width=700 / 3, height=y_pos)
+        get_letter_guess.place(x=700 / 3, y=y_pos * 3, width=700 / 3, height=y_pos)
+        letter_guess_button.place(x=(700 / 3) * 2, y=y_pos * 3, width=700 / 3, height=y_pos)
+
+        display_user_message.place(x=0, y=y_pos * 4, width=x_pos * 2, height=y_pos)
+        
+        display_correct_guess.place(x=0, y=y_pos * 5, width=x_pos, height=y_pos)
+        display_incorrect_guess.place(x=x_pos, y=y_pos * 5, width=x_pos, height=y_pos)
+        correct_guess_container.place(x=0, y=y_pos * 6, width=x_pos, height=y_pos)
+        incorrect_guess_container.place(x=x_pos, y=y_pos * 6, width=x_pos, height=y_pos)
+
+        bottom_left_label.place(x=0, y=y_pos * 7, width=(700 / 3), height=y_pos)
+        show_streak.place(x=(700 / 3), y=y_pos * 7, width=(700 / 3), height=y_pos)
+        bottom_right_label.place(x=(700 / 3) * 2, y=y_pos * 7, width=(700 / 3), height=y_pos) 
+        
+        # window b
+        hint_frame.place(x=700, y=0, width=500, height=y_pos * 8)
+        show_hint.place(x=0, y=0, width=500, height=window_height - 90)
+        prev_hint_button.place(x=0, y=window_height - 90, width=500 / 3, height=70)
+        next_hint_button.place(x=(0) + (500 / 3), y=window_height - 90, width=500 / 3, height=70)
+        random_hint_button.place(x=(0) + (500 / 3) * 2, y=window_height - 90, width=500 / 3, height=70)
+        prev_hint_button.configure(text="Previous")
+        next_hint_button.configure(text="Next")
+        random_hint_button.configure(text="Random")
+        
+        #temp fix #2500
+        close_hint_button.place(x=(0) + (2500 / 3) * 3, y=window_height - 90, width=500 / 3, height=70)
+
+        guide_frame.place(x=700, y=0, width=500, height=y_pos * 8)
+        guide_frame.lower()
+        guide_window.place(x=0, y=0, width=500, height=y_pos * 7)
+        guide_window_close.place(x=0, y=(y_pos * 7) - 20, width=500, height=y_pos)
+        
+        stats_frame.place(x=700, y=0, width=x_pos * 2, height=y_pos * 8)
+        stats_frame.lower()
+        
+        stats_highest_streak.place(x=0, y=0, width=500 / 2, height=window_height / 4)
+        stats_current_percentage.place(x=500 / 2, y=0, width=500 / 2, height=window_height / 4)
+        
+        stats_correct_out_of.place(x=0, y=window_height / 4, width=500 / 2, height=window_height / 4)
+        stats_incorrect_out_of.place(x=500 / 2, y=window_height / 4, width=500 / 2, height=window_height / 4)
+        
+        stats_letters_correct.place(x=0, y=(window_height / 4) * 2, width=500 / 2, height=window_height / 4)
+        stats_letters_incorrect.place(x=500 / 2, y=(window_height / 4) * 2, width=500 / 2, height=window_height / 4)
+        
+        stats_window_close.place(x=0, y=(window_height / 4) * 3, width=500, height=(window_height / 4) - 20)
+        
+
+        MAIN_WINDOW.update()
+    
+
     # size toggles
     def toggle_size_a():
         size_toggle(400, 400, 14, 20)
     
     def toggle_size_b():
-        size_toggle(600, 400, 14, 20)
-    
-    def toggle_size_c():
-        size_toggle(700, 700, 20, 32)       
-    
-    def toggle_size_d():
-        size_toggle(1200, 700, 20, 38)    
+        size_toggle_b(1200, 600, 14, 20)
 
     def set_fg_colour(colour):
-        """sets foreground accent colour"""
+        """sets foreground colour"""
         
         # globals
         global current_fg
@@ -702,8 +823,8 @@ def main():
         prev_hint_button.configure(fg=FG)
         random_hint_button.configure(fg=FG)
         next_hint_button.configure(fg=FG)
-        show_hint_title.configure(fg=FG)
-
+        close_hint_button.configure(fg=FG)
+    
     def set_bg_colour(colour):
         """sets background colour"""
         
@@ -729,10 +850,10 @@ def main():
         stats_window_close.configure(bg=BG)
         guide_window_close.configure(bg=BG)
         show_hint.configure(bg=BG)
-        show_hint_title.configure(bg=BG)
         prev_hint_button.configure(bg=BG)
         random_hint_button.configure(bg=BG)
         next_hint_button.configure(bg=BG)
+        close_hint_button.configure(bg=BG)
     
     def set_accent_colour(colour):
         """sets primary accent colour"""
@@ -787,8 +908,13 @@ def main():
         set_accent_colour(ac)
         set_accent_colour_b(ac_2)
 
+        with open("colourscheme.txt", "w") as f:
+            current_colourscheme = bg[1:]
+            print(current_colourscheme, file=f)
+            f.close()
+
     def select_colour_samba():
-        colour_get("#ffffff", "#240000", "#240000", "#140000")
+        colour_get("#ffffff", "#140000", "#140000", "#140000")
 
     def select_colour_dune():
         colour_get("#000000", "#ffffbb", "#ffffcc", "#ffffdd")
@@ -797,13 +923,13 @@ def main():
         colour_get("#000000", "#ddffcc", "#eeffdd", "#eeffee")
 
     def select_colour_cobalt():
-        colour_get("#ffffff", "#000037", "#000046", "#eeee37")
+        colour_get("#ffffff", "#000007", "#000007", "#000007")
 
     def select_colour_black():
         colour_get("#ffffff", "#000000", "#000000", "#000000")
 
-    def select_colour_default():
-        colour_get("#ffffff", "#000000", "#000000", "#000000")
+    def select_colour_pearl():
+        colour_get("#000000", "#eeeeee", "#dddddd", "#eeeeee")
     
     def exit_cmd():
         """save current high score and exit"""
@@ -859,15 +985,18 @@ def main():
     stats_window_close = Button(stats_frame, text=(f"Close"), font=FONT, fg=FG, bg=BG, bd=BD, relief=RLF_2, activebackground="#ccddff", command=close_stats_show)
 
     # widgets b
-    show_hint_title = Label(text="Hint", font=FONT, fg=FG, bg=BG, bd=BD, relief=RLF_2)
-    show_hint = Label(font=FONT, fg=FG, bg=BG, bd=BD, relief=RLF_2, padx=100, wraplength=300)
+    hint_frame = LabelFrame(MAIN_WINDOW, text="Hint", font=FONT, fg=FG, bg=BG, bd=BD - 2, relief=GROOVE)
+    show_hint = Label(hint_frame, font=FONT, fg=FG, bg=BG, bd=BD, relief=RLF_2, padx=100, wraplength=300)
     show_first_hint()
-    prev_hint_button = Button(text="Previous", font=FONT, fg=FG, bg=AC, bd=BD, relief=RLF_2, activebackground="#ccddff",
+    prev_hint_button = Button(hint_frame, text="Previous", font=FONT, fg=FG, bg=AC, bd=BD, relief=RLF_2, activebackground="#ccddff",
             command=get_prev_hint)
-    next_hint_button = Button(text="Next", font=FONT, fg=FG, bg=AC, bd=BD, relief=RLF_2, activebackground="#ccddff",
+    next_hint_button = Button(hint_frame, text="Next", font=FONT, fg=FG, bg=AC, bd=BD, relief=RLF_2, activebackground="#ccddff",
             command=get_next_hint)
-    random_hint_button = Button(text="Random", font=FONT, fg=FG, bg=AC, bd=BD, relief=RLF_2, activebackground="#ccddff",
+    random_hint_button = Button(hint_frame, text="Random", font=FONT, fg=FG, bg=AC, bd=BD, relief=RLF_2, activebackground="#ccddff",
             command=get_random_hint)
+        
+    close_hint_button = Button(hint_frame, text="Close", fg=FG, bg=AC, bd=BD, relief=RLF_2, activebackground="#ccddff",
+            command=close_hint_show)
 
     # place widgets
     #main_window
@@ -894,11 +1023,11 @@ def main():
     bottom_right_label.place(x=(700 / 3) * 2, y=y_pos * 7, width=(700 / 3), height=y_pos) 
     
     # window b
-    show_hint_title.place(x=700, y=0, width=500, height=70)
-    show_hint.place(x=700, y=70, width=500, height=window_height- 140)
-    prev_hint_button.place(x=700, y=window_height - 70, width=500 / 3, height=70)
-    next_hint_button.place(x=(700) + (500 / 3), y=window_height - 70, width=500 / 3, height=70)
-    random_hint_button.place(x=(700) + (500 / 3) * 2, y=window_height - 70, width=500 / 3, height=70)
+    hint_frame.place(x=700, y=0, width=500, height=y_pos * 8)
+    show_hint.place(x=0, y=0, width=500, height=window_height - 90)
+    prev_hint_button.place(x=0, y=window_height - 90, width=500 / 3, height=70)
+    next_hint_button.place(x=(0) + (500 / 3), y=window_height - 90, width=500 / 3, height=70)
+    random_hint_button.place(x=(0) + (500 / 3) * 2, y=window_height - 90, width=500 / 3, height=70)
 
     guide_frame.place(x=700, y=0, width=500, height=y_pos * 8)
     guide_frame.lower()
@@ -919,6 +1048,22 @@ def main():
     
     stats_window_close.place(x=0, y=(window_height / 4) * 3, width=500, height=(window_height / 4) - 20)
 
+    # retrieve colourscheme
+    with open("colourscheme.txt", "r") as f:
+        saved_colourscheme = f.read()
+        if saved_colourscheme.strip() == "240000":
+            select_colour_samba()
+        elif saved_colourscheme.strip() == "ffffbb":
+            select_colour_dune()
+        elif saved_colourscheme.strip() == "ddffcc":
+            select_colour_mint()
+        elif saved_colourscheme.strip() == "000007":
+            select_colour_cobalt()
+        elif saved_colourscheme.strip() == "000000":
+            select_colour_black()
+
+        f.close()
+    
     #display_bar
     x_pos = 500
     y_pos = window_height
@@ -929,11 +1074,9 @@ def main():
     
     # scale menu
     window_scale_menu = Menu(settings_menu)
-    #window_scale_menu.add_command(label="400x400  (default)", command=toggle_size_a)
-    #window_scale_menu.add_command(label="600x400", command=toggle_size_b)
-    #window_scale_menu.add_command(label="700x700", command=toggle_size_c)
-    #window_scale_menu.add_command(label="1200x700", command=toggle_size_d)
-    #settings_menu.add_cascade(label="Window Scale", menu=window_scale_menu)
+    window_scale_menu.add_command(label="400x400", command=toggle_size_a)
+    window_scale_menu.add_command(label="1200x600  (default)", command=toggle_size_b)
+    settings_menu.add_cascade(label="Window Scale", menu=window_scale_menu)
     
     # shuffle menu
     shuffle_menu = Menu(settings_menu)
@@ -997,8 +1140,7 @@ def main():
     colourscheme_menu.add_command(label="Mint", command=select_colour_mint)
     colourscheme_menu.add_command(label="Cobalt", command=select_colour_cobalt)
     colourscheme_menu.add_command(label="Black", command=select_colour_black)
-    colourscheme_menu.add_separator()
-    colourscheme_menu.add_command(label="Default", command=select_colour_default)
+    colourscheme_menu.add_command(label="Pearl", command=select_colour_pearl)
     settings_menu.add_cascade(label="Colorscheme", menu=colourscheme_menu)
     settings_menu.add_separator()
     settings_menu.add_command(label="Exit", command=exit_cmd, accelerator="Ctrl+Q")
@@ -1008,6 +1150,7 @@ def main():
     about_menu = Menu(top_menu)
     about_menu.add_command(label="Guide", command=guide_show, accelerator="Ctrl+H")
     about_menu.add_command(label="Stats", command=stats_show, accelerator="Ctrl+T")
+    about_menu.add_command(label="Hints", command=hint_show, accelerator="Ctrl+N")
     top_menu.add_cascade(label="About", menu=about_menu)
     
     MAIN_WINDOW.config(menu=top_menu)
@@ -1037,6 +1180,12 @@ def main():
     def callback_close_stats(event):
         close_stats_show()
     
+    def callback_open_hint(event):
+        hint_show()
+    
+    def callback_close_hint(event):
+        close_hint_show()
+    
     def callback_previous_hint(event):
         get_prev_hint()
     
@@ -1054,6 +1203,9 @@ def main():
     MAIN_WINDOW.bind("<Control-Alt-KeyPress-h>", callback_close_guide)
     MAIN_WINDOW.bind("<Control-KeyPress-t>", callback_open_stats)
     MAIN_WINDOW.bind("<Control-Alt-KeyPress-t>", callback_close_stats)
+    MAIN_WINDOW.bind("<Control-KeyPress-n>", callback_open_hint)
+    MAIN_WINDOW.bind("<Control-Alt-KeyPress-n>", callback_close_hint)
+    MAIN_WINDOW.bind("<Control-KeyPress-Right>", callback_previous_hint)
     MAIN_WINDOW.bind("<Control-KeyPress-Right>", callback_previous_hint)
     MAIN_WINDOW.bind("<Control-KeyPress-Up>", callback_random_hint)
     MAIN_WINDOW.bind("<Control-KeyPress-Left>", callback_next_hint)

@@ -151,7 +151,7 @@ el_salvador_facts = [
         "Gained independent from Spain on September 15, 1821.",
         "The territory was once occupied by Olmecs, followed by the Mayans.",
         "The smallest and the most densely populated country in Central America.",
-        "'The torogoz' is the national bird." ,
+        "'The torogoz' is the national bird.",
         "Has only two seasons, unlike other countries that have four. The wet season runs from May to October, and the dry season runs from November to April.",
         "The only country in Central America not to have a Caribbean coastline.",
         "Barra de Santiago",
@@ -188,8 +188,8 @@ mexico_facts = [
         ]
 
 nicaragua_facts = [
-        "Miskito, Rama, and Sumo are some of its regional languages." ,
-        "Honduras and Costa Rica are its two land bordering countries." ,
+        "Miskito, Rama, and Sumo are some of its regional languages.",
+        "Honduras and Costa Rica are its two land bordering countries.",
         "Consists of three definite geographical regions:  the Atlantic Lowlands, the North-Central Highlands and the Pacific Lowlands.",
         "Hom to the Dual Volcano, the only one in the world that is fed by two separate flows of magma.",
         "This country uses the intense steam from deep inside its volcanoes for geothermal energy.",
@@ -238,7 +238,7 @@ argentina_facts = [
         "The countrys declaration and fight for independence (1810-1818) lead to an extended civil war lasting until 1861.",
         "Its name comes from the Latin word argentums (\"silver\") and stems from a legend that it was a land of silver mountains. In Spanish the word is \"plata\" and it was named by the first European explorers of the La Plata Basin.",
         "It is traditional to travel home after lunch daily to take a siesta.",
-        "Has vineyards that have been producing wine since the 16th century." ,
+        "Has vineyards that have been producing wine since the 16th century.",
         "Holds some of the world's finest wine.",
         "The world's fifth leading wine producer with arounf 1,800 wineries in the country presently.",
         "Home to Iguazu Falls, composed of some 275 waterfalls, forming a semicircle of 1.9 miles of waterfalls.",
@@ -246,7 +246,7 @@ argentina_facts = [
     ]
 
 bolivia_facts = [
-        "A landlocked country located in western-central South America." ,
+        "A landlocked country located in western-central South America.",
         "Bordered by Argentina, Chile, Peru, Brazil and Paraguay.",
         "One of the only two landlocked South American countries.",
         "The highest and most isolated country in South America.",
@@ -315,7 +315,7 @@ colombia_facts = []
 
 ecuador_facts = [
         "Founded in 1532 by the Spanish, who drove out the Incans to claim it.",
-        "The only country in the world named after a geographical feature." ,
+        "The only country in the world named after a geographical feature.",
         "One of only two South American countries that do not share a border with Brazil.",
         "The world's largest exporter of bananas, exporting 2.7 billion worth of them annually (23.3% of total banana exports, 2016).",
         "Provides the majority of the world's balsa wood.",
@@ -419,7 +419,7 @@ france_facts = [
         "Inventor of the parachute, the hot air balloon, the motion picture camera, the bicycle and inflatable tires for cars are all French inventions.",
         "The license plates that we see today on automobiles were first introduced here.",
         "One of the largest producers of wine in the world.",
-        "12 time zones in use." ,
+        "12 time zones in use.",
         "Sleep the most among people in the developed world.",
         "The Mona Lisa.",
         "The Louovre.",
@@ -508,9 +508,9 @@ netherlands_facts = [
         ]
 
 belgium_facts = [
-        "Brussels is its capital and largest city." ,
+        "Brussels is its capital and largest city.",
         "It has four bordering countries that are France, Germany, Luxembourg, and the Netherlands.",
-        "One of the six founding countries of the European Union." ,
+        "One of the six founding countries of the European Union.",
         "Its flag is a tricolor with black, yellow and red vertical strips.",
         "Use the metric system.",
         "About one-tenth of the population is biligual.",
@@ -544,7 +544,7 @@ czech_republic_facts = [
         "Highest beer consumption per capita in the world.",
         "Mushroom hunting is a favorite pastime.",
         "Home to 25 protected landscaped areas and four national parks in addition to broadleaf and conifer forests, rivers and mountains.",
-        "Known as the castle capital of the world." ,
+        "Known as the castle capital of the world.",
         ]
 
 greece_facts = [] 
@@ -648,7 +648,7 @@ bulgaria_facts = [
         "It has five bordering countries that are Romania, Serbia, Republic of Macedonia, Greece, and Turkey.",
         "A land of mountains, hiking trails, ski resorts for the winter and beach resorts on the Black Sea.",
         "The Varna invented gold working and were some of the first gold smelters.",
-        "One of the oldest countries in Europe predating the Roman Empire." ,
+        "One of the oldest countries in Europe predating the Roman Empire.",
         "One of ony two countries that refused to send its Jewish population to concentration camps.",
         "A member of the European Union, the Council of Europe, and NATO.",
         "The only country in the Europe whose name has not changed since the original establishment of the country (in 681 AD).",
@@ -691,7 +691,7 @@ croatia_facts = [
         "Its five land bordering countries are Bosnia and Herzegovina, Hungary, Montenegro, Serbia, and Slovenia.",
         "Was once a kingdom in 925 under the kingship of Tomislav, the first king of the country.",
         "The country also has a system of lakes with distinctive colors including mint green, grey or blue.",
-        "The Sea Organ." ,
+        "The Sea Organ.",
         "A rich country in biodiversity.",
         "There is a museum in here dedicated to Frogs doing some people work.",
         ]
@@ -734,7 +734,7 @@ cyprus_facts = []
 
 luxembourg_facts = [
         "Home to the Ardennes - a region of steep-sided valleys carved by beautiful rivers and covered in dense forests.",
-        "One of the world's major business and financial centers." ,
+        "One of the world's major business and financial centers.",
         "We want to remain what we are.",
         "The country is divided into four geographical and cultural regions.",
         "The cuisine is heavily influenced by French and German cuisine, with more recent influences from their Italian and Portuguese immigrants.",
@@ -766,7 +766,7 @@ norway_facts = [
         "The country is famous for some of its greatest waterfalls.",
         "Home to Vinnufossen - the world's sixth tallest and Europe's highest waterfalls.",
         "The least likely to be affected by climate change.",
-        "A very long country." ,
+        "A very long country.",
         "Has one of the longest coastlines in the world.",
         "The country has the largest glacier in mainland Europe - Jostedalsbreen.",
         "Home to Hornindalsvatnet - Europe's deepest lake.",
@@ -784,7 +784,7 @@ iceland_facts = [
         "Gained its independence in 1918.",
         "The last land in Europe to be settled and populated. It is the youngest country in the world in terms of land form.",
         "The 18th largest island in the world and Europe's second largest island after Great Britain.",
-        "The Reykjanes lava fields are a geothermal wonder and a beautiful place where lighthouses outnumber villages." ,
+        "The Reykjanes lava fields are a geothermal wonder and a beautiful place where lighthouses outnumber villages.",
         "About 30 percent of the country is lava fields.",
         "Home of the famous Blue Lagoon.",
         "Home to Vatnajokull glacier - the largest ice cap in Europe.",
@@ -882,7 +882,7 @@ ukraine_facts = [
 
 belarus_facts = [
         "A landlocked country in Eastern Europe.",
-        "Its five land bordering countries are Latvia, Lithuania, Poland, Russia, and Ukraine." ,
+        "Its five land bordering countries are Latvia, Lithuania, Poland, Russia, and Ukraine.",
         "White Russia.",
         "Gained its independence on December 26th, 1991.",
         "The conomy is mainly dependent on the agriculture and manufacturing industries.",
@@ -973,29 +973,29 @@ pakistan_facts = [
         ]
 
 bangladesh_facts = [
-        "A remarkable South Asian country filled with many waterways and lush greenery." ,
+        "A remarkable South Asian country filled with many waterways and lush greenery.",
         "Its fertile plains, including Meghna, Padma, and Jamuna, and the famous river delta dot its landscape.",
         "Attained its independence in 1971 after a nine-month war with Pakistan.",
         "My Golden Bengal.",
         "The country has a dark green flag similar to that of Pakistan but with a red circle placed slightly off its center to represent the country's bloodshed while fighting for independence. The dark green color symbolizes the country's rich vegetation and the Islamic faith.",
-        "Shares land borders with Myanmar and India." ,
+        "Shares land borders with Myanmar and India.",
         "China, Bhutan, and Nepal do not have land borders with Bangladesh but they are near it.",
         "The most populous and largest of the 10 most densely populated countries in the world.",
         "Home to Mahasthangarh - the oldest city. The archaeological site has a history that dates back to around 300 BCE.",
         "A renowned tea-producing country, and it's rated among the top 10 largest tea producers globally.",
         "It's estimated that around 3% of global tea is from here.",
-        "Jackfruit is the national fruit native to parts of southeast and south Asia." ,
+        "Jackfruit is the national fruit native to parts of southeast and south Asia.",
         "Banana is the most popular and common fruit.",
         "The national animal is the Royal Bengal Tiger.",
         "The rich vegetarian diet also means that this is one of the least obese countries globally.",
-        "Home to the city of mosques." ,
+        "Home to the city of mosques.",
         "This is a largely flat country with a low-lying landscape. As a result, it is frequently subjected to annual flooding, especially when the snow melts from the Himalayas.",
         "Its landscape consists of 67% of arable land, forests and woodland account for 16%, while meadows and pastures account for 4% of the land.",
         "It has many historical and archaeological sites with a history dating back to around the 3rd century BC.",
         "There are over 700 rivers found here, with the most scenic ones including Meghna, Jamuna, and the Padma.",
         "The Ganges - Brahmaputra-Meghna form the most populous and largest delta system globally.",
         "It has more than 8,000 km of inland waterways.",
-        "The national game is Kabbadi." ,
+        "The national game is Kabbadi.",
         "However, cricket and football are the most popular sports, and the country has risen to become one of the most popular cricket teams globally.",
         "It's considered a sign of immaturity if you smile too much.",
         "This country is known as the \"playground of seasons\" since it has six seasons: summer, autumn, winter, spring, late autumn, and monsoon.",
@@ -1027,12 +1027,12 @@ sri_lanka_facts = [
         "The pearl of the Indian ocean.",
         "The Land of Rice.",
         "Cricket is the most popular sport.",
-        "Colonized by three colonizers before finally gaining its independence in 1948." ,
+        "Colonized by three colonizers before finally gaining its independence in 1948.",
         "Used to be called Ceylon.",
         "Home to around 91 mammal species distributed throughout the country.",
         "26.5% of its land is listed as Protected.",
         "The country has the highest percentage of protected land compared to other Asian countries and across the world. Of this protected land, there are 92 Key Biodiversity designated areas, which are listed as irreplaceable.",
-        "Over 400 waterfalls." ,
+        "Over 400 waterfalls.",
         "The country prides itself on hosting some of the highest density of waterfalls in the world.",
         "Home to the Jaya Sri Tree, the world's oldest human tree, which is backdated to 288 BC, is still found in Sri Lanka's Mahamewna gardens.",
         "Home to Unique Fruits.",
@@ -1042,85 +1042,322 @@ sri_lanka_facts = [
         "Its national symbol includes a lion, and a water lily.",
         ]
 
-bhutan_facts = [] 
+bhutan_facts = [
+        "It is landlocked by its more prominent neighbours, China (Tibet Autonomous Region) to the north and India to the east.",
+        "Believed to have been inhabited as early as 2000 B.C.",
+        "Language of the palace",
+        "The takin is the national.",
+        "Its highest point is Gangkhar Puensum at 24,840 ft. It remains the highest unclimbed peak in the world.",
+        ]
 
-maldives_facts = [] 
+maldives_facts = [
+        "The lowest country in the world.",
+        "Two seasons dominate this countrys weather: whe winter northeastern monsoon season and the rainy southwestern summer monsoon season.",
+        "People from India were the first to officially colonize these islands, sometime before 269 B.C.",
+        "Its first kingdom was established by an exiled Indian prince, disgraced son of the king of Kalinga in India.",
+        "The customs and people of this country were greatly influenced by Indians, Sri Lankans, North Africans, Arabs and Europeans traveling through the trade routes of the Indian Ocean.",
+        "The smallest Muslim country of any in the entire world.",
+        "Home to five of the world's seven species of marine turtles: the green turtle, the hawksbill, the olive ridley turtle, the loggerhead, and the leatherback turtle.",
+        ]
 
-indonesia_facts = [] 
+indonesia_facts = [
+        "The world's largest archipelago, the world's third-most-populous democracy, and the world's largest Muslim-majority nation.",
+        "More than 50% of the country is covered by forests.",
+        "Has more volcanoes than any other country in the world.",
+        "Home to the Javan rhino - an animal native to the country that cannot be seen anywhere else in the world.",
+        "Home to the Komodo dragon.",
+        "Lakes that change colors.",
+        "There are three lakes at the top of an Indonesian volcano--Kelimutu--that change colors from turquoise to green, red and black.",
+        "Home to the world's largest flower - the Rafflesia Arnoldi.",
+        "The country's inhabitants use more than 700 languages across its span.",
+        "Home to the largest economy in Southeast Asia.",
+        "Home to the world's thirteenth-largest island - Java.",
+        "Many, yet one.",
+        "The world's second-largest biodiverse nation.",
+        ]
 
-phillipines_facts = [] 
+phillipines_facts = [
+        "The third largest English speaking country in the world.",
+        "The world's second largest archipelago made up of over 7,100 islands.",
+        "The country is divided into three key geographical areas. Luzon is the large island to the north on which the capital city Manila is located. Mindanao is the large island to the south. The Visayas are the group of islands lying between them in the middle. The countrys flag has three stars on it to symbolize these three sections of the country.",
+        "The country has the fifth largest coastline of any country in the world.",
+        "Located on the western edge of the Pacific's Ring of Fire.",
+        "The country has hundreds of volcanoes and an average of 20 earthquakes per day.",
+        "The three most active volcanoes in the country are Mount Pinatubo, the Taal Volcano, and the Mayon Volcano.",
+        "The Negritos were the area's earliest inhabitants in prehistoric times.",
+        "A Spanish colony for over 300 years.",
+        "They supply the rest of the world with approximately 25 percent of all the overseas nurses that are available worldwide.",
+        ]
 
-vietnam_facts = [] 
+vietnam_facts = [
+        "It is bordered by three countries - China, Laos, and Cambodia.",
+        "Their culture is a complex adaptation of Chinese, Japanese, French and American colonial influences.",
+        "Home to the world's largest cave, Son Doong.",
+        "Their cuisine is well known for its balance of the five Asian elements; spicy, sour, bitter, salty and sweet.",
+        ]
 
-thailand_facts = [] 
+thailand_facts = [
+        "It has four bordering countries that are Cambodia, Laos, Malaysia, and Myanmar.",
+        "One of the few nations where a monarch is still present.",
+        "A land never colonized by European powers.",
+        "The land of white elephants.",
+        "One of the two places on earth where people actually play elephant polo.",
+        "Home to the world's largest fish, the whale shark.",
+        "The world's largest exporter of orchids.",
+        "The world's second-largest exporter of rice.",
+        ]
 
 burma_facts = [] 
 
-malaysia_facts = [] 
+malaysia_facts = [
+        "one of asia's financial powerhouses.",
+        "it holds a unique place in the world as the only country that sits on both the malay archipelago and mainland asia.",
+        "land of the malays",
+        "the malayan tiger is this countrys national animal.",
+        "home to the largest known cave chamber in the world.",
+        "home of the king cobra.",
+        "its climate is tropical rainforest, which means it experiences warm, humid, and sunny weathers on most days and lots of rainfall starting in october until march.",
+        "jimmy choo.",
+        "sabah is one of malaysia's shining jewels. sabah, which sits on the northern point of borneo, is home to some of the world's most beautiful beaches, rivers, limestone caves, and fertile plains.",
+        "gained its independence from the united kingdom on the 31st of  august 1957.",
+        ]
 
-cambodia_facts = [] 
+cambodia_facts = [
+        "It has three bordering countries that include Thailand, Vietnam, and Laos.",
+        "Multiple cities have been revealed between 900 and 1,400 years old beneath the tropical forest floor.",
+        "One of the fastest-growing economies in Asia with an average growth rate of more than 6% in the last ten years.",
+        ]
 
 laos_facts = [] 
 
-singapore_facts = [] 
+singapore_facts = [
+        "Consists of 63 smaller islands.",
+        "The countrys national icon is The Merlion, a creature that is half lion and half fish.",
+        "Syonan-to, which means the Light of the South, was the name given to the country under Japanese occupation.",
+        "The countrys first name was Temasek which literally meant sea town. A name which holds good even today.",
+        ]
 
 timor_leste_facts = [] 
 
-brunei_facts = [] 
+brunei_facts = [ 
+        "One of the only absolute monarchies left in Asia.",
+        "The 3rd Largest Oil Producer in Southeast Asia.",
+        "78% of the country is Covered by Rainforests.",
+        "Gained its independence from the United Kingdom on January 1 1984.",
+        ]
 
-egypt_facts = [] 
+egypt_facts = [ 
+        "It has four bordering regions that include the Gaza Strip, Israel, Libya, and Sudan.",
+        "Home to more than 130 pyramids.",
+        "Pyramid of Giza.",
+        ]
 
-iran_facts = [] 
+iran_facts = [
+        "Also called Persia.",
+        "Its five land bordering countries are Afghanistan, Turkey, Azerbaijan, Pakistan, and Iraq.",
+        "A multicultural country comprised of various ethnic and religious groups.",
+        "Persian milk",
+        "Famous for beautiful gardens. The word \"paradise\" comes from a Persian word that means \"enclosed garden\".",
+        ]
 
-iraq_facts = [] 
+iraq_facts = [
+        "Its six bordering countries are Turkey, Iran, Kuwait, Jordan, Saudi Arabia, and Syria.",
+        "Deeply rooted, well watered; fertile.",
+        "Under British rule for 17 years, and Ottoman rule for centuries.",
+        "It gained independence from Britain on October 3, 1932.",
+        "Home to the world's first writing system and recorded history.",
+        "The Tigris and Euphrates are the two major rivers of this country.",
+        "Land amidst the rivers",
+        "Considered to be one of the cradles of civilization.",
+        "Has been home to indigenous Akkadian, Assyrian, Babylonian and Sumerian empires in its history.",
+        ]
 
-saudi_arabia_facts = [] 
+saudi_arabia_facts = [ 
+        "The birthplace of Islam.",
+        "served as an ancient trade center.",
+        "Harry Potter books have been banned here.",
+        "9th Largest stock market.",
+        "Biggest Camel Market.",
+        "Top Importer of Tobacco.",
+        "Has invested heavily in 5G, machine learning, the Internet of Things, blockchain, robotics, and artificial intelligence.",
+        "Home to King Fahd's Fountain - the worlds tallest water fountain.",
+        "Home to the world's largest desalination plant - the al-Jubail.",
+        "Sidewalk skiing.",
+        "Its national include colors green, white.",
+        "Borders Jordan, Iraq, Kuwait, Qatar, U.A.E, Oman, and Yemen.",
+        "Its terrain mostly sandy desert.",
+        ]
 
 yemen_facts = [] 
 
-syria_facts = [] 
+syria_facts = [ 
+        "It is bordered by Turkey, Lebanon, Israel, Iraq, and Jordan.",
+        "A founding member of the United Nations.",
+        "Home to \"Jasmine City\" - one of the oldest continuously inhabited cities in the world.",
+        "The largest Arab state to emerge from the ruins of the Ottoman Empire.",
+        ]
 
 jordan_facts = [] 
 
 united_arab_emirates_facts = [] 
 
-israel_facts = [] 
+israel_facts = [
+        "Its shares its land border with four countries (Syria, Lebanon, Jordan, and Egypt.)",
+        "The Mediterranean sea is its western.",
+        "Has the highest concentration of high-tech and startup companies (over 3,000) in the world outside of the United States.",
+        "A world leader in the invention of new technologies.",
+        "Producer of the cell phone, voice mail technology, the first antivirus software, the Pentium MMX chip technology and most of the Window NT operating system.",
+        "The world's largest wholesale diamond center and most of the cut and polished diamonds in the world come from the country.",
+        "The first nation to adopt the Kimberly process.",
+        "The world's biggest consumers of fruits and vegetables.",
+        "The airspace above this country is a bird superhighway.",
+        "The only country in the world that has the same name, is located in the same land and speaks the same language as it did 3,000 years ago.",
+        ]
 
-lebanon_facts = [] 
+lebanon_facts = [
+        "Its land bordering countries are Israel and Syria.",
+        "The smallest recognized country on the entire mainland Asian continent.",
+        "The Switzerland of the East",
+        "This country was part of the Ottoman Empire Between 1516 and 1918.",
+        "Receives almost 80% of its yearly rainfall between November and March.",
+        "Has over 3,000 species of flora.",
+        "An important commercial hub for the Middle East.",
+        "The first Arab country to permit private radio and TV.",
+        ]
 
-oman_facts = [] 
+oman_facts = [
+        "Its land bordering countries are United Arab Emirates, Saudi Arabia, and Yemen.",
+        "Trade of fish, dates and some agricultural products along with tourism form a significant portion of the economy of this country.",
+        "One of the oldest human-inhabited places on the planet.",
+        "It is estimated that humans have been living in the country for at least 106,000 years.",
+        "It is also the oldest independent state in the Arab world.",
+        "A member of the United Nations and the Arab league.",
+        "Credited with being the greatest ship builders in the world.",
+        "In earlier times, this country made a lot of money from the trade of incense.",
+        ]
 
 palestine_facts = [] 
 
-kuwait_facts = [] 
+kuwait_facts = [
+        "Its two land bordering countries are Saudi Arabia and Iraq.",
+        "Its name is derived from Arabic word \"Kut\", meaning \"fort\".",
+        "Home to the world's sixth largest oil reserves.",
+        "Gained its independence in 1961.",
+        ]
 
-qatar_facts = [] 
+qatar_facts = [
+        "saudi arabia is its only land bordering country.",
+        "among the top ten leading producers of lng - liquefied natural gas.",
+        ]
 
-bahrain_facts = [] 
+bahrain_facts = [
+        "The two seas.",
+        "Third in the world in terms of electric power consumption per capita with only Iceland and Norway posting higher numbers.",
+        "Home to Jabal ad Dukhan which translates to \"mountain of smoke\".",
+        "Has no rivers, lakes, or streams.",
+        "It has the lowest supply of freshwater in the world.",
+        "Annexed by the First Persian Empire.",
+        "The ancient Greeks called the land Tylos, then known as the center of pearl trading.",
+        "Produce the world's first 3D-printed coral reef.",
+        "First Grand Prix in the Middle East.",
+        "Largest Underwater Theme Park.",
+        ]
 
 china_facts = [
         "Winners of the 1962 World Cup.",
+        "Its land bordering countries are Russia, Mongolia, Kazakhstan, Kyrgyzstan, Tajikistan, Afghanistan, Pakistan, India, North Korea, Nepal, Bhutan, Myanmar, Laos, and Vietnam.",
+        "Has the most number of neighbors touching its borders.",
+        "The world's most populous country.",
+        "Inventor of football.",
+        "The first people to fly.",
+        "Invented ice cream by mixing together milk, rice, and snow.",
+        "Invented the water wheel in A.D. 31 and the Iron plow.",
         ] 
 
 japan_facts = [
         "Winners of the 2002 World Cup.",
+        "Shares maritime borders with the following regions: Taiwan (Republic of China), the Northern Mariana Islands (US territory), the Philippines, Russia, South Korea, China, and North Korea.",
+        "Land of the Rising Sun",
+        "A member of the UN, the G7, the G8, and the G20.",
+        "Square watermelons for the sake of ease of storing.",
+        "One of the leading countries to produce animated shows.",
+        "The sun's origin",
+        "Home to Mount Fuji.",
+        "ASIMO.",
+        "Home to the maglev bullet train - the fastest train in the world.",
         ] 
 
 south_korea_facts = [
         "Winners of the 2002 World Cup.",
+        "Known for its for high-end manufacturing capabilities (especially computer chips) and vibrant culture.",
+        "Among the most advanced economies and democracies in Asia.",
+        "After Japan's surrender in WWII the country was divided in two, the northern part occupied by the Soviet Union, and the southern by the United States.",
+        "Blood types are so important.",
+        "Has the world's fastest wireless internet speeds.",
+        "The computer chips used in Apple's iPhones are made by the company Samsung which is also one of the leading producers of smartphones in the world.",
+        "A mountainous country.",
+        "Has three main rivers and over 4000 islands dotted around its coastline.",
+        "Marriage is extremely popular in the country.",
+        "They tie with Japan for having among the lowest levels of obesity in the world.",
+        "Around a fifth or all men in this country enjoy using makeup and spend close to $1 billion a year to make themselves more attractive.",
+        "The country leads the world in the harvesting of seaweed for human consumption and produces over 90% of the world's supply; some seaweed farms are so extensive they can be seen from space.",
+        "Home to the Shinsegae department store - the largest in the world.",
+        "The country is home to the oldest astronomical observatory in the world, the Cheomseongdae Observatory, which is located in Gyeongju and was built in the mid sixth century.",
+        "Fruit is extremely expensive in the country and is regarded as a generous gift.",
+        "The national animal of the country is the Siberian tiger.",
+        "The countrys national flower is called the Mugunghwa (Rose of Sharon).",
+        "As well as the tiger the country is home to a number of rare and endangered species including the Amur leopard, Golden eagle and lynx, among others.",
         ] 
 
-north_korea_facts = [] 
+north_korea_facts = [
+        "Its three bordering countries are China, Russia, and South Korea.",
+        "Home to the world's largest stadium, boasting a seating capacity of 150,000.",
+        "There are only 28 styles of approved haircuts from which to choose in this country.",
+        "Red Star OS",
+        "NADA",
+        "Has one of the largest armies in the world.",
+        "Their citizens have limited access to television, radio and other forms of communication and media information.",
+        "They have their own intranet - \"Kwangmyong.\" It was opened in 2000 and includes a browser, email, news and search capabilities. They do not have the open internet as it exists in other parts of the world. Most things there are restricted.",
+        ]
 
-mongolia_facts = [] 
+mongolia_facts = [
+        "Genghis Khan.",
+        "A landlocked, unitary sovereign state in East Asia.",
+        "Lies between China to the South and Russia to the North.",
+        "With an average altitude of 1580 m above sea level, it is one of the highest countries in the world.",
+        "Almost 3/4^th of its land area is pastureland, which supports the lives of its grazing livestock.",
+        "Pprone to earthquakes some of whom are severe in nature.",
+        "Does not share direct contact with an ocean.",
+        "The country is famous for its nomadic lifestyle and traditions.",
+        "The country is one of the last nations in the world to have such a high proportion of nomads among its population.",
+        "Due to certain geographical limitations, spices are not grown in the country.",
+        ]
 
-azerbaijan_facts = [] 
+azerbaijan_facts = [
+        "Its four land bordering countries are Georgia, Russia, Iran, and Armenia.",
+        "Also known as \"the Land of Fire\".",
+        "Briefly became independent between 1918 and 1920; however, it was once again incorporated into the Soviet Union for the next seventy years.",
+        "Inhabited since the Paleolithic age.",
+        "The home of two of the world class chess players - Garry Kasparov and Teymur Rajabov.",
+        "Mountains cover 60% area of the country and the remaining is covered by plains and lowlands.",
+        "Located at the intersection of the temperate and subtropical climate zones.",
+        "Also known as \"the museum of mineral waters.\"",
+        "Istisu (hot water spring), Sirab, and Badamly are famed mineral waters. The country has more than 1000 unlimited mineral water resources.",
+        "A land of many rivers.",
+        "Home to the world's first offshore oil platform - Oil Rocks.",
+        "Home to the first university in the East.",
+        "National Animal - the horse.",
+        ]
 
 georgia_facts = [] 
 
 armenia_facts = [] 
 
-uzbekistan_facts = [] 
+uzbekistan_facts = [
+        "Its five land bordering countries are Kazakhstan, Kyrgyzstan, Tajikistan, Afghanistan and Turkmenistan.",
+        "Once part of the ancient Persian Empire.",
+        "The country is the world's second-largest cotton exporter and fifth largest producer.",
+        ]
 
 kazakhstan_facts = [] 
 
@@ -1130,27 +1367,95 @@ kyrgyzstan_facts = []
 
 turkmenistan_facts = [] 
 
-algeria_facts = [] 
+algeria_facts = [
+        "A land bordered by the Morocco, Mauritania, Mali, Niger, Libya, Tunisia, and Western Sahara.",
+        "Shares maritime borders with Italy and Spain.",
+        "Commonly called the country of cherries and dates.",
+        "The Fennec Fox is thier national animal.",
+        "Les Fennecs.",
+        "Has competed at every summer Olympics since 1964, winning five gold medals and 17 medals overall.",
+        "The largest country by area in all of Africa.",
+        "The tenth-largest country in the world.",
+        "Only 12 percent of its land is inhabited.",
+        "Over 90 percent of the country is covered by the Sahara desert.",
+        "Its longest river is the Chelif.",
+        "During its history, the country has been ruled by Romans, Germanic tribes, Byzantines, the Spanish, Turks and the French.",
+        "In its earliest time, the country was known as Numidia.",
+        ]
 
-sudan_facts = [] 
+sudan_facts = [
+        "Its land bordering countries are Egypt, Eritrea, Ethiopia, South Sudan, Central African Republic, Chad and Libya.",
+        "A member of the United Nations, the African Union, the Arab League, the Organisation of Islamic Cooperation and the Non-Aligned Movement, as well as an observer in the World Trade Organization.",
+        "Once the largest and the most geographically diverse state in South Africa.",
+        "On January 1, 1956, the country gained independence from Egypt and the UK.",
+        "The river Nile.",
+        "Home to the Red Sea.",
+        ]
 
-morocco_facts = [] 
+morocco_facts = [
+        "Has been inhabited by humans since the Paleolithic era of prehistoric times.",
+        "Gained their independence in 1956.",
+        "Cannabis is grown in the Rig Mountains and according to the French Ministry, 80 percent of the hashish consumed in Europe comes from here.",
+        ]
 
 tunisia_facts = [] 
 
-south_sudan_facts = [] 
+south_sudan_facts = [
+        "The youngest country in the world.",
+        "The most multi-lingual state in Africa.",
+        "The country is landlocked. It has many neighbors who include Sudan, Kenya, Congo and Ethiopia, Uganda and the Central African Republic.",
+        "Games and sports played in the country include football, basketball, wrestling and mock battles.",
+        "The country gained independence on July 9, 2011 after it broke away from the mother country Sudan in 2011.",
+        "Its natural resources include hydropower, fertile agricultural land, gold, diamonds, petroleum, hardwoods, limestone, iron ore, copper, chromium ore, zinc, tungsten, mica, and silver.",
+        ]
 
-libya_facts = [] 
+libya_facts = [
+        "Its six land bordering countries are Algeria, Chad, Egypt, Niger, Sudan, and Tunisia.",
+        "Known as the Mermaid of the Mediterranean for its turquoise waters and whitewashed buildings.",
+        ]
 
 south_africa_facts = [
         "Winners of the 2010 World Cup.",
+        "Six countries that share land borders with South Africa are Botswana, Mozambique, Namibia, Swaziland, Lesotho and Zimbabwe.",
+        "Home to the longest continuous wine route on earth.",
+        "The largest meat producer in Africa.",
+        "Home to Table Mountain - one of the oldest mountains on the planet.",
+        "The only country in the world where right-hand drive cars are produced by Mercedes Benz.",
+        "Home to the Bloukrans Bridge - the highest bridge for bungee jumping in the world.",
+        "Home to four of the seven fastest mammals on earth - the lion, wildebeest, cheetah and the springbok.",
+        "It is believed to be the home of the largest man-made forest on earth.",
+        "The country generates two-thirds of Africa's electricity.",
+        "Most of the world's macadamia nuts come from here.",
+        "Three times bigger than Texas, and five times bigger than Japan.",
+        "Completely surrounds the kingdom of Lesotho.",
+        "Home to the African elephant - the largest land mammal in the world.",
+        "Home to the tallest animal in the world, the giraffe.",
+        "Home to the Least Dwarf Shrew - the smallest mammal in the world.",
+        "Home to the world's largest reptile - the Leatherback Turtle.",
+        "Home to the largest and the slowest antelope in the world, the Eland.",
+        "The whale shark is found in the ocean waters of this country.",
+        "Producer of about 1/5 of the world's gold.",
+        "Home to about 900 different types of birds.",
+        "The world's largest bird, the ostrich, is found here.",
+        "Its climate consists of wetlands, deserts, bush, grasslands, mountains, escarpments, and subtropical forests.",
+        "No other country in the world abandoned its nuclear arms program voluntarily like this country did.",
+        "The oldest human remains, more than 160,000 years old, were discovered here.",
+        "There are only 6 floral kingdoms on the planet, and this country is home to one of them, namely Fynbos.",
         ] 
 
 namibia_facts = [] 
 
 botswana_facts = [] 
 
-lesotho_facts = [] 
+lesotho_facts = [
+        "A high-altitude country.",
+        "The Kingdom in the Sky.",
+        "\"Thabana Ntlenyana\" at 3,482 m is the highest point in the country.",
+        "The junction of the Orange and Makhaleng Rivers at 1,400 m is the lowest point in the country. It is also the highest lowest point of any country in the world.",
+        "Lesotho is the only country in the world entirely above 1,000 m.",
+        "A mountainous country with more than 80% of the country 1,800 m above sea level.",
+        "Radio is the most popular form of media in the country.",
+        ]
 
 swaziland_facts = [] 
 
@@ -1172,23 +1477,51 @@ equatorial_guinea_facts = []
 
 sao_tome_and_principe_facts = [] 
 
-ethiopia_facts = [] 
+ethiopia_facts = [
+        "Its six land bordering countries are Eritrea, Djibouti, Somalia, Sudan, South Sudan, and Kenya.",
+        "The main nation within Africa that was never formally colonized.",
+        "Among the oldest countries on the planet, having been established in 980 B.C.",
+        "The only country in the world to have 13 months in a year.",
+        "Home to the oldest fossil skeleton of a human.",
+        "The tenth-largest country in Africa.",
+        ]
 
 tanzania_facts = [] 
 
-kenya_facts = [] 
+kenya_facts = [
+        "Its five land bordering countries are Ethiopia, Somalia, South Sudan, Tanzania, and Uganda.",
+        "Named after Mt Kenya, the tallest mountain in the country and the second-highest in Africa, after Kilimanjaro.",
+        "Between 1920 and 1963, the country was a colony of the United Kingdom.",
+        "Home to the bones of one of the earliest human ancestors ever found.",
+        "The regional hub for trade and finance in East Africa.",
+        "Some of the forests, especially Kakamega, have some of the rarest breeds of butterflies and snakes that cannot be found in many other places.",
+        "Mombasa.",
+        "Lamu Island is the oldest continuously inhabited settlement in the country.",
+        ]
 
-uganda_facts = [] 
+uganda_facts = [
+        "Hunter gatherers up until 1,700 to 2,300 years ago.",
+        "the Pearl of Africa",
+        ]
 
 mozambique_facts = [] 
 
-madagascar_facts = [] 
+madagascar_facts = [
+        "The lemur is a sacred animal to this country.",
+        "To the Malagasy people lemurs carry the souls of their ancestors.",
+        "The Eighth Continent of the World.",
+        "This tropical paradise is the world's second-largest producer of vanilla, after Indonesia.",
+        "Home to Tsingy - an entire forest made of stones",
+        "Fruits like jackfruit, longan, avocado, custard apple, breadfruit, and baobab all grow on this tiny island tropical island.",
+        ]
 
 malawi_facts = [] 
 
 zambia_facts = [] 
 
-somalia_facts = [] 
+somalia_facts = [
+        "Its bordering countries are Djibouti, Ethiopia and Kenya.",
+        ]
 
 zimbabwe_facts = [] 
 
@@ -1216,13 +1549,39 @@ niger_facts = []
 
 burkina_faso_facts = [] 
 
-mali_facts = [] 
+mali_facts = [
+        "A landlocked country in West Africa.",
+        "Bordered by Algeria, Niger, Burkina Faso, Ivory Coast (or Cote d'Ivoire), Guinea, Senegal and Mauritania.",
+        "The eighth-largest country in Africa.",
+        "This countrys three natural land zones include the arid Saharan zone, the semiarid central Sahelian zone, and the southern cultivated Sudanese, where the majority of the country's population lives.",
+        "One of the hottest countries in the world.",
+        "Historically, this country part of three different West African empires that controlled all the trans-Saharan trade.",
+        "Thirty four percent of the land is used as agricultural land, with 5.6 percent in arable land and 28.4 percent in permanent pastureland.",
+        "Forests occupy ten percent of the country.",
+        ]
 
-senegal_facts = [] 
+senegal_facts = [
+        "Its five bordering countries are Gambia, Guinea, Guinea-Bissau, Mali, and Mauritania.",
+        "The country also shares a maritime border with Cape Verde.",
+        "The countrys national flag bears three colors; red, yellow and green.",
+        ]
 
 guinea_facts = [] 
 
-benin_facts = [] 
+benin_facts = [
+        "Named after the body of water on which it lies - the \"Bight of Benin\".",
+        "Became independent from France on August 1, 1960.",
+        "The capital region of the country and the area nearby was referred as \"Slave Coast\" from as early as the 17^th century.",
+        "The region was a French colony for 58 years between 1900 and 1958.",
+        "The first country in the 1990s to make the transition from a dictatorship to a multiparty democracy.",
+        "The country measures about 325 km (202 mi) at its widest point.",
+        "Harbors the largest remaining population of lions in West Africa.",
+        "While cotton is the country's main export item, the economy of the country is also dependent on agriculture and regional trade.",
+        "The country's only seaport and international airport are in Cotonou, which is also the largest city in the country.",
+        "Soccer is the national sport.",
+        "The country has a 121 km long coastline.",
+        "31.3% of the country's land area is under agriculture while 40% of it is under forest.",
+        ]
 
 sierra_leone_facts = [] 
 
@@ -1256,7 +1615,12 @@ palau_facts = []
 
 nauru_facts = [] 
 
-new_zealand_facts = [] 
+new_zealand_facts = [
+        "Santa Clause's reindeer have a hard time delivering presents here because it's summertime during Christmas.",
+        "The silver fern is the symbol of unity in the Island Nation.",
+        "The tallest structure in the whole Southern Hemisphere is The Sky Tower of Auckland.",
+        "A vocal supporter of nuclear non-proliferation.",
+        ]
 
 samoa_facts = [] 
 
