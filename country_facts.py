@@ -1,7 +1,12 @@
 # hint data
 #england
 
-antigua_and_barbuda_facts = [] 
+antigua_and_barbuda_facts = [
+        "An island state located between the Caribbean Sea and the Atlantic Ocean." ,
+        "A former British colony.",
+        "One of the members of the 54-state Commonwealth of Nations.",
+        "A colony of Britain for several centuries.",
+        ]
 
 aruba_facts = [
         "Famous for its white sand beaches.", 
@@ -39,7 +44,14 @@ cuba_facts = [
         "National symbol is the royal palm."
         ] 
 
-dominica_facts = [] 
+dominica_facts = [
+        "Still populated by the generations people who inhabited it many centuries ago.",
+        "Tall is her body",
+        "The country is home to black sand and multiple volcanoes.",
+        "The natives of the country have a ritual of making masks.",
+        "Home to the De La Vega Carnival.",
+        "Thier wedding traditions include the ritual of exchanging coins.",
+        ]
 
 dominican_republic_facts = [
         "The second largest island in the Caribbean.", 
@@ -100,13 +112,29 @@ jamaica_facts = [
         "National symbols include the green-and-black streamertail, and the Guaiacum officinale."
         ] 
 
-st_kitts_and_nevis_facts = [] 
+st_kitts_and_nevis_facts = [
+        "Considered to be the smallest country in the Western Hemisphere.",
+        "The Mother Colony of the West Indies.",
+        "The island decided to gain independence from Britain in 1983.",
+        "The island country is surrounded by more islands.",
+        ]
 
-st_lucia_facts = [] 
+st_lucia_facts = [
+        "The country gained its independence from England on 22 February 1979.",
+        "Its national bird is the Jacquot parrot.",
+        ]
 
-st_vincent_and_the_grenadines_facts = [] 
+st_vincent_and_the_grenadines_facts = [
+        "A multi-island, southern Caribbean country.",
+        ]
 
-trinidad_and_tobago_facts = [] 
+trinidad_and_tobago_facts = [
+        "A dual island.",
+        "Creator of limbo.",
+        "Home to the North Carolina Reaper - the world's second hottest chili pepper.",
+        "Home to the world's largest brain coral.",
+        "Inventors of goat racing.",
+        ]
 
 belize_facts = [
         "Borders Mexico and Guatemala.", 
@@ -158,8 +186,6 @@ el_salvador_facts = [
         "The only Latin American country that has troops in Iraq.",
         "The name of the country translates to 'the Savior.'",
         ]
-
-guatemalahaiti_facts = [] 
 
 honduras_facts = [
         "Its three land bordering countries are Guatemala, Nicaragua and El Salvador.",
@@ -311,7 +337,13 @@ chile_facts = [
         "Home to the world's largest swimming pool.",
         ]
 
-colombia_facts = [] 
+colombia_facts = [
+        "Surrounded by the Caribbean Sea, Panama, Venezuela, Ecuador, Peru, the Pacific Ocean, and Brazil.",
+        "Humans settled in this country more than 20,000 years ago.",
+        "They have the most endemic species of birds, of orchids, of amphibian species, and butterflies, in the world.",
+        "The third biggest exporter of coffee, right behind Brazil and Vietnam.",
+        "The country's name is pronounced and spelled Colombia, not Columbia.",
+        ]
 
 ecuador_facts = [
         "Founded in 1532 by the Spanish, who drove out the Incans to claim it.",
@@ -405,7 +437,12 @@ germany_facts = [
         "Autobahn.",
         ]
 
-united_kingdom_facts = [] 
+united_kingdom_facts = [
+        "An island country located off the northwestern coast of mainland Europe.",
+        "The United Kingdom comprises the whole of the island of Great Britain - which contains England, Wales, and Scotland - as well as the northern portion of the island of Ireland.",
+        "The first country to withdraw from the EU.",
+        "Apart from the land border with the Irish republic, this country is surrounded by sea.",
+        ]
 
 france_facts = [
         "Winners of the 1938 World Cup.", "Winners of the 1998 World Cup.",
@@ -547,7 +584,14 @@ czech_republic_facts = [
         "Known as the castle capital of the world.",
         ]
 
-greece_facts = [] 
+greece_facts = [
+        "Considered to be the cradle of Western Civilisation.",
+        "The country's official local name is the Hellenic Republic.",
+        "The first international Olympic Games were held in the country's capital, Athens.",
+        "Home of the Parthenon.",
+        "One of the leading marble exporters across the globe.",
+        "Home to Mount Olympus - one of the highest peaks in Europe.",
+        ]
 
 portugal_facts = [
         "Spain is its only land bordering country.",
@@ -683,9 +727,16 @@ finland_facts = [
         "They celebrate an annual day for failure. It is a day dedicated to failures that people have gone through, and the reason to celebrate is to understand the fact that success and failure go hand in hand.",
         ]
 
-slovakia_facts = [] 
+slovakia_facts = [
+        "A small mountainous and landlocked country in central Europe.",
+        "One of the newest countries in the world.",
+        "There are more castles per capita here than any other country.",
+        ]
 
-ireland_facts = [] 
+ireland_facts = [
+        "Has been inhabited since the Paleolithic Era.",
+        "The country is home to more than 30,000 castles and ruins.",
+        ]
 
 croatia_facts = [
         "Its five land bordering countries are Bosnia and Herzegovina, Hungary, Montenegro, Serbia, and Slovenia.",
@@ -696,7 +747,10 @@ croatia_facts = [
         "There is a museum in here dedicated to Frogs doing some people work.",
         ]
 
-lithuania_facts = [] 
+lithuania_facts = [
+        "First occupied during the 10^th millennium BC.",
+        "1990, the country became the first Baltic country to declare itself independent from Soviet Rule.",
+        ]
 
 slovenia_facts = [ 
         "With a narrow coastline, it shares its land borders with four countries - Austria, Croatia, Hungary, and Italy.",
@@ -730,7 +784,13 @@ estonia_facts = [
         "The least populous state of the European Union.",
         ]
 
-cyprus_facts = [] 
+cyprus_facts = [
+        "Gained its independence from Britain in 1960.",
+        "Resembles a saucepan.",
+        "Between the Mountains",
+        "Home to an intense Mediterranean climate, with a typically strongly marked seasonal rhythm.",
+        "Lies on major migration routes for birds.",
+        ]
 
 luxembourg_facts = [
         "Home to the Ardennes - a region of steep-sided valleys carved by beautiful rivers and covered in dense forests.",
@@ -818,7 +878,9 @@ serbia_facts = [
         "Formed a union with Montenegro in 1992, and split up again in 2006 to become independent.",
         ]
 
-bosnia_and_herzegovina_facts = [] 
+bosnia_and_herzegovina_facts = [
+        "Heart Shaped Land",
+        ]
 
 albania_facts = [
         "Its five bordering countries are Montenegro, Serbia, Kosovo, the Republic of Macedonia, and Greece.",
@@ -832,7 +894,12 @@ albania_facts = [
         "A country of mountains. The country is covered by 70% mountains within its territory.",
         ]
 
-north_macedonia_facts = [] 
+north_macedonia_facts = [
+        "It is a landlocked country, and it borders Albania to the west, Kosovo to the northwest, Serbia to the northeast, Bulgaria to the east, and Greece to the south." ,
+        "One of the oldest surviving names that has remained unchanged in European history.",
+        "Home to Skopje - one of the oldest cities in the world.",
+        "Home to the Kokino astronomic observatory - one of the oldest observatory in the whole world.",
+        ]
 
 montenegro_facts = [
         "Its land bordering countries are Croatia, Bosnia and Herzegovina, Serbia, Kosovo, Albania and the Adriatic Sea.",
@@ -893,7 +960,11 @@ belarus_facts = [
         "Hero city.",
         ]
 
-moldova_facts = [] 
+moldova_facts = [
+        "The country shares its borders with Ukraine and Romania.",
+        "Home to Milestii Mici - the worlds largest wine cellar.",
+        "Thsi countrys wine cannot be sold in Russia.",
+        ]
 
 switzerland_facts = [
         "Winners of the 1954 World Cup.",
@@ -911,7 +982,12 @@ switzerland_facts = [
         "Not involved in any of the two world wars.",
         ] 
 
-liechtenstein_facts = [] 
+liechtenstein_facts = [
+        "One of the smallest countries in the world." ,
+        "It is located between Switzerland and Austria.",
+        "The country gained its independence in 1866.",
+        "The entire territory is located in the Alpine region.",
+        ]
 
 monaco_facts = [
         "Surrounded by France on three sides and the remaining part of the country is bordered by the Mediterranean Sea.",
@@ -1004,7 +1080,9 @@ bangladesh_facts = [
         "Has the fifth largest number of green jobs on earth. Solar panels power a considerable part of the national grid.",
         ]
 
-afghanistan_facts = [] 
+afghanistan_facts = [
+        "The traditional wedding ceremonies of the country last for three days.",
+        ]
 
 nepal_facts = [
         "A landlocked country in South Asia.",
@@ -1128,7 +1206,17 @@ cambodia_facts = [
         "One of the fastest-growing economies in Asia with an average growth rate of more than 6% in the last ten years.",
         ]
 
-laos_facts = [] 
+laos_facts = [
+        "The world's 82^nd largest country.",
+        "Being landlocked and situated in one of the most remote places in Southeast Asia made it possible for the country to be more culturally and architecturally preserved than other countries in the region.",
+        "It is the only landlocked country in Southeast Asia.",
+        "Bordered by Cambodia, People's Republic of China, Myanmar (Burma), Thailand, and Vietnam.",
+        "The only country in Southeast Asia without access to any world ocean.",
+        "Southeast Asian's oldest modern human fossil was discovered in this country.",
+        "Home to Khone Falls (Khone Papeng)- the largest waterfalls in Southeast Asia and the widest waterfalls in the world.",
+        "One of the most bombed countries in the world.",
+        "One of the last few Communist countries in the world.",
+        ]
 
 singapore_facts = [
         "Consists of 63 smaller islands.",
@@ -1137,7 +1225,12 @@ singapore_facts = [
         "The countrys first name was Temasek which literally meant sea town. A name which holds good even today.",
         ]
 
-timor_leste_facts = [] 
+timor_leste_facts = [
+        "Colonized by the Portuguese in 1520.",
+        "On July 16, 1976, the island was declared an independent nation.",
+        "Lena Hara.",
+        "A mountainous country.",
+        ]
 
 brunei_facts = [ 
         "One of the only absolute monarchies left in Asia.",
@@ -1188,7 +1281,11 @@ saudi_arabia_facts = [
         "Its terrain mostly sandy desert.",
         ]
 
-yemen_facts = [] 
+yemen_facts = [
+        "The land of milk and honey.",
+        "The only republic in the Arab peninsula.",
+        "Home of the Mocha coffe bean.",
+        ]
 
 syria_facts = [ 
         "It is bordered by Turkey, Lebanon, Israel, Iraq, and Jordan.",
@@ -1197,9 +1294,17 @@ syria_facts = [
         "The largest Arab state to emerge from the ruins of the Ottoman Empire.",
         ]
 
-jordan_facts = [] 
+jordan_facts = [
+        "Of the youngest countries in the Arabian Peninsula.",
+        "Home of the Dead Sea.",
+        "One of the smallest Middle Eastern Countries.",
+        "Home to humus.",
+        ]
 
-united_arab_emirates_facts = [] 
+united_arab_emirates_facts = [
+        "The City of Gold",
+        "The UAE is the only country that gained independence without violence.",
+        ]
 
 israel_facts = [
         "Its shares its land border with four countries (Syria, Lebanon, Jordan, and Egypt.)",
@@ -1349,9 +1454,24 @@ azerbaijan_facts = [
         "National Animal - the horse.",
         ]
 
-georgia_facts = [] 
+georgia_facts = [
+        "An ancient country located in the neighborhood of Russia.",
+        "The Russians ruled over this country till the end of the 29^th century.",
+        "Gained its independence from Russia after the fall of the Soviet Union in 1991.",
+        "Considered to be the birthplace of the first European man.",
+        "Home to the Veryovkina - the deepest known cave of our Earth.",
+        "Home to Mtskheta and Kutaisi - two of the most ancient cities in Europe.",
+        "Located at the junction of Europe and Asia.",
+        ]
 
-armenia_facts = [] 
+armenia_facts = [
+        "Once belonged to the Soviet Union.",
+        "Shares its borders with Turkey to its west, Azerbaijan to its east, Iran to its south, and Georgia to its north.",
+        "Gained its independence from the USSR on the 21^st of September 1991.",
+        "Yerevan, the capital city is often called the pink city.",
+        "Agriculture is common in the country, and one of their well-known crops is the grape.",
+        "Not only do they produce plenty of wine but they also have some of the oldest wine in the world.",
+        ]
 
 uzbekistan_facts = [
         "Its five land bordering countries are Kazakhstan, Kyrgyzstan, Tajikistan, Afghanistan and Turkmenistan.",
@@ -1359,13 +1479,41 @@ uzbekistan_facts = [
         "The country is the world's second-largest cotton exporter and fifth largest producer.",
         ]
 
-kazakhstan_facts = [] 
+kazakhstan_facts = [
+        "The country shares most of its border with Russia.",
+        "The 9^th Largest Country in the World.",
+        "One of the countries with the lowest population density in the world.",
+        "Home to the longest continuous land border in the world.",
+        "A country rich with Uranium Reserves.",
+        "The largest land-locked country in the world.",
+        "The country does not share any of its borders with an open sea or ocean.",
+        "Home to Medu - the world's highest mountain skating rink.",
+        "Sputnik 1.",
+        ]
 
-tajikstan_facts = [] 
+tajikstan_facts = [
+        "The country shares borders with Afghanistan, Uzbekistan, Kyrgyzstan, and China." ,
+        "A land-locked country.",
+        "The land of Mountains.",
+        "More than 90% of the land in this country is covered by mountains." ,
+        "Home to the Nurek Dam - known as the world's second-tallest man-made dam.",
+        "Home to the Fedchenko Glacier - the longest glacier in the world.",
+        "Home to more than 1,300 lakes which cover around 2% of the land in the country.",
+        "The country is highly susceptible to Earthquakes due to the fac that is located in a seismically active zone of the world.",
+        "Home to Sarazm.",
+        ]
 
-kyrgyzstan_facts = [] 
+kyrgyzstan_facts = [
+        "Bordered by Kazakhstan, Uzbekistan, Tajikistan and China.",
+        "Home to some of the world's largest natural Walnut forests.",
+        "Gold is one of the country's biggest exports.",
+        ]
 
-turkmenistan_facts = [] 
+turkmenistan_facts = [
+        "This country is Central Asia's largest natural gas reserve.",
+        "Home to the \"Gates of Hell\".",
+        "Home to Ashgabat - The White City made of marble.",
+        ]
 
 algeria_facts = [
         "A land bordered by the Morocco, Mauritania, Mali, Niger, Libya, Tunisia, and Western Sahara.",
@@ -1398,7 +1546,12 @@ morocco_facts = [
         "Cannabis is grown in the Rig Mountains and according to the French Ministry, 80 percent of the hashish consumed in Europe comes from here.",
         ]
 
-tunisia_facts = [] 
+tunisia_facts = [ 
+        "Bbordered by Algeria and Libya.",
+        "Bordered by the Mediterranean Sea to the north and the east.",
+        "Gained its independence in 1957.",
+        "Star Wars, The English Patient, and Jesus of Nazareth were all filmed in this country.",
+        ]
 
 south_sudan_facts = [
         "The youngest country in the world.",
@@ -1443,9 +1596,18 @@ south_africa_facts = [
         "There are only 6 floral kingdoms on the planet, and this country is home to one of them, namely Fynbos.",
         ] 
 
-namibia_facts = [] 
+namibia_facts = [
+        "A former South African colony.",
+        "One of the least densely populated countries on the planet.",
+        "Once named South West Africa.",
+        "The country was granted independence in 1990.",
+        ]
 
-botswana_facts = [] 
+botswana_facts = [ 
+        "A landlocked country in the southern area of Africa.",
+        "Surrounded by Zimbabwe, South Africa, Namibia and Zambia.",
+        "One of the most ancient countries in the world.",
+        ]
 
 lesotho_facts = [
         "A high-altitude country.",
@@ -1459,17 +1621,41 @@ lesotho_facts = [
 
 swaziland_facts = [] 
 
-democratic_republic_of_the_congo_facts = [] 
+democratic_republic_of_the_congo_facts = [
+        "Surrounded by the Caribbean Sea, Panama, Venezuela, Ecuador, Peru, the Pacific Ocean, and Brazil.",
+        "Humans settled in this country more than 20,000 years ago.",
+        "They have the most endemic species of birds, of orchids, of amphibian species, and butterflies, in the world.",
+        "The third biggest exporter of coffee, right behind Brazil and Vietnam.",
+        "The country's name is pronounced and spelled Colombia, not Columbia.",
+        ]
 
-angola_facts = []
+angola_facts = [
+        "It shares borders with the Republic of the Congo, Democratic Republic of the Congo, Zambia, and Namibia.",
+        "The second largest oil producer in Sub-Saharan Africa.",
+        "One of the largest producers of diamond.",
+        "Much of this country was left in ruins after twenty-seven years of civil war.",
+        "The countrys national icon is a giant sable antelope.",
+        "One of the richest countries in Africa and one of the fastest growing economies in the world.",
+        ]
 
 camaroon_facts = [] 
 
-chad_facts = [] 
+chad_facts = [
+        "Scome of the best camel racers in the world.",
+        "Its national symbols are the goat and the lion.",
+        "The country is named after Lake Chad.",
+        "Football is the most popular sport here.",
+        "Home to some of the most important archaeological sites in Africa.",
+        ]
 
 central_african_republic_facts = [] 
 
-republic_of_the_congo_facts = [] 
+republic_of_the_congo_facts = [
+        "The country gained its independence in 1960.",
+        "Home to the Congo River - one of the largest rivers in the world.",
+        "Home to the worlds second largest rainforest - the Congo Rainforest.",
+        "The Last Eden",
+        ]
 
 gabon_facts = []
 
@@ -1504,7 +1690,10 @@ uganda_facts = [
         "the Pearl of Africa",
         ]
 
-mozambique_facts = [] 
+mozambique_facts = [
+        "Home to one of the largest coastal marine reserves in the world.",
+        "The Mozambican Makonde masks were used for initiation rituals.",
+        ]
 
 madagascar_facts = [
         "The lemur is a sacred animal to this country.",
@@ -1515,7 +1704,10 @@ madagascar_facts = [
         "Fruits like jackfruit, longan, avocado, custard apple, breadfruit, and baobab all grow on this tiny island tropical island.",
         ]
 
-malawi_facts = [] 
+malawi_facts = [
+        "Warm Heart of Africa",
+        "One of the many African countries that were officially considered to be colonies of the British Empire.",
+        ]
 
 zambia_facts = [] 
 
@@ -1525,13 +1717,27 @@ somalia_facts = [
 
 zimbabwe_facts = [] 
 
-rwanda_facts = [] 
+rwanda_facts = [
+        "Pays des mille collines.",
+        "Land of a thousand hills.",
+        ]
 
-burundi_facts = [] 
+burundi_facts = [
+        "The country is landlocked but borders Lake Tanganyika.",
+        "The country formed part of German East Africa from 1890.",
+        "Media is severely restricted in this country.",
+        ]
 
-eritrea_facts = [] 
+eritrea_facts = [
+        "Located on the coast of the Red Sea.",
+        "Home to the oldest port of Africa.",
+        "The name is derived from the Greek word Erythraean, which was first used in 1890 when the Italians occupied this region.",
+        ]
 
-mauritius_facts = [] 
+mauritius_facts = [
+        "The country officially gained independence in 1960.",
+        "Black wedding dresses.",
+        ]
 
 djibouti_facts = [] 
 
@@ -1545,7 +1751,12 @@ ghaman_facts = []
 
 cote_dlvoire_facts = [] 
 
-niger_facts = [] 
+niger_facts = [
+        "A landlocked country in Western Africa.",
+        "Named after the Niger River. A river that is clear over the whole course.",
+        "The river floods annually, the flooding season begins in September and ends in May.",
+        "The ethnic composition of the languages in Niger is as follows: Hausa (53%); Zarma-Sonari (21.2%); Tuareg (10.4%); Fula (9.9%) Kanuri Manga (4.4%); Tubu (0.4%); Gourmantche (0.3%).",
+        ]
 
 burkina_faso_facts = [] 
 
@@ -1566,7 +1777,9 @@ senegal_facts = [
         "The countrys national flag bears three colors; red, yellow and green.",
         ]
 
-guinea_facts = [] 
+guinea_facts = [
+        "Bordered by Guinea-Bissau, Senegal, Mali, Cote d'Ivoire, Liberia, and Sierra Leone.",
+        ]
 
 benin_facts = [
         "Named after the body of water on which it lies - the \"Bight of Benin\".",
@@ -1583,37 +1796,86 @@ benin_facts = [
         "31.3% of the country's land area is under agriculture while 40% of it is under forest.",
         ]
 
-sierra_leone_facts = [] 
+sierra_leone_facts = [
+        "Shine bright like a diamond.",
+        "Diamonds are forever."
+        "Diamonds of",
+        "Blood Diamond",
+        ] 
 
-togo_facts = [] 
+togo_facts = [
+        "Its land bordering countries are Ghana, Benin and Burkina Faso.",
+        "The country, along with its surrounding regions were known as \"the slave coast\" between the 16th and the 18th century because Europeans would come to the region in search of slaves.",
+        "House of sea",
+        "Gained its ndependence on 27 April 1960.",
+        "Cocoa, coffee, and cotton generate 20% of the countrys export earnings.",
+        ]
 
-liberia_facts = [] 
+liberia_facts = [
+        "The country was originally a settlement for freed slaves from the United States.",
+        ]
 
 mauritania_facts = [] 
 
-gambia_facts = [] 
+gambia_facts = [
+        "The country's crocodile pools are sacred.",
+        ]
 
-guinea_bissau_facts = [] 
+guinea_bissau_facts = [
+        "First explored in the mid-15th century.",
+        "Once part of the Slave Coast.",
+        "The country gained independence from the Portuguese on September 24, 1973.",
+        ]
 
-cape_verde_facts = [] 
+cape_verde_facts = [ 
+        "An uninhabited island which was first discovered and colonized by the Portuguese in the 15^th century.",
+        "The name of the islands originates from the Cap-Vert peninsula in West Africa.",
+        "A group of islands in the Atlantic Ocean.",
+        "Remained under the Portuguese control until 1975.",
+        "Home to eight islets.",
+        "A joint country with Guinea-Bissau until 1980.",
+        ]
 
 papua_new_guinea_facts = [] 
 
-fiji_facts = [] 
+fiji_facts = [
+        "An archipelago of some 333 islands and over 500 islets.",
+        "Fire walking originated on the islands around 500 years.",
+        ]
 
 solomon_islands_facts = [] 
 
-vanuatu_facts = [] 
+vanuatu_facts = [
+        "A country that consists of a chain of 13 principal and other smaller islands located in the southwestern Pacific Ocean.",
+        "The islands that make up the country form an irregular Y shape.",
+        "Where Bungee jumping was invented.",
+        "The most linguistically diverse nation on the planet.",
+        ]
 
 kirbati_facts = [] 
 
 federated_states_of_micronesia_facts = [] 
 
-marshall_islands_facts = [] 
+marshall_islands_facts = [
+        "There are more than 1,000 islands in the peninsula.",
+        "The nation is home to the world's largest shark sanctuary.",
+        "The land may go underwater soon.",
+        ]
 
 palau_facts = [] 
 
-nauru_facts = [] 
+nauru_facts = [
+        "Formerly known as Pleasant Island.",
+        "It has no land bordering countries.",
+        "A small, oval-shaped island.",
+        "Phosphate mining, offshore banking and coconut products represent the prominent industries of the country.",
+        "Annexed by Germany in 1888.",
+        "The world's smallest independent republic, and it joined the UN in 1999.",
+        "The country gained its independent in 1968.",
+        "The world's smallest island country.",
+        "Situated 53 kilometers south of the Equator.",
+        "One of the three great phosphate rock islands in the Pacific.",
+        ]
 
 new_zealand_facts = [
         "Santa Clause's reindeer have a hard time delivering presents here because it's summertime during Christmas.",
@@ -1626,13 +1888,23 @@ samoa_facts = []
 
 tonga_facts = [] 
 
-tuvalu_facts = []
+tuvalu_facts = [
+        "Falls halfway between Australia and Hawaii.",
+        "Previously part of the British colony of Gilbert and Ellice Islands.",
+        "Gained independence in 1978.",
+        "Previously known as Ellice Island.",
+        "Eight standing together.",
+        "It is the fourth-smallest country in the world.",
+        "The country is made entirely of coral and may disappear.",
+        "The .tv country domain extension assigned to the country generates 10% of its revenue.",
+        "The countrys mythology says the eel and the flounder created the islands.",
+        ]
 
 country_facts = [
         antigua_and_barbuda_facts, aruba_facts, bahamas_facts, barbados_facts, cayman_islands_facts, cuba_facts, dominica_facts, 
         dominican_republic_facts, grenada_facts, haiti_facts, jamaica_facts, st_kitts_and_nevis_facts, st_lucia_facts, 
         st_vincent_and_the_grenadines_facts, trinidad_and_tobago_facts, belize_facts, bermuda_facts, canada_facts, costa_rica_facts, 
-        el_salvador_facts, guatemalahaiti_facts, honduras_facts, mexico_facts, nicaragua_facts, panama_facts, united_states_facts, 
+        el_salvador_facts, honduras_facts, mexico_facts, nicaragua_facts, panama_facts, united_states_facts, 
         guatemala_facts, argentina_facts, bolivia_facts, brazil_facts, chile_facts, colombia_facts, ecuador_facts, guyana_facts, paraguay_facts, 
         peru_facts, suriname_facts, uruguay_facts, venezuela_facts, columbia_facts, germany_facts, united_kingdom_facts, france_facts, 
         italy_facts, spain_facts, poland_facts, romania_facts, netherlands_facts, belgium_facts, czech_republic_facts, greece_facts, 

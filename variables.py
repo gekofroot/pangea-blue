@@ -4,11 +4,12 @@ from tkinter import GROOVE, RAISED, FLAT
 WCBG = "#77ff77"
 font_size = 14
 FONT=("Helvetica", font_size)
-FG="#222222"
+FG="#000000"
 BG="#eeeeee"
 AC="#dddddd"
 AC_2="#eeeeee"
-BD=4
+ACTVBG="#ffcc00"
+BD=0
 current_fg=FG
 current_bg=BG
 current_ac=AC
@@ -19,6 +20,8 @@ window_height = 600
 increment_guess = 0
 numbers_guessed = 0
 games_played = 0
+perfect_game = 0
+lucky_win = 0
 index_count = 0
 
 current_streak = 0
