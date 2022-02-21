@@ -488,11 +488,11 @@ def main():
                                 # no incorrect guesses
                                 if numbers_guessed == len(country_name) and len(incorrect_guess) == 0:
                                     perfect_game += 1
-                                    stats_perfect_game.configure(text=(f"Perfect\nGame\n\n{perfect_game}"))
+                                    stats_perfect_game.configure(text=(f"Perfect\nGames\n\n{perfect_game}"))
                                 
                                 if len(incorrect_guess) == 4:
                                     lucky_win += 1
-                                    stats_lucky_win.configure(text=(f"Lucky\nWin\n\n{lucky_win}"))
+                                    stats_lucky_win.configure(text=(f"Lucky\nWins\n\n{lucky_win}"))
 
                                 # update highest streak / update high score
                                 if current_streak > highest_streak:
@@ -912,48 +912,113 @@ def main():
         letter_guess_button.configure(bg=AC_2)
         bottom_left_label.configure(bg=AC_2)
         bottom_right_label.configure(bg=AC_2)
+    
+    def set_active_bg_colour(colour):
+        """sets active background colour"""
 
-    def colour_get(fg, bg, ac, ac_2):
+        #globals
+        global current_actvbg
+
+        ACTVBG = colour
+        current_actvbg
+
+        stats_button.configure(activebackground=ACTVBG)
+        letter_guess_button.configure(activebackground=ACTVBG)
+        bottom_right_label.configure(activebackground=ACTVBG)
+        guide_window_close.configure(activebackground=ACTVBG)
+        stats_window_close.configure(activebackground=ACTVBG)
+        prev_hint_button.configure(activebackground=ACTVBG)
+        next_hint_button.configure(activebackground=ACTVBG)
+        random_hint_button.configure(activebackground=ACTVBG)
+        close_hint_button.configure(activebackground=ACTVBG)
+
+    def colour_get(fg, bg, ac, ac_2, actvbg):
         """set foreground/background and primary/secondary accent colours"""
 
         # globals
         global current_fg
         global current_bg
         global current_ac
+        global current_actvbg
 
         current_fg = fg
         current_bg = bg
         current_ac = ac
         current_ac_2 = ac_2
+        current_actvbg = actvbg
 
         set_fg_colour(fg)
         set_bg_colour(bg)
         set_accent_colour(ac)
         set_accent_colour_b(ac_2)
+        set_active_bg_colour(actvbg)
 
         with open("colourscheme.txt", "w") as f:
-            current_colourscheme = bg[1:]
-            print(current_colourscheme, file=f)
+            current_colourscheme_bg = bg[1:]
+            current_colourscheme_actv = actvbg[1:]
+            print(f"{current_colourscheme_bg}\n{current_colourscheme_actv}", file=f)
             f.close()
-
-    def select_colour_samba():
-        colour_get("#ffffff", "#140000", "#140000", "#140000")
-
-    def select_colour_dune():
-        colour_get("#000000", "#ffffbb", "#ffffcc", "#ffffdd")
-
-    def select_colour_mint():
-        colour_get("#000000", "#ddffcc", "#eeffdd", "#eeffee")
-
-    def select_colour_cobalt():
-        colour_get("#ffffff", "#000007", "#000007", "#000007")
-
-    def select_colour_black():
-        colour_get("#ffffff", "#000000", "#000000", "#000000")
-
-    def select_colour_pearl():
-        colour_get("#000000", "#eeeeee", "#dddddd", "#eeeeee")
     
+    # samba
+    def select_colour_samba():
+        colour_get("#ffffff", "#140000", "#140000", "#140000", "#ffcccc")
+    
+    def select_colour_samba_sunda():
+        colour_get("#ffffff", "#140000", "#140000", "#140000", "#6a604d")
+    
+    def select_colour_samba_snow():
+        colour_get("#ffffff", "#140000", "#140000", "#140000", "#ffffff")
+    
+    def select_colour_samba_cara():
+        colour_get("#ffffff", "#140000", "#140000", "#140000", "#a58c79")
+    
+    def select_colour_dune():
+        colour_get("#000000", "#ffffbb", "#ffffcc", "#ffffdd", "#ffee77")
+
+    # mint
+    def select_colour_mint():
+        colour_get("#000000", "#ddffcc", "#eeffdd", "#eeffee", "#99ff99")
+
+    # cobalt
+    def select_colour_cobalt():
+        colour_get("#ffffff", "#000007", "#000007", "#000007", "#dddddd")
+    
+    def select_colour_cobalt_snow():
+        colour_get("#ffffff", "#000007", "#000007", "#000007", "#ffffff")
+    
+    def select_colour_cobalt_cara():
+        colour_get("#ffffff", "#000007", "#000007", "#000007", "#a58c79")
+
+    def select_colour_cobalt_lynx():
+        colour_get("#ffffff", "#000007", "#000007", "#000007", "#767a7d")
+
+    # black
+    def select_colour_black():
+        colour_get("#ffffff", "#000000", "#000000", "#000000", "#dddddd")
+    
+    def select_colour_black_corsac():
+        colour_get("#ffffff", "#000000", "#000000", "#000000", "#8d6c44")
+    
+    def select_colour_black_fennec():
+        colour_get("#ffffff", "#000000", "#000000", "#000000", "#bd9d85")
+
+    def select_colour_black_lynx():
+        colour_get("#ffffff", "#000000", "#000000", "#000000", "#767a7d")
+    
+    # pearl
+    def select_colour_pearl():
+        colour_get("#000000", "#eeeeee", "#dddddd", "#eeeeee", "#ffaa99")
+    
+    def select_colour_pearl_corsac():
+        colour_get("#000000", "#eeeeee", "#dddddd", "#eeeeee", "#8d6c44")
+    
+    def select_colour_pearl_fennec():
+        colour_get("#000000", "#eeeeee", "#dddddd", "#eeeeee", "#bd9d85")
+
+    def select_colour_pearl_lynx():
+        colour_get("#000000", "#eeeeee", "#dddddd", "#eeeeee", "#767a7d")
+    
+
     def exit_cmd():
         """save current high score and exit"""
 
@@ -1000,8 +1065,8 @@ def main():
     stats_frame = LabelFrame(MAIN_WINDOW, text="Stats", font=FONT, fg=FG, bg=BG, bd=BD - 2, relief=GROOVE)
     
     stats_highest_streak = Label(stats_frame, text=(f"Highest\nStreak\n\n{highest_streak}"),font=("Helvetica", 10), fg=FG, bg=AC, bd=BD, relief=RLF_2)
-    stats_perfect_game = Label(stats_frame, text=(f"Perfect\nGame\n\n{perfect_game}"),font=("Helvetica", 10), fg=FG, bg=AC, bd=BD, relief=RLF_2)
-    stats_lucky_win = Label(stats_frame, text=(f"Lucky\nWin\n\n{lucky_win}"),font=("Helvetica", 10), fg=FG, bg=AC, bd=BD, relief=RLF_2)
+    stats_perfect_game = Label(stats_frame, text=(f"Perfect\nGames\n\n{perfect_game}"),font=("Helvetica", 10), fg=FG, bg=AC, bd=BD, relief=RLF_2)
+    stats_lucky_win = Label(stats_frame, text=(f"Lucky\nWins\n\n{lucky_win}"),font=("Helvetica", 10), fg=FG, bg=AC, bd=BD, relief=RLF_2)
     stats_current_percentage = Label(stats_frame, text=(f"Win\nPercentage\n\n{current_percentage:.0f} %"), font=("Helvetica", 10), fg=FG, bg=AC, bd=BD, relief=RLF_2)
     stats_correct_out_of = Label(stats_frame, text=(f"Wins\n\n{correct_out_of} / {games_played}"), font=("Helvetica", 10), fg=FG, bg=AC, bd=BD, relief=RLF_2)
     stats_incorrect_out_of = Label(stats_frame, text=(f"Losses\n\n{incorrect_out_of} / {games_played}"), font=("Helvetica", 10), fg=FG, bg=AC, bd=BD, relief=RLF_2)
@@ -1019,7 +1084,6 @@ def main():
             command=get_next_hint)
     random_hint_button = Button(hint_frame, text="Random", font=FONT, fg=FG, bg=AC, bd=BD, relief=RLF_2, activebackground=ACTVBG,
             command=get_random_hint)
-        
     close_hint_button = Button(hint_frame, text="Close", font=FONT, fg=FG, bg=AC, bd=BD, relief=RLF_2, activebackground=ACTVBG,
             command=close_hint_show)
 
@@ -1053,12 +1117,14 @@ def main():
     prev_hint_button.place(x=0, y=window_height - 90, width=500 / 3, height=70)
     next_hint_button.place(x=(0) + (500 / 3), y=window_height - 90, width=500 / 3, height=70)
     random_hint_button.place(x=(0) + (500 / 3) * 2, y=window_height - 90, width=500 / 3, height=70)
-
+    
+    # place guide
     guide_frame.place(x=700, y=0, width=500, height=y_pos * 8)
     guide_frame.lower()
     guide_window.place(x=0, y=0, width=500, height=y_pos * 7)
     guide_window_close.place(x=0, y=(y_pos * 7) - 20, width=500, height=y_pos)
     
+    # place stats
     stats_frame.place(x=700, y=0, width=x_pos * 2, height=y_pos * 8)
     stats_frame.lower()
     
@@ -1073,23 +1139,63 @@ def main():
     
     stats_letters_correct.place(x=0, y=(window_height / 5) * 3, width=500 / 2, height=window_height / 5)
     stats_letters_incorrect.place(x=500 / 2, y=(window_height / 5) * 3, width=500 / 2, height=window_height / 5)
-    
+
     stats_window_close.place(x=0, y=(window_height / 5) * 4, width=500, height=(window_height / 5) - 20)
 
     # retrieve colourscheme
     with open("colourscheme.txt", "r") as f:
         saved_colourscheme = f.read()
-        if saved_colourscheme.strip() == "240000":
+        saved_colourscheme_bg = saved_colourscheme[:6]
+        saved_colourscheme_actvbg = saved_colourscheme[6:]
+        
+        # samba
+        if saved_colourscheme_bg.strip() == "140000" and saved_colourscheme_actvbg.strip() == "ffcccc":
             select_colour_samba()
-        elif saved_colourscheme.strip() == "ffffbb":
+        elif saved_colourscheme_bg.strip() == "140000" and saved_colourscheme_actvbg.strip() == "6a604d":
+            select_colour_samba_sunda()
+        elif saved_colourscheme_bg.strip() == "140000" and saved_colourscheme_actvbg.strip() == "ffffff":
+            select_colour_samba_snow()
+        elif saved_colourscheme_bg.strip() == "140000" and saved_colourscheme_actvbg.strip() == "a58c79":
+            select_colour_samba_cara()
+        
+        # dune
+        elif saved_colourscheme_bg.strip() == "ffffbb" and saved_colourscheme_actvbg.strip() == "ffee77":
             select_colour_dune()
-        elif saved_colourscheme.strip() == "ddffcc":
+        
+        # mint
+        elif saved_colourscheme_bg.strip() == "ddffcc" and saved_colourscheme_actvbg.strip() == "99ff99":
             select_colour_mint()
-        elif saved_colourscheme.strip() == "000007":
+        
+        # cobalt
+        elif saved_colourscheme_bg.strip() == "000007" and saved_colourscheme_actvbg.strip() == "dddddd":
             select_colour_cobalt()
-        elif saved_colourscheme.strip() == "000000":
+        elif saved_colourscheme_bg.strip() == "000007" and saved_colourscheme_actvbg.strip() == "ffffff":
+            select_colour_cobalt_snow()
+        elif saved_colourscheme_bg.strip() == "000007" and saved_colourscheme_actvbg.strip() == "a58c79":
+            select_colour_cobalt_cara()
+        elif saved_colourscheme_bg.strip() == "000007" and saved_colourscheme_actvbg.strip() == "767a7d":
+            select_colour_cobalt_lynx()
+        
+        # black
+        elif saved_colourscheme_bg.strip() == "000000" and saved_colourscheme_actvbg.strip() == "dddddd":
             select_colour_black()
-
+        elif saved_colourscheme_bg.strip() == "000000" and saved_colourscheme_actvbg.strip() == "8d6c44":
+            select_colour_black_corsac()
+        elif saved_colourscheme_bg.strip() == "000000" and saved_colourscheme_actvbg.strip() == "bd9d85":
+            select_colour_black_fennec()
+        elif saved_colourscheme_bg.strip() == "000000" and saved_colourscheme_actvbg.strip() == "767a7d":
+            select_colour_black_lynx()
+        
+        # pearl
+        elif saved_colourscheme_bg.strip() == "eeeeee" and saved_colourscheme_actvbg.strip() == "ffaa99":
+            select_colourscheme_pearl()
+        elif saved_colourscheme_bg.strip() == "eeeeee" and saved_colourscheme_actvbg.strip() == "8d6c44":
+            select_colourscheme_pearl_corsac()
+        elif saved_colourscheme_bg.strip() == "eeeeee" and saved_colourscheme_actvbg.strip() == "bd9d85":
+            select_colourscheme_pearl_fennec()
+        elif saved_colourscheme_bg.strip() == "eeeeee" and saved_colourscheme_actvbg.strip() == "767a7d":
+            select_colourscheme_pearl_lynx()
+        
         f.close()
     
     #display_bar
@@ -1163,12 +1269,32 @@ def main():
     
     # colourscheme menu
     colourscheme_menu = Menu(settings_menu)
-    colourscheme_menu.add_command(label="Samba", command=select_colour_samba)
+    colour_samba_menu = Menu(colourscheme_menu)
+    colour_samba_menu.add_command(label="Samba", command=select_colour_samba)
+    colour_samba_menu.add_command(label="Samba Sunda", command=select_colour_samba_sunda)
+    colour_samba_menu.add_command(label="Samba Snow", command=select_colour_samba_snow)
+    colour_samba_menu.add_command(label="Samba Cara", command=select_colour_samba_cara)
+    colourscheme_menu.add_cascade(label="Samba", menu=colour_samba_menu)
     colourscheme_menu.add_command(label="Dune", command=select_colour_dune)
     colourscheme_menu.add_command(label="Mint", command=select_colour_mint)
-    colourscheme_menu.add_command(label="Cobalt", command=select_colour_cobalt)
-    colourscheme_menu.add_command(label="Black", command=select_colour_black)
-    colourscheme_menu.add_command(label="Pearl", command=select_colour_pearl)
+    colour_cobalt_menu = Menu(colourscheme_menu)
+    colour_cobalt_menu.add_command(label="Cobalt", command=select_colour_cobalt)
+    colour_cobalt_menu.add_command(label="Cobalt Snow", command=select_colour_cobalt_snow)
+    colour_cobalt_menu.add_command(label="Cobalt Cara", command=select_colour_cobalt_cara)
+    colour_cobalt_menu.add_command(label="Cobalt Lynx", command=select_colour_cobalt_lynx)
+    colourscheme_menu.add_cascade(label="Cobalt", menu=colour_cobalt_menu)
+    colour_black_menu = Menu(colourscheme_menu)
+    colour_black_menu.add_command(label="Black", command=select_colour_black)
+    colour_black_menu.add_command(label="Black Corsac", command=select_colour_black_corsac)
+    colour_black_menu.add_command(label="Black Fennec", command=select_colour_black_fennec)
+    colour_black_menu.add_command(label="Black Lynx", command=select_colour_black_lynx)
+    colourscheme_menu.add_cascade(label="Black", menu=colour_black_menu)
+    colour_pearl_menu = Menu(colourscheme_menu)
+    colour_pearl_menu.add_command(label="Pearl", command=select_colour_pearl)
+    colour_pearl_menu.add_command(label="Pearl Corsac", command=select_colour_pearl_corsac)
+    colour_pearl_menu.add_command(label="Pearl Fennec", command=select_colour_pearl_fennec)
+    colour_pearl_menu.add_command(label="Pearl Lynx", command=select_colour_pearl_lynx)
+    colourscheme_menu.add_cascade(label="Pearl", menu=colour_pearl_menu)
     settings_menu.add_cascade(label="Colorscheme", menu=colourscheme_menu)
     settings_menu.add_separator()
     settings_menu.add_command(label="Exit", command=exit_cmd, accelerator="Ctrl+Q")

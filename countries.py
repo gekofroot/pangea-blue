@@ -30,7 +30,7 @@ countries_south_america = [
 
 countries_latin_america = [
         "Antigua and Barbuda", "Argentina", "Bahamas", "Barbados",
-        "Bolivia", "Brazil", "Chile", "Columbia", "Costa Rica",
+        "Bolivia", "Brazil", "Chile", "Costa Rica",
         "Cuba", "Dominica", "Dominican Republic", "El Salvador",
         "Ecuador", "Grenada", "Guatemala", "Haiti", "Honduras",
         "Jamaica", "Mexico", "Nicaragua", "Panama", "Paraguay",
@@ -207,8 +207,8 @@ regions = [
 country_names = [
         'Antigua and Barbuda', 'Aruba', 'Bahamas', 'Barbados', 'Cayman Islands', 'Cuba', 'Dominica', 'Dominican Republic', 'Grenada', 'Haiti', 
         'Jamaica', 'St. Kitts and Nevis', 'St. Lucia', 'St. Vincent and The Grenadines', 'Trinidad and Tobago', 'Belize', 'Bermuda', 'Canada', 
-        'Costa Rica', 'El Salvador', 'GuatemalaHaiti', 'Honduras', 'Mexico', 'Nicaragua', 'Panama', 'United States', 'Guatemala', 'Argentina', 
-        'Bolivia', 'Brazil', 'Chile', 'Colombia', 'Ecuador', 'Guyana', 'Paraguay', 'Peru', 'Suriname', 'Uruguay', 'Venezuela', 'Columbia', 
+        'Costa Rica', 'El Salvador', 'Honduras', 'Mexico', 'Nicaragua', 'Panama', 'United States', 'Guatemala', 'Argentina', 
+        'Bolivia', 'Brazil', 'Chile', 'Colombia', 'Ecuador', 'Guyana', 'Paraguay', 'Peru', 'Suriname', 'Uruguay', 'Venezuela', 
         'Germany', 'United Kingdom', 'France', 'Italy', 'Spain', 'Poland', 'Romania', 'Netherlands', 'Belgium', 'Czech Republic', 'Greece', 
         'Portugal', 'Sweden', 'Hungary', 'Austria', 'Bulgaria', 'Denmark', 'Finland', 'Slovakia', 'Ireland', 'Croatia', 'Lithuania', 'Slovenia', 
         'Latvia', 'Estonia', 'Cyprus', 'Luxembourg', 'Malta', 'Norway', 'Iceland', 'Turkey', 'Serbia', 'Bosnia and Herzegovina', 'Albania', 
