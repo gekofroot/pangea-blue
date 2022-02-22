@@ -48,6 +48,7 @@ def main():
     global highest_streak
     global current_streak
     global current_percentage
+    global current_loss_percentage
     global correct_total
     global incorrect_total
     global correct_out_of
@@ -57,19 +58,31 @@ def main():
     global current_country
     global index_count
     global shown_hint
+    global highest_score
+    global points
 
     MAIN_WINDOW = Tk()
     MAIN_WINDOW.geometry(f"{window_width}x{window_height}")
     MAIN_WINDOW.title("Pangea Blue")
     
-    # retrieve high score
-    with open("high_score.txt", "r") as high_score:
-        hs_txt = high_score.read()
+    # retrieve high scores
+    with open("highest_streak.txt", "r") as high_streak:
+        hs_txt = high_streak.read()
         if hs_txt == 0:
             highest_streak = 0
-            high_score.close()
+            high_streak.close()
         else:
             highest_streak = int(hs_txt)
+            high_streak.close()
+    
+    # retrieve high points
+    with open("high_score.txt", "r") as high_score:
+        hp_txt = high_score.read()
+        if hp_txt == 0:
+            highest_score = 0
+            high_score.close()
+        else:
+            highest_score = int(hp_txt)
             high_score.close()
     
     countries = []
@@ -389,12 +402,15 @@ def main():
         global highest_streak
         global current_streak
         global current_percentage
+        global current_loss_percentage
         global correct_total
         global incorrect_total
         global correct_out_of
         global incorrect_out_of
         global letters_correct
         global letters_incorrect
+        global highest_score
+        global points
 
         correct_guess_container.configure(bg=current_ac)
         incorrect_guess_container.configure(bg=current_ac)
@@ -416,17 +432,20 @@ def main():
             show_streak.configure(text=(f"Streak: {current_streak}"))
             if games_played > 0:
                 current_percentage = (correct_total / games_played) * 100
+                current_loss_percentage = (incorrect_total / games_played) * 100
             else:
                 current_percentage = 0
+                current_loss_percentage = 0
             stats_highest_streak.configure(text=(f"Streak\n\n{highest_streak}"))
             stats_current_percentage.configure(text=(f"Win\nPercentage\n\n{current_percentage:.2f}"))
+            stats_current_loss_percentage.configure(text=(f"Loss\nPercentage\n\n{current_loss_percentage:.2f}"))
             get_letter_guess.configure(disabledbackground=current_ac, state=DISABLED)
             letter_guess_button.configure(text="Play Again", command=play_again)
             sleep(1)
             display_user_message.configure(text=(f"{country_name}"), fg="#000000", bg="#ffbb99")
         else:
             # ensure valid input
-            if user_guess in invalid_characters:
+            if user_guess.strip() in invalid_characters:
                 display_user_message.configure(text=(f"[  {user_guess}  ]\nentry must be a letter"), font=10, fg="#ff0000", bg="#ffffff")
                 get_letter_guess.delete(0, END)
             else:
@@ -484,31 +503,52 @@ def main():
                             if numbers_guessed == len(country_name):
                                 games_played += 1
                                 current_streak += 1
+                                
+                                # set bonus
+                                if current_streak > 10:
+                                    points += 25
+                                else:
+                                    points += 20
                             
                                 # no incorrect guesses
                                 if numbers_guessed == len(country_name) and len(incorrect_guess) == 0:
                                     perfect_game += 1
                                     stats_perfect_game.configure(text=(f"Perfect\nGames\n\n{perfect_game}"))
+                                    if current_streak > 10:
+                                        points += 15
+                                    else:
+                                        points += 10
                                 
                                 if len(incorrect_guess) == 4:
                                     lucky_win += 1
                                     stats_lucky_win.configure(text=(f"Lucky\nWins\n\n{lucky_win}"))
+                                    points += 2
 
-                                # update highest streak / update high score
+                                # update highest streak
                                 if current_streak > highest_streak:
                                     highest_streak = current_streak
+                                    with open("highest_streak.txt", "w") as high_streak:
+                                        print(f"{highest_streak}", file=high_streak)
+                                        high_streak.close()
+                                
+                                # update high score
+                                if points > highest_score:
+                                    highest_score = points
                                     with open("high_score.txt", "w") as high_score:
-                                        print(f"{highest_streak}", file=high_score)
+                                        print(f"{highest_score}", file=high_score)
                                         high_score.close()
                                 
-                            
                                 correct_total += 1
                                 current_percentage = (correct_total / games_played) * 100
+                                current_loss_percentage = (incorrect_total / games_played) * 100
+                                display_points.configure(text=(f"{points}"))
                                 show_streak.configure(text=(f"Streak: {current_streak}"))
                                 stats_highest_streak.configure(text=(f"Highest\nStreak\n\n{highest_streak}"))
+                                stats_high_score.configure(text=(f"High\nScore\n\n{highest_score}"))
                                 stats_correct_out_of.configure(text=(f"Wins\n\n{correct_total} / {games_played}"))
                                 stats_incorrect_out_of.configure(text=(f"Losses \n\n{incorrect_total} / {games_played}"))
                                 stats_current_percentage.configure(text=(f"Win\nPercentage\n\n{current_percentage:.2f} %"))
+                                stats_current_loss_percentage.configure(text=(f"Loss\nPercentage\n\n{current_loss_percentage:.2f} %"))
                                 get_letter_guess.configure(disabledbackground=current_ac, state=DISABLED)
                                 letter_guess_button.configure(text="Play Again", command=play_again)
                                 display_user_message.configure(text="")
@@ -540,21 +580,32 @@ def main():
                             if increment_guess > 4:
                                 games_played += 1
                                 
-                                # update highest streak / update high score
+                                # update highest streak
                                 if current_streak > highest_streak:
                                     highest_streak = current_streak
-                                    with open("hs.txt", "w") as hs_txt:
-                                        print(f"{highest_streak}", file=hs_txt)
+                                    with open("high_score.txt", "w") as high_streak:
+                                        print(f"{highest_streak}", file=high_streak)
                                         hs_txt.close()
                                 
+                                # update points
+                                if points > highest_score:
+                                    highest_score = points
+                                    with open("high_score.txt", "w") as high_score:
+                                        print(f"{highest_score}", file=high_score)
+                                        hs_txt.close()
+                                points -= 10
                                 current_streak = 0
                                 incorrect_total += 1
                                 current_percentage = (correct_total / games_played) * 100
+                                current_loss_percentage = (incorrect_total / games_played) * 100
+                                display_points.configure(text=(f"{points}"))
                                 show_streak.configure(text=(f"Streak: {current_streak}"))
                                 stats_highest_streak.configure(text=(f"Highest\nStreak\n\n{highest_streak}"))
+                                stats_high_score.configure(text=(f"High\nScore\n\n{highest_score}"))
                                 stats_correct_out_of.configure(text=(f"Wins\n\n{correct_total} / {games_played}"))
                                 stats_incorrect_out_of.configure(text=(f"Losses\n\n{incorrect_total} / {games_played}"))
                                 stats_current_percentage.configure(text=(f"Win\nPercentage\n\n{current_percentage:.2f} %"))
+                                stats_current_loss_percentage.configure(text=(f"Loss\nPercentage\n\n{current_loss_percentage:.2f} %"))
                                 get_letter_guess.configure(disabledbackground=current_ac, state=DISABLED)
                                 letter_guess_button.configure(text="Play Again", command=play_again)
                                 sleep(1)
@@ -665,7 +716,7 @@ def main():
         incorrect_guess_container.configure(font=FONT)
         show_streak.configure(font=("Helvetica", font_size))
 
-        bottom_left_label.configure(font=FONT)
+        display_points.configure(font=FONT)
         bottom_right_label.configure(font=FONT)
         
         display_region.place(x=0, y=0, width=x_pos * 2, height=y_pos)
@@ -683,7 +734,7 @@ def main():
         correct_guess_container.place(x=0, y=y_pos * 6, width=x_pos, height=y_pos)
         incorrect_guess_container.place(x=x_pos, y=y_pos * 6, width=x_pos, height=y_pos)
 
-        bottom_left_label.place(x=0, y=y_pos * 7, width=(window_width / 3), height=y_pos)
+        display_points.place(x=0, y=y_pos * 7, width=(window_width / 3), height=y_pos)
         show_streak.place(x=window_width / 3, y=y_pos * 7, width=(window_width / 3), height=y_pos)
         bottom_right_label.place(x=(window_width / 3) * 2, y=y_pos * 7, width=(window_width / 3), height=y_pos) 
         
@@ -704,19 +755,22 @@ def main():
         stats_frame.place(x=0, y=0, width=x_pos * 2, height=y_pos * 8)
         stats_frame.lower()
         
-        stats_highest_streak.place(x=0, y=0, width=400 / 2, height=window_height / 5)
-        stats_current_percentage.place(x=400 / 2, y=0, width=400 / 2, height=window_height / 5)
+        stats_highest_streak.place(x=0, y=0, width=400 / 2, height=window_height / 6)
+        stats_high_score.place(x=400 / 2, y=0, width=400 / 2, height=window_height / 6)
         
-        stats_perfect_game.place(x=0, y=window_height / 5, width=400 / 2, height=window_height / 5)
-        stats_lucky_win.place(x=400 / 2, y=window_height / 5, width=400 / 2, height=window_height / 5)
+        stats_current_percentage.place(x=0, y=window_height / 6, width=400 / 2, height=window_height / 6)
+        stats_current_loss_percentage.place(x=400 / 2, y=window_height / 6, width=400 / 2, height=window_height / 6)
+
+        stats_perfect_game.place(x=0, y=(window_height / 6) * 2, width=400 / 2, height=window_height / 6)
+        stats_lucky_win.place(x=400 / 2, y=(window_height / 6) * 2, width=400 / 2, height=window_height / 6)
         
-        stats_correct_out_of.place(x=0, y=(window_height / 5) * 2, width=400 / 2, height=window_height / 5)
-        stats_incorrect_out_of.place(x=400 / 2, y=(window_height / 5) * 2, width=400 / 2, height=window_height / 5)
+        stats_correct_out_of.place(x=0, y=(window_height / 6) * 3, width=400 / 2, height=window_height / 6)
+        stats_incorrect_out_of.place(x=400 / 2, y=(window_height / 6) * 3, width=400 / 2, height=window_height / 6)
         
-        stats_letters_correct.place(x=0, y=(window_height / 5) * 3, width=400 / 2, height=window_height / 5)
-        stats_letters_incorrect.place(x=400 / 2, y=(window_height / 5) * 3, width=400 / 2, height=window_height / 5)
+        stats_letters_correct.place(x=0, y=(window_height / 6) * 4, width=400 / 2, height=window_height / 6)
+        stats_letters_incorrect.place(x=400 / 2, y=(window_height / 6) * 4, width=400 / 2, height=window_height / 6)
         
-        stats_window_close.place(x=0, y=(window_height / 5) * 4, width=400, height=(window_height / 5) - 20)
+        stats_window_close.place(x=0, y=(window_height / 6) * 5, width=400, height=(window_height / 6) - 20)
         
         MAIN_WINDOW.update()
     
@@ -756,7 +810,7 @@ def main():
         correct_guess_container.place(x=0, y=y_pos * 6, width=x_pos, height=y_pos)
         incorrect_guess_container.place(x=x_pos, y=y_pos * 6, width=x_pos, height=y_pos)
 
-        bottom_left_label.place(x=0, y=y_pos * 7, width=(700 / 3), height=y_pos)
+        display_points.place(x=0, y=y_pos * 7, width=(700 / 3), height=y_pos)
         show_streak.place(x=(700 / 3), y=y_pos * 7, width=(700 / 3), height=y_pos)
         bottom_right_label.place(x=(700 / 3) * 2, y=y_pos * 7, width=(700 / 3), height=y_pos) 
         
@@ -781,19 +835,22 @@ def main():
         stats_frame.place(x=700, y=0, width=x_pos * 2, height=y_pos * 8)
         stats_frame.lower()
         
-        stats_highest_streak.place(x=0, y=0, width=500 / 2, height=window_height / 5)
-        stats_current_percentage.place(x=500 / 2, y=0, width=500 / 2, height=window_height / 5)
+        stats_highest_streak.place(x=0, y=0, width=500 / 2, height=window_height / 6)
+        stats_high_score.place(x=500 / 2, y=0, width=500 / 2, height=window_height / 6)
         
-        stats_perfect_game.place(x=0, y=window_height / 5, width=500 / 2, height=window_height / 5)
-        stats_lucky_win.place(x=500 / 2, y=window_height / 5, width=500 / 2, height=window_height / 5)
+        stats_current_percentage.place(x=0, y=window_height / 6, width=500 / 2, height=window_height / 6)
+        stats_current_loss_percentage.place(x=500 / 2, y=window_height / 6, width=500 / 2, height=window_height / 6)
         
-        stats_correct_out_of.place(x=0, y=(window_height / 5) * 2, width=500 / 2, height=window_height / 5)
-        stats_incorrect_out_of.place(x=500 / 2, y=(window_height / 5) * 2, width=500 / 2, height=window_height / 5)
+        stats_perfect_game.place(x=0, y=(window_height / 6) * 2, width=500 / 2, height=window_height / 6)
+        stats_lucky_win.place(x=500 / 2, y=(window_height / 6) * 2, width=500 / 2, height=window_height / 6)
         
-        stats_letters_correct.place(x=0, y=(window_height / 5) * 3, width=500 / 2, height=window_height / 5)
-        stats_letters_incorrect.place(x=500 / 2, y=(window_height / 5) * 3, width=500 / 2, height=window_height / 5)
+        stats_correct_out_of.place(x=0, y=(window_height / 6) * 3, width=500 / 2, height=window_height / 6)
+        stats_incorrect_out_of.place(x=500 / 2, y=(window_height / 6) * 3, width=500 / 2, height=window_height / 6)
         
-        stats_window_close.place(x=0, y=(window_height / 5) * 4, width=500, height=(window_height / 5) - 20)
+        stats_letters_correct.place(x=0, y=(window_height / 6) * 4, width=500 / 2, height=window_height / 6)
+        stats_letters_incorrect.place(x=500 / 2, y=(window_height / 6) * 4, width=500 / 2, height=window_height / 6)
+        
+        stats_window_close.place(x=0, y=(window_height / 6) * 5, width=500, height=(window_height / 6) - 20)
         
 
         MAIN_WINDOW.update()
@@ -824,12 +881,14 @@ def main():
         display_incorrect_guess.configure(fg=FG)
         incorrect_guess_container.configure(fg=FG)
         display_user_message.configure(fg=FG)
-        bottom_left_label.configure(fg=FG)
+        display_points.configure(fg=FG)
         bottom_right_label.configure(fg=FG)
         guide_frame.configure(fg=FG)
         stats_frame.configure(fg=FG)
         stats_highest_streak.configure(fg=FG)
+        stats_high_score.configure(fg=FG)
         stats_current_percentage.configure(fg=FG)
+        stats_current_loss_percentage.configure(fg=FG)
         stats_perfect_game.configure(fg=FG)
         stats_lucky_win.configure(fg=FG)
         stats_correct_out_of.configure(fg=FG)
@@ -864,7 +923,7 @@ def main():
         display_incorrect_guess.configure(bg=BG)
         incorrect_guess_container.configure(bg=BG)
         display_user_message.configure(bg=BG)
-        bottom_left_label.configure(bg=BG)
+        display_points.configure(bg=BG)
         bottom_right_label.configure(bg=BG)
         guide_frame.configure(bg=BG)
         stats_frame.configure(bg=BG)
@@ -891,7 +950,9 @@ def main():
         incorrect_guess_container.configure(bg=AC)
         show_streak.configure(bg=AC)
         stats_highest_streak.configure(bg=AC)
+        stats_high_score.configure(bg=AC)
         stats_current_percentage.configure(bg=AC)
+        stats_current_loss_percentage.configure(bg=AC)
         stats_perfect_game.configure(bg=AC)
         stats_lucky_win.configure(bg=AC)
         stats_correct_out_of.configure(bg=AC)
@@ -910,7 +971,7 @@ def main():
 
         stats_button.configure(bg=AC_2)
         letter_guess_button.configure(bg=AC_2)
-        bottom_left_label.configure(bg=AC_2)
+        display_points.configure(bg=AC_2)
         bottom_right_label.configure(bg=AC_2)
     
     def set_active_bg_colour(colour):
@@ -1023,12 +1084,20 @@ def main():
         """save current high score and exit"""
 
         global highest_streak
-        
+        global highest_score
+
         # update highest streak / update high score
         if current_streak > highest_streak:
             highest_streak = current_streak
-            with open("hs.txt", "w") as hs_txt:
+            with open("highest_streak.txt", "w") as hs_txt:
                 print(f"{highest_streak}", file=hs_txt)
+                hs_txt.close()
+        
+        # update points
+        if points > highest_score:
+            highest_score = points
+            with open("high_score.txt", "w") as hs_txt:
+                print(f"{highest_score}", file=hs_txt)
                 hs_txt.close()
         sys.exit()
 
@@ -1051,7 +1120,7 @@ def main():
     
     display_user_message = Label(text="", font=FONT, fg=FG, bg=BG)
     
-    bottom_left_label = Label(font=FONT, fg=FG, bg=AC_2, bd=BD, relief=RLF_2, disabledforeground=FG)
+    display_points = Label(text=(f"{points}"), font=FONT, fg=FG, bg=AC_2, bd=BD, relief=RLF_2, disabledforeground=FG)
     
     show_streak = Label(text=(f"Streak: {current_streak}"), font=FONT, fg=FG, bg=AC, bd=BD - 2, relief=RLF_2)
     bottom_right_label = Label(font=FONT, fg=FG, bg=AC_2, bd=BD, relief=RLF_2, activebackground=ACTVBG)
@@ -1065,9 +1134,11 @@ def main():
     stats_frame = LabelFrame(MAIN_WINDOW, text="Stats", font=FONT, fg=FG, bg=BG, bd=BD - 2, relief=GROOVE)
     
     stats_highest_streak = Label(stats_frame, text=(f"Highest\nStreak\n\n{highest_streak}"),font=("Helvetica", 10), fg=FG, bg=AC, bd=BD, relief=RLF_2)
-    stats_perfect_game = Label(stats_frame, text=(f"Perfect\nGames\n\n{perfect_game}"),font=("Helvetica", 10), fg=FG, bg=AC, bd=BD, relief=RLF_2)
+    stats_high_score = Label(stats_frame, text=(f"High\nScore\n\n{highest_score}"), font=("Helvetica", 10), fg=FG, bg=AC, bd=BD, relief=RLF_2)
+    stats_perfect_game = Label(stats_frame, text=(f"Perfect\nGames\n\n{perfect_game}"), font=("Helvetica", 10), fg=FG, bg=AC, bd=BD, relief=RLF_2)
     stats_lucky_win = Label(stats_frame, text=(f"Lucky\nWins\n\n{lucky_win}"),font=("Helvetica", 10), fg=FG, bg=AC, bd=BD, relief=RLF_2)
     stats_current_percentage = Label(stats_frame, text=(f"Win\nPercentage\n\n{current_percentage:.0f} %"), font=("Helvetica", 10), fg=FG, bg=AC, bd=BD, relief=RLF_2)
+    stats_current_loss_percentage = Label(stats_frame, text=(f"Loss\nPercentage\n\n{current_loss_percentage:.0f} %"), font=("Helvetica", 10), fg=FG, bg=AC, bd=BD, relief=RLF_2)
     stats_correct_out_of = Label(stats_frame, text=(f"Wins\n\n{correct_out_of} / {games_played}"), font=("Helvetica", 10), fg=FG, bg=AC, bd=BD, relief=RLF_2)
     stats_incorrect_out_of = Label(stats_frame, text=(f"Losses\n\n{incorrect_out_of} / {games_played}"), font=("Helvetica", 10), fg=FG, bg=AC, bd=BD, relief=RLF_2)
     stats_letters_correct = Label(stats_frame, text=(f"Correct\nLetters\n\n{letters_correct}"), font=("Helvetica", 10), fg=FG, bg=AC, bd=BD, relief=RLF_2)
@@ -1107,7 +1178,7 @@ def main():
     correct_guess_container.place(x=0, y=y_pos * 6, width=x_pos, height=y_pos)
     incorrect_guess_container.place(x=x_pos, y=y_pos * 6, width=x_pos, height=y_pos)
 
-    bottom_left_label.place(x=0, y=y_pos * 7, width=(700 / 3), height=y_pos)
+    display_points.place(x=0, y=y_pos * 7, width=(700 / 3), height=y_pos)
     show_streak.place(x=(700 / 3), y=y_pos * 7, width=(700 / 3), height=y_pos)
     bottom_right_label.place(x=(700 / 3) * 2, y=y_pos * 7, width=(700 / 3), height=y_pos) 
     
@@ -1128,19 +1199,22 @@ def main():
     stats_frame.place(x=700, y=0, width=x_pos * 2, height=y_pos * 8)
     stats_frame.lower()
     
-    stats_highest_streak.place(x=0, y=0, width=500 / 2, height=window_height / 5)
-    stats_current_percentage.place(x=500 / 2, y=0, width=500 / 2, height=window_height / 5)
-    
-    stats_perfect_game.place(x=0, y=window_height / 5, width=500 / 2, height=window_height / 5)
-    stats_lucky_win.place(x=500 / 2, y=window_height / 5, width=500 / 2, height=window_height / 5)
-    
-    stats_correct_out_of.place(x=0, y=(window_height / 5) * 2, width=500 / 2, height=window_height / 5)
-    stats_incorrect_out_of.place(x=500 / 2, y=(window_height / 5) * 2, width=500 / 2, height=window_height / 5)
-    
-    stats_letters_correct.place(x=0, y=(window_height / 5) * 3, width=500 / 2, height=window_height / 5)
-    stats_letters_incorrect.place(x=500 / 2, y=(window_height / 5) * 3, width=500 / 2, height=window_height / 5)
+    stats_highest_streak.place(x=0, y=0, width=500 / 2, height=window_height / 6)
+    stats_high_score.place(x=500 / 2, y=0, width=500 / 2, height=window_height / 6)
 
-    stats_window_close.place(x=0, y=(window_height / 5) * 4, width=500, height=(window_height / 5) - 20)
+    stats_current_percentage.place(x=0, y=window_height / 6, width=500 / 2, height=window_height / 6)
+    stats_current_loss_percentage.place(x=500 / 2, y=window_height / 6, width=500 / 2, height=window_height / 6) 
+    
+    stats_perfect_game.place(x=0, y=(window_height / 6) * 2, width=500 / 2, height=window_height / 6)
+    stats_lucky_win.place(x=500 / 2, y=(window_height / 6) * 2, width=500 / 2, height=window_height / 6)
+    
+    stats_correct_out_of.place(x=0, y=(window_height / 6) * 3, width=500 / 2, height=window_height / 6)
+    stats_incorrect_out_of.place(x=500 / 2, y=(window_height / 6) * 3, width=500 / 2, height=window_height / 6)
+    
+    stats_letters_correct.place(x=0, y=(window_height / 6) * 4, width=500 / 2, height=window_height / 6)
+    stats_letters_incorrect.place(x=500 / 2, y=(window_height / 6) * 4, width=500 / 2, height=window_height / 6)
+
+    stats_window_close.place(x=0, y=(window_height / 6) * 5, width=500, height=(window_height / 6) - 20)
 
     # retrieve colourscheme
     with open("colourscheme.txt", "r") as f:
@@ -1188,13 +1262,13 @@ def main():
         
         # pearl
         elif saved_colourscheme_bg.strip() == "eeeeee" and saved_colourscheme_actvbg.strip() == "ffaa99":
-            select_colourscheme_pearl()
+            select_colour_pearl()
         elif saved_colourscheme_bg.strip() == "eeeeee" and saved_colourscheme_actvbg.strip() == "8d6c44":
-            select_colourscheme_pearl_corsac()
+            select_colour_pearl_corsac()
         elif saved_colourscheme_bg.strip() == "eeeeee" and saved_colourscheme_actvbg.strip() == "bd9d85":
-            select_colourscheme_pearl_fennec()
+            select_colour_pearl_fennec()
         elif saved_colourscheme_bg.strip() == "eeeeee" and saved_colourscheme_actvbg.strip() == "767a7d":
-            select_colourscheme_pearl_lynx()
+            select_colour_pearl_lynx()
         
         f.close()
     

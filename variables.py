@@ -23,9 +23,11 @@ games_played = 0
 perfect_game = 0
 lucky_win = 0
 index_count = 0
+points = 0
 
 current_streak = 0
 current_percentage = 0
+current_loss_percentage = 0
 correct_total = 0
 incorrect_total = 0
 correct_out_of = 0
