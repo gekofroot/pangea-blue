@@ -81,7 +81,7 @@ canada_facts = [
         "Responsible for 77 percent of all maple syrup production.",
         "Home to Manitoulin Island - the worlds largest freshwater island.",
         "Kanata",
-
+        "Member of the five eyes.",
         ]
 
 costa_rica_facts = [
@@ -116,6 +116,7 @@ united_states_facts = [
         "Third most populated country in the world behind China and India.", 
         "Home to the worlds largest airforce.", 
         "Largest producer of nuclear power.", 
+        "Member of the five eyes.",
         ]
 
 guatemala_facts = [
@@ -187,6 +188,7 @@ germany_facts = [
 
 united_kingdom_facts = [
         "Red, white and blue.",
+        "Member of the five eyes.",
         ]
 
 france_facts = [
@@ -853,6 +855,7 @@ nauru_facts = [
 
 new_zealand_facts = [
         "Red, blue.",
+        "Member of the five eyes.",
         ]
 
 samoa_facts = [
@@ -867,6 +870,11 @@ tonga_facts = [
 
 tuvalu_facts = [
         "Red, blue and yellow.",
+        ]
+
+australia_facts = [
+        "Red, blue and white,"
+        "Member of the five eyes.",
         ]
 
 country_facts = [
@@ -896,6 +904,6 @@ country_facts = [
         senegal_facts, guinea_facts, benin_facts, sierra_leone_facts, togo_facts, liberia_facts, mauritania_facts, gambia_facts, 
         guinea_bissau_facts, cape_verde_facts, papua_new_guinea_facts, fiji_facts, solomon_islands_facts, vanuatu_facts, kiribati_facts, 
         federated_states_of_micronesia_facts, marshall_islands_facts, palau_facts, nauru_facts, new_zealand_facts, samoa_facts, tonga_facts, 
-        tuvalu_facts,
+        tuvalu_facts, australia_facts,
         ]
 
