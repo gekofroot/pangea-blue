@@ -190,7 +190,10 @@ countries_polynesia = [
         "New Zealand", "Samoa", "Tonga", "Tuvalu",
         ]
 
-region_oceania = []
+#revis
+region_oceania = [
+        "Australia",
+        ]
 oceanian_countries = [
         countries_melanesia, countries_micronesia, countries_polynesia,
         ]
@@ -223,5 +226,5 @@ country_names = [
         'Madagascar', 'Malawi', 'Zambia', 'Somalia', 'Zimbabwe', 'Rwanda', 'Burundi', 'Eritrea', 'Mauritius', 'Djibouti', 'Comoros', 
         'Seychelles', 'Nigeria', 'Ghaman', "Cote d'lvoire", 'Niger', 'Burkina Faso', 'Mali', 'Senegal', 'Guinea', 'Benin', 'Sierra Leone', 
         'Togo', 'Liberia', 'Mauritania', 'Gambia', 'Guinea-Bissau', 'Cape Verde', 'Papua New Guinea', 'Fiji', 'Solomon Islands', 'Vanuatu', 
-        'Kirbati', 'Federated States of Micronesia', 'Marshall Islands', 'Palau', 'Nauru', 'New Zealand', 'Samoa', 'Tonga', 'Tuvalu',
+        'Kirbati', 'Federated States of Micronesia', 'Marshall Islands', 'Palau', 'Nauru', 'New Zealand', 'Samoa', 'Tonga', 'Tuvalu', 'Australia',
         ]
