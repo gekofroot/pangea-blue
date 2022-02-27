@@ -93,7 +93,7 @@ def main():
             countries.append(country)
     shuffle(countries)    
     country_name = choice(countries)
-    
+
     # show initial hint
     def show_first_hint():
         count = 0

@@ -81,7 +81,7 @@ canada_facts = [
         "Responsible for 77 percent of all maple syrup production.",
         "Home to Manitoulin Island - the worlds largest freshwater island.",
         "Kanata",
-        "Member of the five eyes.",
+
         ]
 
 costa_rica_facts = [
@@ -116,7 +116,6 @@ united_states_facts = [
         "Third most populated country in the world behind China and India.", 
         "Home to the worlds largest airforce.", 
         "Largest producer of nuclear power.", 
-        "Member of the five eyes.",
         ]
 
 guatemala_facts = [
@@ -188,7 +187,6 @@ germany_facts = [
 
 united_kingdom_facts = [
         "Red, white and blue.",
-        "Member of the five eyes.",
         ]
 
 france_facts = [
@@ -250,6 +248,10 @@ sweden_facts = [
 
 hungary_facts = [
         "Red, white and green.",
+        ]
+
+australia_facts = [
+        "Red, white and blue.",
         ]
 
 austria_facts = [
@@ -855,7 +857,6 @@ nauru_facts = [
 
 new_zealand_facts = [
         "Red, blue.",
-        "Member of the five eyes.",
         ]
 
 samoa_facts = [
@@ -872,11 +873,6 @@ tuvalu_facts = [
         "Red, blue and yellow.",
         ]
 
-australia_facts = [
-        "Red, blue and white,"
-        "Member of the five eyes.",
-        ]
-
 country_facts = [
         antigua_and_barbuda_facts, aruba_facts, bahamas_facts, barbados_facts, cayman_islands_facts, cuba_facts, dominica_facts, 
         dominican_republic_facts, grenada_facts, haiti_facts, jamaica_facts, st_kitts_and_nevis_facts, st_lucia_facts, 
@@ -885,7 +881,7 @@ country_facts = [
         guatemala_facts, argentina_facts, bolivia_facts, brazil_facts, chile_facts, colombia_facts, ecuador_facts, guyana_facts, paraguay_facts, 
         peru_facts, suriname_facts, uruguay_facts, venezuela_facts, germany_facts, united_kingdom_facts, france_facts, 
         italy_facts, spain_facts, poland_facts, romania_facts, netherlands_facts, belgium_facts, czech_republic_facts, greece_facts, 
-        portugal_facts, sweden_facts, hungary_facts, austria_facts, bulgaria_facts, denmark_facts, finland_facts, slovakia_facts, 
+        portugal_facts, sweden_facts, hungary_facts, australia_facts, austria_facts, bulgaria_facts, denmark_facts, finland_facts, slovakia_facts, 
         ireland_facts, croatia_facts, lithuania_facts, slovenia_facts, latvia_facts, estonia_facts, cyprus_facts, luxembourg_facts, 
         malta_facts, norway_facts, iceland_facts, turkey_facts, serbia_facts, bosnia_and_herzegovina_facts, albania_facts, north_macedonia_facts, 
         montenegro_facts, andorra_facts, san_marino_facts, holy_see_facts, russia_facts, ukraine_facts, belarus_facts, moldova_facts, 
@@ -904,6 +900,6 @@ country_facts = [
         senegal_facts, guinea_facts, benin_facts, sierra_leone_facts, togo_facts, liberia_facts, mauritania_facts, gambia_facts, 
         guinea_bissau_facts, cape_verde_facts, papua_new_guinea_facts, fiji_facts, solomon_islands_facts, vanuatu_facts, kiribati_facts, 
         federated_states_of_micronesia_facts, marshall_islands_facts, palau_facts, nauru_facts, new_zealand_facts, samoa_facts, tonga_facts, 
-        tuvalu_facts, australia_facts,
+        tuvalu_facts,
         ]
 

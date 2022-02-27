@@ -190,10 +190,7 @@ countries_polynesia = [
         "New Zealand", "Samoa", "Tonga", "Tuvalu",
         ]
 
-#revis
-region_oceania = [
-        "Australia",
-        ]
+region_oceania = []
 oceanian_countries = [
         countries_melanesia, countries_micronesia, countries_polynesia,
         ]
@@ -202,9 +199,18 @@ for group in oceanian_countries:
     for country in group:
         region_oceania.append(country)
 
+region_australia = []
+country_australia = [
+        "Australia",
+        ]
+
+for country in country_australia:
+    region_australia.append(country)
+
 regions = [
         region_europe, region_america, 
         region_asia, region_africa, region_oceania,
+        region_australia,
         ]
 
 country_names = [
@@ -213,7 +219,7 @@ country_names = [
         'Costa Rica', 'El Salvador', 'Honduras', 'Mexico', 'Nicaragua', 'Panama', 'United States', 'Guatemala', 'Argentina', 
         'Bolivia', 'Brazil', 'Chile', 'Colombia', 'Ecuador', 'Guyana', 'Paraguay', 'Peru', 'Suriname', 'Uruguay', 'Venezuela', 
         'Germany', 'United Kingdom', 'France', 'Italy', 'Spain', 'Poland', 'Romania', 'Netherlands', 'Belgium', 'Czech Republic', 'Greece', 
-        'Portugal', 'Sweden', 'Hungary', 'Austria', 'Bulgaria', 'Denmark', 'Finland', 'Slovakia', 'Ireland', 'Croatia', 'Lithuania', 'Slovenia', 
+        'Portugal', 'Sweden', 'Hungary', 'Australia', 'Austria', 'Bulgaria', 'Denmark', 'Finland', 'Slovakia', 'Ireland', 'Croatia', 'Lithuania', 'Slovenia', 
         'Latvia', 'Estonia', 'Cyprus', 'Luxembourg', 'Malta', 'Norway', 'Iceland', 'Turkey', 'Serbia', 'Bosnia and Herzegovina', 'Albania', 
         'North Macedonia', 'Montenegro', 'Andorra', 'San Marino', 'Holy See', 'Russia', 'Ukraine', 'Belarus', 'Moldova', 'Switzerland', 
         'Liechtenstein', 'Monaco', 'India', 'Pakistan', 'Bangladesh', 'Afghanistan', 'Nepal', 'Sri Lanka', 'Bhutan', 'Maldives', 'Indonesia', 
@@ -226,5 +232,5 @@ country_names = [
         'Madagascar', 'Malawi', 'Zambia', 'Somalia', 'Zimbabwe', 'Rwanda', 'Burundi', 'Eritrea', 'Mauritius', 'Djibouti', 'Comoros', 
         'Seychelles', 'Nigeria', 'Ghaman', "Cote d'lvoire", 'Niger', 'Burkina Faso', 'Mali', 'Senegal', 'Guinea', 'Benin', 'Sierra Leone', 
         'Togo', 'Liberia', 'Mauritania', 'Gambia', 'Guinea-Bissau', 'Cape Verde', 'Papua New Guinea', 'Fiji', 'Solomon Islands', 'Vanuatu', 
-        'Kirbati', 'Federated States of Micronesia', 'Marshall Islands', 'Palau', 'Nauru', 'New Zealand', 'Samoa', 'Tonga', 'Tuvalu', 'Australia',
+        'Kirbati', 'Federated States of Micronesia', 'Marshall Islands', 'Palau', 'Nauru', 'New Zealand', 'Samoa', 'Tonga', 'Tuvalu',
         ]
