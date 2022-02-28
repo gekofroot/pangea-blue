@@ -100,8 +100,13 @@ def main():
         for country in country_names:
             if country_name == country_names[count]:
                 if len(country_facts[count]) > 0:
-                    info = country_facts[count][index_count]
-                    show_hint.configure(text=info)
+                    if len(country_facts[count]) == 1:
+                        info = country_facts[count][index_count]
+                        show_hint.configure(text=info)
+                    elif len(country_facts[count]) > 1:
+                        index_count = randint(0, len(country_facts[count]) - 1)
+                        info = country_facts[count][index_count]
+                        show_hint.configure(text=info)
                 else:
                     show_hint.configure(text="no available data at this time...")
             count += 1
@@ -670,6 +675,13 @@ def main():
         for country in country_names:
             if country_name == country_names[count]:
                 if len(country_facts[count]) > 0:
+                    if len(country_facts[count]) == 1:
+                        info = country_facts[count][index_count]
+                        show_hint.configure(text=info)
+                    elif len(country_facts[count]) > 1:
+                        index_count = randint(0, len(country_facts[count]) - 1)
+                        info = country_facts[count][index_count]
+                        show_hint.configure(text=info)
                     info = country_facts[count][index_count]
                     show_hint.configure(text=info)
                 else:

@@ -1,347 +1,375 @@
 # hint data
 antigua_and_barbuda_facts = [
-        "Red, black, yellow, blue and white.",
+        "Red, black, yellow, blue and white",
         ]
 
 aruba_facts = [
-        "Red, white, blue and yellow.",
+        "Red, white, blue and yellow",
         ]
 
 bahamas_facts = [
-        "Black, blue and yellow.",
+        "Black, blue and yellow",
         ] 
 
 barbados_facts = [
-        "Blue and yellow.",
-        "Windmill city.",
+        "Blue and yellow",
+        "Windmill City",
         ] 
 
 cayman_islands_facts = [
-        "Red, white and blue.",
+        "Red, white and blue",
 
         ]
 
 cuba_facts = [
-        "Red, white and blue.",
-        "Coca-Cola cannot not be bought nor sold here.",
-        "Fidel Castro.",
+        "Red, white and blue",
+        "Coca-Cola cannot not be bought nor sold here",
+        "Fidel Castro",
         ] 
 
 dominica_facts = [
-        "Green, yellow, white and red.",
+        "Green, yellow, white and red",
         ]
 
 dominican_republic_facts = [
-        "Blue, white and red.",
+        "Blue, white and red",
         ] 
 
 grenada_facts = [
-        "Red, yellow and green.",
-        "Spice Isle.", 
+        "Red, yellow and green",
+        "Spice Isle", 
         ] 
 
 haiti_facts = [
-        "Blue and red.",
+        "Blue and red",
         ] 
 
 jamaica_facts = [
-        "Black, yellow and green.",
-        "Bob Marley.",
-        "Home of the fastest man on earth.",
+        "Black, yellow and green",
+        "Bob Marley",
+        "Usain Bolt",
+        "Patois",
+        "Home to over 200 species of exotic orchid",
+        "Out of many, one poeple",
+        "Xaymaca",
+        "Land of wood and water",
         ] 
 
 st_kitts_and_nevis_facts = [
-        "Green, yellow, black and red.",
+        "Green, yellow, black and red",
         ]
 
 st_lucia_facts = [
-        "Blue, white, black and yellow.",
+        "Blue, white, black and yellow",
         ]
 
 st_vincent_and_the_grenadines_facts = [
-        "Blue, yellow and green.",
+        "Blue, yellow and green",
         ]
 
 trinidad_and_tobago_facts = [
-        "Red, white and black.",
+        "Red, white and black",
         ]
 
 belize_facts = [
-        "Red and blue.",
-        "Under the Shade I flourish.", 
+        "Red and blue",
+        "Under the Shade I flourish", 
         ]
 
 bermuda_facts = [
-        "Blue, red and white.",
-        "Bermuda Triangle.",
+        "Blue, red and white",
+        "Bermuda Triangle",
         ]
 
 canada_facts = [
-        "Red and white.",
-        "Responsible for 77 percent of all maple syrup production.",
-        "Home to Manitoulin Island - the worlds largest freshwater island.",
+        "Red and white",
+        "Responsible for 77 percent of all maple syrup production",
+        "Manitoulin Island",
         "Kanata",
 
         ]
 
 costa_rica_facts = [
-        "Blue, white and red.",
+        "Blue, white and red",
         ]
 
 el_salvador_facts = [
-        "Blue and white.",
+        "Blue and white",
         ]
 
 honduras_facts = [
-        "Blue and white.",
-        "Fish rain.",
-        "The Lost City of The Monkey God.",
+        "Blue and white",
+        "Fish rain",
+        "The Lost City of The Monkey God",
         ]
 
 mexico_facts = [
-        "Green, white and red.",
+        "Green, white and red",
         ]
 
 nicaragua_facts = [
-        "Blue, white and green.",
+        "Blue, white and green",
         ]
 
 panama_facts = [
-        "Blue, white and red.",
+        "Blue, white and red",
         ]
 
 united_states_facts = [
-        "Red, white and blue.",
-        "Both owns and operates the Global Positioning System.", 
-        "Third most populated country in the world behind China and India.", 
-        "Home to the worlds largest airforce.", 
-        "Largest producer of nuclear power.", 
+        "Red, white and blue",
+        "Both owns and operates the Global Positioning System", 
+        "Third most populated country in the world behind China and India", 
+        "Home to the worlds largest airforce", 
+        "Worlds largest producer of nuclear power",
+        "Cathedral of Saint John the Divine",
         ]
 
 guatemala_facts = [
-        "Blue and white.",
+        "Blue and white",
         ] 
 
 argentina_facts = [
-        "Blue, white and gold.",
+        "Blue, white and gold",
     ]
 
 bolivia_facts = [
-        "Red, yellow and green.",
-        "Pink Dolphins.",
+        "Red, yellow and green",
+        "Pink Dolphins",
         ]
 
 brazil_facts = [
-        "Green, yellow, blue and white.",
-        "Pele.",
-        "Ronaldinho.",
+        "Green, yellow, blue and white",
+        "Pele",
+        "Ronaldinho",
+        "Amazon river",
         ]
 
 chile_facts = [
-        "Blue, white and red.",
+        "Blue, white and red",
+        "Ojos del Salado",
         ]
 
 colombia_facts = [
-        "Yellow, blue and red.",
-        "The country's name is pronounced and spelled Colombia, not Columbia.",
+        "Yellow, blue and red",
+        "The country's name is pronounced and spelled Colombia, not Columbia",
+        "Amazon river",
+        "Medellin Botanical Garden",
         ]
 
 ecuador_facts = [
-        "Yellow, blue, and red.",
+        "Yellow, blue, and red",
+        "Chimborazo",
         ]
 
 guyana_facts = [
-        "Red, black, yellow, white and green.",
+        "Red, black, yellow, white and green",
         ]
 
 paraguay_facts = [
-        "Red, white and blue.",
-        "Corazon de America.",
-        "Makers of some of the world's finest lacework.",
+        "Red, white and blue",
+        "Corazon de America",
+        "Makers of some of the world's finest lacework",
         ]
 
 peru_facts = [
-        "Red and white.",
-        "Nazca Lines.",
+        "Red and white",
+        "Amazon river",
+        "Nazca Lines",
+        "Nevado Coropuna",
         ]
 
 suriname_facts = [
-        "Green, white, red and gold.",
+        "Green, white, red and gold",
         ]
 
 uruguay_facts = [
-        "White, yellow and blue.",
+        "White, yellow and blue",
         ] 
 
 venezuela_facts = [
-        "Yellow, blue, red and white.",
-        "Land of Grace.",
-        "Little Venice.",
-        "Rolling blackouts.",
+        "Yellow, blue, red and white",
+        "Land of Grace",
+        "Little Venice",
+        "Rolling blackouts",
         ]
 
 germany_facts = [
-        "Black, red and yellow.",
-        "Autobahn.",
+        "Black, red and yellow",
+        "Autobahn",
         ]
 
 united_kingdom_facts = [
-        "Red, white and blue.",
+        "Red, white and blue",
+        "Anne Spencer House",
         ]
 
 france_facts = [
-        "Blue, white and red.",
-        "The Mona Lisa.",
-        "The Louovre.",
-        "The worlds leading wine producer.",
+        "Blue, white and red",
+        "The Mona Lisa",
+        "The Louovre",
+        "The worlds leading wine producer",
+        "Arles",
+        "Claude Monets Garden",
         ]
 
 italy_facts = [
-        "Green, white and red.",
-        "Benito Mussolini.",
-        "Michelangelo.",
-        "Armani, Versace, Gucci, Prada, Farrari, Lamborghini...",
+        "Green, white and red",
+        "Benito Mussolini",
+        "Michelangelo",
+        "Armani, Versace, Gucci, Prada, Farrari, Lamborghini..",
+        "Home to holy see",
+        "St. Peters Basilica",
+        "Colosseum",
+        "Milan Cathedral",
         ]
 
 spain_facts = [
-        "Red and yellow.",
-        "Winners of the 1982 World Cup.",
-        "Borders Andorra, France, Portugal, and Gibraltar.",
-        "Valazquez, Goya, Picasso, Miro and Dali...",
-        "Gate of the Sun.",
-        "Wordless anthem.",
+        "Red and yellow",
+        "Winners of the 1982 World Cup",
+        "Borders Andorra, France, Portugal, and Gibraltar",
+        "Valazquez, Goya, Picasso, Miro and Dali..",
+        "Gate of the Sun",
+        "Wordless anthem",
+        "Seville Cathedral",
         ] 
 
 poland_facts = [
-        "White and red.",
+        "White and red",
+        "Malbork",
         ]
 
 romania_facts = [
-        "Blue, yellow and red.",
+        "Blue, yellow and red",
         ]
 
 netherlands_facts = [
-        "Red, white and blue.",
+        "Red, white and blue",
         ]
 
 belgium_facts = [
-        "Black, yellow, and red.",
+        "Black, yellow, and red",
         ]
 
 czech_republic_facts = [
-        "Blue, white and red.",
+        "Blue, white and red",
+        "Prague Castle",
         ]
 
 greece_facts = [
-        "Blue and white.",
+        "Blue and white",
         ]
 
 portugal_facts = [
-        "Green and red.",
+        "Green and red",
         ]
 
 sweden_facts = [
-        "Blue and yellow.",
-        "Saab, Electrolux, IKEA, Ericsson, Volvo...",
-        "Home to the ABBA museum.",
+        "Blue and yellow",
+        "Saab, Electrolux, IKEA, Ericsson, Volvo..",
+        "ABBA museum",
         ] 
 
 hungary_facts = [
-        "Red, white and green.",
+        "Red, white and green",
         ]
 
 australia_facts = [
-        "Red, white and blue.",
+        "Red, white and blue",
         ]
 
 austria_facts = [
-        "Red, white.",
+        "Red, white",
         ]
 
 bulgaria_facts = [
-        "White, green and red.",
+        "White, green and red",
         ]
 
 denmark_facts = [
-        "Red and white.",
-        "Lego.",
+        "Red and white",
+        "Lego",
         ]
 
 finland_facts = [
-        "White and blue.",
-        "Nokia.",
+        "White and blue",
+        "Nokia",
         ]
 
 slovakia_facts = [
-        "White, blue and red.",
+        "White, blue and red",
         "Between the Mountains",
         ]
 
 ireland_facts = [
-        "Green, white and orange.",
-        "The country is home to more than 30,000 castles and ruins.",
+        "Green, white and orange",
+        "The country is home to more than 30,000 castles and ruins",
+        "Powerscout Estate",
         ]
 
 croatia_facts = [
-        "Red, white and blue.",
+        "Red, white and blue",
+        "Pula Arena",
         ]
 
 lithuania_facts = [
-        "Yellow, green and red.",
+        "Yellow, green and red",
         ]
 
 slovenia_facts = [
-        "White, blue and red.",
+        "White, blue and red",
         ]
 
 latvia_facts = [
-        "Red and white.",
+        "Red and white",
         ]
 
 estonia_facts = [
-        "Blue, black and white.",
+        "Blue, black and white",
         ]
 
 cyprus_facts = [
-        "White and gold.",
+        "White and gold",
         ]
 
 luxembourg_facts = [
-        "Red, white and blue.",
-        "We want to remain what we are.",
+        "Red, white and blue",
+        "We want to remain what we are",
         ]
 
 malta_facts = [
-        "White and red.",
+        "White and red",
+        "Ghar-Dalam",
+        "Honey",
+        "Mdina",
         ]
 
 norway_facts = [
-        "Red, white and blue.",
+        "Red, white and blue",
         ]
 
 iceland_facts = [
-        "Blue, white and red.",
+        "Blue, white and red",
         ]
 
 turkey_facts = [
-        "Red and white.",
-        "Home to the \"Gates of Hell\".",
+        "Red and white",
+        "Gates of Hell",
         ]
 
 serbia_facts = [
-        "Red, blue and white.",
+        "Red, blue and white",
         ]
 
 bosnia_and_herzegovina_facts = [
-        "Blue, yellow and white.",
+        "Blue, yellow and white",
         ]
 
 albania_facts = [
-        "Red.",
+        "Red",
         ]
 
 north_macedonia_facts = [
-        "Yellow and red.",
+        "Yellow and red",
         "Red Star OS",
         "NADA",
         ]
@@ -351,80 +379,84 @@ montenegro_facts = [
         ]
 
 andorra_facts = [
-        "Blue, yellow and red.",
+        "Blue, yellow and red",
         ]
 
 san_marino_facts = [
-        "White and blue.",
+        "White and blue",
         ]
 
 holy_see_facts = [
-        "Yellow and white.",
-        "The Vatican.",
-        "Smallest country in the world.",
+        "Yellow and white",
+        "The Vatican",
+        "Smallest country in the world",
+        "Fazzini - The Resurrection",
         ]
 
 russia_facts = [
-        "White, blue and red.",
-        "Largest country in the world.",
+        "White, blue and red",
+        "Largest country in the world",
         ] 
 
 ukraine_facts = [
-        "Blue and yellow.",
+        "Blue and yellow",
         ]
 
 belarus_facts = [
-        "Red, green and white.",
-        "White Russia.",
+        "Red, green and white",
+        "White Russia",
         ]
 
 moldova_facts = [
-        "Blue, yellow and red.",
+        "Blue, yellow and red",
         ]
 
 switzerland_facts = [
-        "Red and white.",
+        "Red and white",
         "Plus",
-        "Solar Impulse 2.",
+        "Solar Impulse 2",
         "Audemars Piguet, Baume & Mercier, Bell & Ross, Blancpain...",
         ] 
 
 liechtenstein_facts = [
-        "Blue and red.",
+        "Blue and red",
         ]
 
 monaco_facts = [
-        "Red and white.",
+        "Red and white",
         ]
 
 india_facts = [
-        "Orange, white and green.",
-        "A name derived from the river Indus.",
+        "Orange, white and green",
+        "A name derived from the river Indus",
         "Zero",
+        "Kangchenjunga",
+        "Mehrangarh Fort",
         ]
 
 pakistan_facts = [
-        "White and green.",
-        "K2 Mountain.",
+        "White and green",
+        "K2",
         ]
 
 bangladesh_facts = [
-        "Red, green.",
+        "Red, green",
         ]
 
 afghanistan_facts = [
-        "Black, red, green and white.",
+        "Black, red, green and white",
         ]
 
 nepal_facts = [
-        "Red, white and black.",
-        "Mount Everest.",
+        "Red, white and black",
+        "Mount Everest",
+        "Kangchenjunga",
         ]
 
 sri_lanka_facts = [
-        "Green, orange, gold and red.",
-        "The pearl of the Indian ocean.",
-        "Previously Ceylon.",
+        "Green, orange, gold and red",
+        "Pearl of the Indian ocean",
+        "Previously Ceylon",
         ]
 
 bhutan_facts = [
@@ -432,230 +464,246 @@ bhutan_facts = [
         ]
 
 maldives_facts = [
-        "White, red and green.",
+        "White, red and green",
         ]
 
 indonesia_facts = [
-        "Red and white.",
+        "Red and white",
         ]
 
 phillipines_facts = [
-        "White yellow, blue and red.",
+        "White yellow, blue and red",
         ]
 
 vietnam_facts = [
-        "Red and yellow.",
+        "Red and yellow",
         ]
 
 thailand_facts = [
-        "Red, white and blue.",
-        "The land of white elephants.",
+        "Red, white and blue",
+        "The land of white elephants",
         ]
 
 burma_facts = [
-        "White, yellow, green and red.",
+        "White, yellow, green and red",
         ]
 
 malaysia_facts = [
-        "Blue, red, white and yellow.",
+        "Blue, red, white and yellow",
         ]
 
 cambodia_facts = [
-        "Blue and red.",
+        "Blue and red",
         ]
 
 laos_facts = [
-        "Red, blue and white.",
+        "Red, blue and white",
         ]
 
 singapore_facts = [
-        "Red and white.", 
+        "Red and white", 
         ]
 
 timor_leste_facts = [
-        "Black, white, yellow and red.",
+        "Black, white, yellow and red",
         ]
 
 brunei_facts = [
-        "Yellow, white, black and red.",
+        "Yellow, white, black and red",
         ]
 
 egypt_facts = [
-        "Red, white and black.",
+        "Red, white and black",
+        "Nile river",
         ]
 
 iran_facts = [
-        "Green, white and red.",
+        "Green, white and red",
         ]
 
 iraq_facts = [
-        "Red, white, green and black.",
+        "Red, white, green and black",
         ]
 
 saudi_arabia_facts = [
-        "Green and white.", 
+        "Green and white", 
         ]
 
 yemen_facts = [
-        "Red, white and black.",
-        "The land of milk and honey.",
+        "Red, white and black",
+        "The land of milk and honey",
         ]
 
 syria_facts = [
-        "Red, white and black.",
+        "Red, white and black",
         ]
 
 jordan_facts = [
-        "Red, black, white and green.",
-        "The Dead Sea.",
+        "Red, black, white and green",
+        "The Dead Sea",
         ]
 
 united_arab_emirates_facts = [
-        "Red, green, white and black.",
+        "Red, green, white and black",
+        "E & J Gallo",
+        "Constellation Brands",
+        "The Wine Group",
         ]
 
 israel_facts = [
-        "Blue and white.",
+        "Blue and white",
         ]
 
 lebanon_facts = [
-        "Red, white and green.",
-        "Switzerland of the East.",
+        "Red, white and green",
+        "Switzerland of the East",
         ]
 
 oman_facts = [
-        "Red, white and green.",
+        "Red, white and green",
         ]
 
 palestine_facts = [
-        "Red, black, white green.",
+        "Red, black, white green",
         ]
 
 kuwait_facts = [
-        "Black, green, white and red.",
+        "Black, green, white and red",
         ]
 
 qatar_facts = [
-        "White and red.",
+        "White and red",
         ]
 
 bahrain_facts = [
-        "White and red.",
+        "White and red",
         ]
 
 china_facts = [
-        "Yellow and red.",
-        "Inventor of football.",
+        "Yellow and red",
+        "Inventor of football",
+        "Yangtze river",
+        "Mount Everest",
+        "K2",
+        "Danyang-Kunshan Grand Bridge",
+        "Shanghai Maglev",
         ] 
 
 japan_facts = [
-        "White and red.",
-        "ASIMO.",
+        "White and red",
+        "ASIMO",
+        "Three Great Gardens",
         ] 
 
 south_korea_facts = [
-        "White, blue and red.",
-        "A mountainous country.",
+        "White, blue and red",
+        "A mountainous country",
+        "Blood type",
+        "Samsung",
+        "K-Pop",
         ] 
 
 north_korea_facts = [
-        "Blue, white and red.",
+        "Blue, white and red",
+        "K-Pop",
         ]
 
 mongolia_facts = [
-        "Red, yellow and blue.",
-        "Genghis Khan.",
+        "Red, yellow and blue",
+        "Genghis Khan",
         ]
 
 azerbaijan_facts = [
-        "Blue, red, green and white.",
-        "the Land of Fire.",
+        "Blue, red, green and white",
+        "the Land of Fire",
         ]
 
 georgia_facts = [
-        "White and red.",
+        "White and red",
         ]
 
 armenia_facts = [
-        "Red, blue and orange.",
+        "Red, blue and orange",
         ]
 
 uzbekistan_facts = [
-        "White, blue, green and red.",
+        "White, blue, green and red",
         ]
 
 kazakhstan_facts = [
-        "Blue and yellow.",
+        "Blue and yellow",
         ]
 
 tajikstan_facts = [
-        "Red, white and green.",
+        "Red, white and green",
         ]
 
 kyrgyzstan_facts = [
-        "Red and yellow.",
+        "Red and yellow",
         ]
 
 turkmenistan_facts = [
-        "Green, red and white.",
+        "Green, red and white",
         ]
 
 algeria_facts = [
-        "Green white and red.",
-        "Les Fennecs.",
+        "Green white and red",
+        "Les Fennecs",
         ]
 
 sudan_facts = [
-        "Green, red, white and black.",
-        "Red Sea.",
+        "Green, red, white and black",
+        "Red Sea",
+        "Nile river",
         ]
 
 morocco_facts = [
-        "Red.",
+        "Red",
         ]
 
 tunisia_facts = [
-        "Red and white.",
+        "Red and white",
         ]
 
 south_sudan_facts = [
-        "Blue, black, white, red and green.",
+        "Blue, black, white, red and green",
+        "Nile river",
         ]
 
 libya_facts = [
-        "White, red, black and green.",
+        "White, red, black and green",
         ]
 
 south_africa_facts = [
-        "Black, yellow, green, white, red and blue.",
+        "Black, yellow, green, white, red and blue",
         ] 
 
 namibia_facts = [
-        "Blue, white, red and green.",
+        "Blue, white, red and green",
         ]
 
 botswana_facts = [
-        "Blue, black and white.",
+        "Blue, black and white",
         ]
 
 lesotho_facts = [
-        "Blue, white and green.",
+        "Blue, white and green",
         ]
 
 swaziland_facts = [
-        "Black, white, blue, yellow and red.",
+        "Black, white, blue, yellow and red",
         ]
 
 democratic_republic_of_the_congo_facts = [
-        "Yellow, blue and red.",
+        "Yellow, blue and red",
         ]
 
 angola_facts = [
-        "Red, black and yellow.",
+        "Red, black and yellow",
         ]
 
 cameroon_facts = [
-        "Green, red and yellow.",
+        "Green, red and yellow",
         ]
 
 chad_facts = [
@@ -663,214 +711,222 @@ chad_facts = [
         ]
 
 central_african_republic_facts = [
-        "Blue, white, green and yellow.",
+        "Blue, white, green and yellow",
         ]
 
+#nlrvr
 republic_of_the_congo_facts = [
-        "Green, yellow and red.",
+        "Green, yellow and red",
+        "Nile river",
         ]
 
 gabon_facts = [
-        "Green, yellow and blue.",
+        "Green, yellow and blue",
         ]
 
 equatorial_guinea_facts = [
-        "Blue, green, white and red.",
+        "Blue, green, white and red",
         ]
 
 sao_tome_and_principe_facts = [
-        "Red, green, black and yellow.",
+        "Red, green, black and yellow",
         ]
 
 ethiopia_facts = [
-        "Green, yellow and red.",
+        "Green, yellow and red",
+        "Nile river",
         ]
 
 tanzania_facts = [
-        "Green, yellow, black and blue.",
+        "Green, yellow, black and blue",
+        "Nile river",
         ]
 
 kenya_facts = [
-        "Black, white, red and green.",
+        "Black, white, red and green",
+        "Nile river",
         ]
 
 uganda_facts = [
-        "Black, yellow, red and white.",
+        "Black, yellow, red and white",
+        "Nile river",
         ]
 
 mozambique_facts = [
-        "Red, green, white, black and yellow.",
+        "Red, green, white, black and yellow",
         ]
 
 madagascar_facts = [
-        "White, red and green.",
-        "The lemur is a sacred animal to this country.",
+        "White, red and green",
+        "The lemur is a sacred animal",
         ]
 
 malawi_facts = [
-        "Black, red and green.",
+        "Black, red and green",
         ]
 
 zambia_facts = [
-        "Green, red and black.",
+        "Green, red and black",
         ]
 
 somalia_facts = [
-        "Blue and white.",
+        "Blue and white",
         ]
 
 zimbabwe_facts = [
-        "White, green, yellow, red and black.",
+        "White, green, yellow, red and black",
         ]
 
 rwanda_facts = [
-        "Blue, yellow and green.",
+        "Blue, yellow and green",
+        "Nile river",
         ]
 
 burundi_facts = [
-        "Red, green and white.",
+        "Red, green and white",
+        "Nile river",
         ]
 
 eritrea_facts = [
-        "Red, green and blue.",
+        "Red, green and blue",
         ]
 
 mauritius_facts = [
-        "Red, blue, yellow and green.",
+        "Red, blue, yellow and green",
         ]
 
 djibouti_facts = [
-        "White, red, blue and green.",
+        "White, red, blue and green",
         ]
 
 comoros_facts = [
-        "Green, white, yellow, red and blue.",
+        "Green, white, yellow, red and blue",
         ]
 
 seychelles_facts = [
-        "Blue, yellow, red, white and green.",
+        "Blue, yellow, red, white and green",
         ]
 
 nigeria_facts = [
-        "Green and white.",
+        "Green and white",
         ]
 
 ghaman_facts = [
-        "Red, yellow, black and green.",
+        "Red, yellow, black and green",
         ] 
 
 cote_dlvoire_facts = [
-        "Orange, white and green.",
+        "Orange, white and green",
         ]
 
 niger_facts = [
-        "Orange, white and green.",
+        "Orange, white and green",
         ]
 
 burkina_faso_facts = [
-        "Red, green and yellow.",
+        "Red, green and yellow",
         ]
 
 mali_facts = [
-        "Green, yellow and red.",
+        "Green, yellow and red",
         ]
 
 senegal_facts = [
-        "Green, yellow and red.",
+        "Green, yellow and red",
         ]
 
 guinea_facts = [
-        "Red, yellow and green.",
+        "Red, yellow and green",
         ]
 
 benin_facts = [
-        "Green, yellow and red.",
+        "Green, yellow and red",
         ]
 
 sierra_leone_facts = [
-        "Green, white and blue.",
-        "Diamonds are forever.",
+        "Green, white and blue",
+        "Diamonds are forever",
         "Diamonds of",
         "Blood Diamond",
         ] 
 
 togo_facts = [
-        "Red, white, green and yellow.",
+        "Red, white, green and yellow",
         ]
 
 liberia_facts = [
-        "Blue, white and red.",
+        "Blue, white and red",
         ]
 
 mauritania_facts = [
-        "Red, yellow and green.",
+        "Red, yellow and green",
         ]
 
 gambia_facts = [
-        "Red, white, blue and green.",
+        "Red, white, blue and green",
         ]
 
 guinea_bissau_facts = [
-        "Black, red, yellow and green.",
+        "Black, red, yellow and green",
         ]
 
 cape_verde_facts = [
-        "Blue, white and red.",
+        "Blue, white and red",
         ]
 
 papua_new_guinea_facts = [
-        "Red, black and white.",
+        "Red, black and white",
         ]
 
 fiji_facts = [
-        "Red and blue.",
+        "Red and blue",
         ]
 
 solomon_islands_facts = [
-        "White, blue, yellow and green.",
+        "White, blue, yellow and green",
         ]
 
 vanuatu_facts = [
-        "Black, yellow, red and green.",
+        "Black, yellow, red and green",
         ]
 
 kiribati_facts = [
-        "Red, white and blue.",
+        "Red, white and blue",
         ]
 
 federated_states_of_micronesia_facts = [
-        "White and blue.",
+        "White and blue",
         ] 
 
 marshall_islands_facts = [
-        "White, blue and orange.",
+        "White, blue and orange",
         ]
 
 palau_facts = [
-        "Blue, yellow.",
+        "Blue, yellow",
         ]
 
 nauru_facts = [
-        "Blue, yellow and white.",
-        "A small, oval-shaped island.",
+        "Blue, yellow and white",
+        "A small, oval-shaped island",
         ]
 
 new_zealand_facts = [
-        "Red, blue.",
+        "Red, blue",
         ]
 
 samoa_facts = [
-        "Blue, white and red.",
+        "Blue, white and red",
         ]
 
 tonga_facts = [
         "Red and white",
-        "Red plus.",
-        "An archipelago.",
+        "Red plus",
+        "An archipelago",
         ]
 
 tuvalu_facts = [
-        "Red, blue and yellow.",
+        "Red, blue and yellow",
         ]
 
 country_facts = [
