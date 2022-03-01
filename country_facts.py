@@ -53,6 +53,7 @@ jamaica_facts = [
         "Out of many, one poeple",
         "Xaymaca",
         "Land of wood and water",
+        "Sunken Pirate City of Port Royal",
         ] 
 
 st_kitts_and_nevis_facts = [
@@ -105,6 +106,11 @@ honduras_facts = [
 
 mexico_facts = [
         "Green, white and red",
+        "Palenque",
+        "El Castillo",
+        "Pyramid of Calakmul",
+        "Pyramid of the Niches",
+        "Pyramid of Cholula",
         ]
 
 nicaragua_facts = [
@@ -122,19 +128,26 @@ united_states_facts = [
         "Home to the worlds largest airforce", 
         "Worlds largest producer of nuclear power",
         "Cathedral of Saint John the Divine",
+        "Mesa Verde",
         ]
 
 guatemala_facts = [
         "Blue and white",
+        "Tikal",
+        "Mayan Pyramids of Tikal",
+        "The Lost Underwater Mayan City of Samabaj",
         ] 
 
 argentina_facts = [
         "Blue, white and gold",
-    ]
+        "Devils Throat",
+        "Villa Epecuen",
+        ]
 
 bolivia_facts = [
         "Red, yellow and green",
         "Pink Dolphins",
+        "Akapana Pyramid",
         ]
 
 brazil_facts = [
@@ -176,6 +189,10 @@ peru_facts = [
         "Amazon river",
         "Nazca Lines",
         "Nevado Coropuna",
+        "The jungle of peru",
+        "Lord of Miracles",
+        "Machu Picchu",
+        "The Huaca Pucllana",
         ]
 
 suriname_facts = [
@@ -191,6 +208,7 @@ venezuela_facts = [
         "Land of Grace",
         "Little Venice",
         "Rolling blackouts",
+        "Salto Para",
         ]
 
 germany_facts = [
@@ -203,6 +221,11 @@ united_kingdom_facts = [
         "Anne Spencer House",
         ]
 
+england_facts = [
+        "Red and white",
+        "Stonehenge",
+        ]
+
 france_facts = [
         "Blue, white and red",
         "The Mona Lisa",
@@ -210,6 +233,8 @@ france_facts = [
         "The worlds leading wine producer",
         "Arles",
         "Claude Monets Garden",
+        "Eiffel Tower",
+        "The Louvre",
         ]
 
 italy_facts = [
@@ -221,6 +246,14 @@ italy_facts = [
         "St. Peters Basilica",
         "Colosseum",
         "Milan Cathedral",
+        "City on water",
+        "Piazza della Signoria",
+        "Mugnone",
+        "Pompeii",
+        "Pyramid of Cestius",
+        "Monte d'Accoddi",
+        "The Sunken City of Baiae",
+        "Lago di Braies",
         ]
 
 spain_facts = [
@@ -257,6 +290,8 @@ czech_republic_facts = [
 
 greece_facts = [
         "Blue and white",
+        "The Sunken City of Pavlopetri",
+        "The Sunken City of Olous",
         ]
 
 portugal_facts = [
@@ -283,6 +318,7 @@ austria_facts = [
 
 bulgaria_facts = [
         "White, green and red",
+        "Plovdiv",
         ]
 
 denmark_facts = [
@@ -354,6 +390,10 @@ iceland_facts = [
 turkey_facts = [
         "Red and white",
         "Gates of Hell",
+        "Derinkuyu",
+        "Ani",
+        "Troy",
+        "Ephesus",
         ]
 
 serbia_facts = [
@@ -370,8 +410,6 @@ albania_facts = [
 
 north_macedonia_facts = [
         "Yellow and red",
-        "Red Star OS",
-        "NADA",
         ]
 
 montenegro_facts = [
@@ -396,6 +434,10 @@ holy_see_facts = [
 russia_facts = [
         "White, blue and red",
         "Largest country in the world",
+        "Red Square",
+        "St. Basils Cathedral",
+        "The Kremlin",
+        "Fortress in a city",
         ] 
 
 ukraine_facts = [
@@ -427,16 +469,33 @@ monaco_facts = [
         ]
 
 india_facts = [
+        "Vijayanagar",
         "Orange, white and green",
         "A name derived from the river Indus",
         "Zero",
         "Kangchenjunga",
         "Mehrangarh Fort",
+        "Nagar Sagar Kund",
+        "Ujala Baoli",
+        "Rani ki Vav",
+        "Panna Meena Ka Kund Jaipur",
+        "Hampi Pushkarini",
+        "Sanchi",
+        "Lothal",
+        "Vaishali",
+        "Chaukhandi Stupa",
+        "Pyramid of the Sun",
+        "Brihadeeswarar Temple",
+        "Ahichhatra",
+        "Dwarka",
+        "The submerged temples of Mahabalipuram",
         ]
 
 pakistan_facts = [
         "White and green",
         "K2",
+        "Mohenjo-daro",
+        "Taxila",
         ]
 
 bangladesh_facts = [
@@ -469,6 +528,8 @@ maldives_facts = [
 
 indonesia_facts = [
         "Red and white",
+        "Borobudur Temple",
+        "Candi Sukuh",
         ]
 
 phillipines_facts = [
@@ -482,6 +543,7 @@ vietnam_facts = [
 thailand_facts = [
         "Red, white and blue",
         "The land of white elephants",
+        "The White Temple",
         ]
 
 burma_facts = [
@@ -494,10 +556,14 @@ malaysia_facts = [
 
 cambodia_facts = [
         "Blue and red",
+        "Angkor",
+        "Angkor Wat",
+        "Prang Temple",
         ]
 
 laos_facts = [
         "Red, blue and white",
+        "Chutes de Khone",
         ]
 
 singapore_facts = [
@@ -515,14 +581,26 @@ brunei_facts = [
 egypt_facts = [
         "Red, white and black",
         "Nile river",
+        "Thebes",
+        "The Great Pyramids of Giza",
+        "Pyramid of Khafre",
+        "Pyramid of Djoser",
+        "The Bent Pyramid",
+        "Heracleion",
         ]
 
 iran_facts = [
         "Green, white and red",
+        "Persepolis",
+        "Chogha Zanbil",
         ]
 
 iraq_facts = [
         "Red, white, green and black",
+        "Uruk",
+        "Babylon",
+        "Ctesiphon",
+        "Ziggurat of Ur",
         ]
 
 saudi_arabia_facts = [
@@ -536,11 +614,13 @@ yemen_facts = [
 
 syria_facts = [
         "Red, white and black",
+        "Palmyra",
         ]
 
 jordan_facts = [
         "Red, black, white and green",
         "The Dead Sea",
+        "Petra",
         ]
 
 united_arab_emirates_facts = [
@@ -548,15 +628,18 @@ united_arab_emirates_facts = [
         "E & J Gallo",
         "Constellation Brands",
         "The Wine Group",
+        "Moma",
         ]
 
 israel_facts = [
         "Blue and white",
+        "Atlit-Yaam",
         ]
 
 lebanon_facts = [
         "Red, white and green",
         "Switzerland of the East",
+        "Byblos",
         ]
 
 oman_facts = [
@@ -565,6 +648,7 @@ oman_facts = [
 
 palestine_facts = [
         "Red, black, white green",
+        "Jericho",
         ]
 
 kuwait_facts = [
@@ -587,12 +671,19 @@ china_facts = [
         "K2",
         "Danyang-Kunshan Grand Bridge",
         "Shanghai Maglev",
+        "Mausoleum of the First Qin Emperor",
+        "Tomb of the General",
+        "Shi Cheng",
+        "The Ancient Underwater City in Fuxian Lake",
         ] 
 
 japan_facts = [
         "White and red",
         "ASIMO",
         "Three Great Gardens",
+        "The Yonaguni Ruins",
+        "Mayumi Miyawaki - Blue Box",
+        "Plaza in Kanagawa",
         ] 
 
 south_korea_facts = [
@@ -601,10 +692,13 @@ south_korea_facts = [
         "Blood type",
         "Samsung",
         "K-Pop",
+        "Gumi Art Center",
         ] 
 
 north_korea_facts = [
         "Blue, white and red",
+        "Nada",
+        "Red Star OS",
         "K-Pop",
         ]
 
@@ -644,17 +738,20 @@ kyrgyzstan_facts = [
 
 turkmenistan_facts = [
         "Green, red and white",
+        "The Submerged castle in Lake Van",
         ]
 
 algeria_facts = [
         "Green white and red",
         "Les Fennecs",
+        "Timgad",
         ]
 
 sudan_facts = [
         "Green, red, white and black",
         "Red Sea",
         "Nile river",
+        "The Nubian Pyramids of Sudan",
         ]
 
 morocco_facts = [
@@ -663,6 +760,7 @@ morocco_facts = [
 
 tunisia_facts = [
         "Red and white",
+        "Carthage",
         ]
 
 south_sudan_facts = [
@@ -672,6 +770,7 @@ south_sudan_facts = [
 
 libya_facts = [
         "White, red, black and green",
+        "The Tadrart Acacus",
         ]
 
 south_africa_facts = [
@@ -718,10 +817,12 @@ central_african_republic_facts = [
 republic_of_the_congo_facts = [
         "Green, yellow and red",
         "Nile river",
+        "Inga Falls",
         ]
 
 gabon_facts = [
         "Green, yellow and blue",
+        "Chutes Kongou",
         ]
 
 equatorial_guinea_facts = [
@@ -775,6 +876,8 @@ somalia_facts = [
 
 zimbabwe_facts = [
         "White, green, yellow, red and black",
+        "Victoria Falls",
+        "Great Zimbabwe",
         ]
 
 rwanda_facts = [
@@ -935,7 +1038,7 @@ country_facts = [
         st_vincent_and_the_grenadines_facts, trinidad_and_tobago_facts, belize_facts, bermuda_facts, canada_facts, costa_rica_facts, 
         el_salvador_facts, honduras_facts, mexico_facts, nicaragua_facts, panama_facts, united_states_facts, 
         guatemala_facts, argentina_facts, bolivia_facts, brazil_facts, chile_facts, colombia_facts, ecuador_facts, guyana_facts, paraguay_facts, 
-        peru_facts, suriname_facts, uruguay_facts, venezuela_facts, germany_facts, united_kingdom_facts, france_facts, 
+        peru_facts, suriname_facts, uruguay_facts, venezuela_facts, germany_facts, united_kingdom_facts, england_facts, france_facts, 
         italy_facts, spain_facts, poland_facts, romania_facts, netherlands_facts, belgium_facts, czech_republic_facts, greece_facts, 
         portugal_facts, sweden_facts, hungary_facts, australia_facts, austria_facts, bulgaria_facts, denmark_facts, finland_facts, slovakia_facts, 
         ireland_facts, croatia_facts, lithuania_facts, slovenia_facts, latvia_facts, estonia_facts, cyprus_facts, luxembourg_facts, 

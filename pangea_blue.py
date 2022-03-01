@@ -25,7 +25,6 @@ from country_facts import *
 
 def main():
     
-    # globals
     global WCBG
     global FONT
     global font_size
@@ -96,7 +95,10 @@ def main():
 
     # show initial hint
     def show_first_hint():
+        
+        global index_count
         count = 0
+        
         for country in country_names:
             if country_name == country_names[count]:
                 if len(country_facts[count]) > 0:
@@ -228,7 +230,6 @@ def main():
     def region_get(reg, reg_name):
         """shuffle selected region and select randomly generated country"""
         
-        # globals
         global countries
 
         display_region.configure(text=reg_name)
@@ -391,7 +392,6 @@ def main():
         determine whether or not input data occurs in country name
         """
         
-        # globals
         global WCBG
         global correct_letters
         global correct_guess
@@ -625,7 +625,6 @@ def main():
     def play_again():
         """reconfigure/reset neccessary widgets/variables"""
         
-        # globals
         global correct_letters
         global correct_guess
         global incorrect_guess
@@ -691,7 +690,6 @@ def main():
     def size_toggle(width, height, get_font, font_size_2):
         """resize main window"""
         
-        # globals
         global font
         global window_width
         global window_height
@@ -789,7 +787,6 @@ def main():
     def size_toggle_b(width, height, get_font, font_size_2):
         """resize main window"""
         
-        # globals
         global font
         global window_width
         global window_height
@@ -878,7 +875,6 @@ def main():
     def set_fg_colour(colour):
         """sets foreground colour"""
         
-        # globals
         global current_fg
 
         FG = colour
@@ -920,7 +916,6 @@ def main():
     def set_bg_colour(colour):
         """sets background colour"""
         
-        # globals
         global current_bg
 
         BG = colour
@@ -950,7 +945,6 @@ def main():
     def set_accent_colour(colour):
         """sets primary accent colour"""
         
-        # globals
         global current_ac
 
         AC = colour
@@ -975,7 +969,6 @@ def main():
     def set_accent_colour_b(colour):
         """sets secondary accent colour"""
         
-        # globals
         global current_ac_2
 
         AC_2 = colour
@@ -989,7 +982,6 @@ def main():
     def set_active_bg_colour(colour):
         """sets active background colour"""
 
-        #globals
         global current_actvbg
 
         ACTVBG = colour
@@ -1008,7 +1000,6 @@ def main():
     def colour_get(fg, bg, ac, ac_2, actvbg):
         """set foreground/background and primary/secondary accent colours"""
 
-        # globals
         global current_fg
         global current_bg
         global current_ac

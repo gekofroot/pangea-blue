@@ -51,7 +51,7 @@ for group in american_countries:
 
 # Europe
 countries_eu = [
-        "Germany", "United Kingdom", "France", "Italy",
+        "Germany", "United Kingdom", "England", "France", "Italy",
         "Spain", "Poland", "Romania", "Netherlands", "Belgium",
         "Czech Republic", "Greece", "Portugal", "Sweden",
         "Hungary", "Austria", "Bulgaria", "Denmark", "Finland",
@@ -79,7 +79,7 @@ countries_eastern_europe = [
     ]
 
 countries_western_europe = [
-        "Germany", "France", "Netherlands", "Belgium", "Austria",
+        "Germany", "England", "France", "Netherlands", "Belgium", "Austria",
         "Switzerland", "Luxembourg", "Liechtenstein", "Monaco",
     ]
 
@@ -218,7 +218,7 @@ country_names = [
         'Jamaica', 'St. Kitts and Nevis', 'St. Lucia', 'St. Vincent and The Grenadines', 'Trinidad and Tobago', 'Belize', 'Bermuda', 'Canada', 
         'Costa Rica', 'El Salvador', 'Honduras', 'Mexico', 'Nicaragua', 'Panama', 'United States', 'Guatemala', 'Argentina', 
         'Bolivia', 'Brazil', 'Chile', 'Colombia', 'Ecuador', 'Guyana', 'Paraguay', 'Peru', 'Suriname', 'Uruguay', 'Venezuela', 
-        'Germany', 'United Kingdom', 'France', 'Italy', 'Spain', 'Poland', 'Romania', 'Netherlands', 'Belgium', 'Czech Republic', 'Greece', 
+        'Germany', 'United Kingdom', 'England', 'France', 'Italy', 'Spain', 'Poland', 'Romania', 'Netherlands', 'Belgium', 'Czech Republic', 'Greece', 
         'Portugal', 'Sweden', 'Hungary', 'Australia', 'Austria', 'Bulgaria', 'Denmark', 'Finland', 'Slovakia', 'Ireland', 'Croatia', 'Lithuania', 'Slovenia', 
         'Latvia', 'Estonia', 'Cyprus', 'Luxembourg', 'Malta', 'Norway', 'Iceland', 'Turkey', 'Serbia', 'Bosnia and Herzegovina', 'Albania', 
         'North Macedonia', 'Montenegro', 'Andorra', 'San Marino', 'Holy See', 'Russia', 'Ukraine', 'Belarus', 'Moldova', 'Switzerland', 
