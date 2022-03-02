@@ -127,6 +127,7 @@ def main():
     def get_next_hint():
         
         global index_count
+        
         count = 0
         
         for country in country_names:
@@ -147,8 +148,8 @@ def main():
     def get_prev_hint():
         
         global index_count
+        
         count = 0
-
         for country in country_names:
             if country_name == country_names[count]:
                 if len(country_facts[count]) > 0:
@@ -168,8 +169,8 @@ def main():
         
         global index_count
         global shown_hint
-        count = 0
         
+        count = 0
         for country in country_names:
             if country_name == country_names[count]:
                 if len(country_facts[count]) > 0:
