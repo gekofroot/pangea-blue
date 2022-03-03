@@ -129,7 +129,6 @@ def main():
         global index_count
         
         count = 0
-        
         for country in country_names:
             if country_name == country_names[count]:
                 if len(country_facts[count]) > 0:
@@ -144,7 +143,6 @@ def main():
             count += 1
     
     # get previous hint
-    # mod
     def get_prev_hint():
         
         global index_count
@@ -1437,10 +1435,9 @@ def main():
     MAIN_WINDOW.bind("<Control-Alt-KeyPress-t>", callback_close_stats)
     MAIN_WINDOW.bind("<Control-KeyPress-n>", callback_open_hint)
     MAIN_WINDOW.bind("<Control-Alt-KeyPress-n>", callback_close_hint)
-    MAIN_WINDOW.bind("<Control-KeyPress-Right>", callback_previous_hint)
-    MAIN_WINDOW.bind("<Control-KeyPress-Right>", callback_previous_hint)
+    MAIN_WINDOW.bind("<Control-KeyPress-Left>", callback_previous_hint)
     MAIN_WINDOW.bind("<Control-KeyPress-Up>", callback_random_hint)
-    MAIN_WINDOW.bind("<Control-KeyPress-Left>", callback_next_hint)
+    MAIN_WINDOW.bind("<Control-KeyPress-Right>", callback_next_hint)
 
     # mainloop
     MAIN_WINDOW.mainloop()

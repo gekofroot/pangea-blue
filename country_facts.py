@@ -129,6 +129,10 @@ united_states_facts = [
         "Worlds largest producer of nuclear power",
         "Cathedral of Saint John the Divine",
         "Mesa Verde",
+        "Eywind Earle - Hillside Magic",
+        "Shag - Green Lagoon",
+        "Shag - Milky Moon",
+        "Shag - Black Kitten",
         ]
 
 guatemala_facts = [
@@ -214,6 +218,9 @@ venezuela_facts = [
 germany_facts = [
         "Black, red and yellow",
         "Autobahn",
+        "Max Nonnenbruch - Evening by the Lake",
+        "Neuschwanstein Castle",
+        "Zwinger",
         ]
 
 united_kingdom_facts = [
@@ -224,6 +231,7 @@ united_kingdom_facts = [
 england_facts = [
         "Red and white",
         "Stonehenge",
+        "Graham Dean - Close-up kiss",
         ]
 
 france_facts = [
@@ -235,6 +243,8 @@ france_facts = [
         "Claude Monets Garden",
         "Eiffel Tower",
         "The Louvre",
+        "Arles Amphitheatre",
+        "Chateau de Gourdon",
         ]
 
 italy_facts = [
@@ -254,6 +264,9 @@ italy_facts = [
         "Monte d'Accoddi",
         "The Sunken City of Baiae",
         "Lago di Braies",
+        "Castle del Monte",
+        "Flavianus Amphitheater",
+        "Castel Sant'Angelo",
         ]
 
 spain_facts = [
@@ -269,6 +282,7 @@ spain_facts = [
 poland_facts = [
         "White and red",
         "Malbork",
+        "Fort Srebrna Gora",
         ]
 
 romania_facts = [
@@ -314,6 +328,7 @@ australia_facts = [
 
 austria_facts = [
         "Red, white",
+        "Sissi",
         ]
 
 bulgaria_facts = [
@@ -340,6 +355,7 @@ ireland_facts = [
         "Green, white and orange",
         "The country is home to more than 30,000 castles and ruins",
         "Powerscout Estate",
+        "Kylemore Abbey",
         ]
 
 croatia_facts = [
@@ -381,6 +397,8 @@ malta_facts = [
 
 norway_facts = [
         "Red, white and blue",
+        "Lofoten Islands - Cascading lakes",
+        "Kistefos Museum",
         ]
 
 iceland_facts = [
@@ -394,6 +412,7 @@ turkey_facts = [
         "Ani",
         "Troy",
         "Ephesus",
+        "Zilkale Castle",
         ]
 
 serbia_facts = [
@@ -438,6 +457,10 @@ russia_facts = [
         "St. Basils Cathedral",
         "The Kremlin",
         "Fortress in a city",
+        "Ida Rubinstein",
+        "Ivan Aivazovsky - Between the Waves",
+        "Ivan Fedorovich - Sunset over the sea",
+        "Institute of Robotics and Technical Cybernetics",
         ] 
 
 ukraine_facts = [
@@ -458,6 +481,7 @@ switzerland_facts = [
         "Plus",
         "Solar Impulse 2",
         "Audemars Piguet, Baume & Mercier, Bell & Ross, Blancpain...",
+        "Thun Castle",
         ] 
 
 liechtenstein_facts = [
@@ -489,6 +513,13 @@ india_facts = [
         "Ahichhatra",
         "Dwarka",
         "The submerged temples of Mahabalipuram",
+        "Chausath Yogini",
+        "Jal Mahal",
+        "Vettuvan Koil",
+        "Gadisar in Jaisalmer",
+        "Chand Baori",
+        "Kailasa Temple",
+        "Akshardham Temple",
         ]
 
 pakistan_facts = [
@@ -516,6 +547,7 @@ sri_lanka_facts = [
         "Green, orange, gold and red",
         "Pearl of the Indian ocean",
         "Previously Ceylon",
+        "Ambuluwawa tower",
         ]
 
 bhutan_facts = [
@@ -538,12 +570,13 @@ phillipines_facts = [
 
 vietnam_facts = [
         "Red and yellow",
+        "The Straw Pavilion",
         ]
 
 thailand_facts = [
         "Red, white and blue",
         "The land of white elephants",
-        "The White Temple",
+        "Wat Rong Khun",
         ]
 
 burma_facts = [
@@ -559,6 +592,7 @@ cambodia_facts = [
         "Angkor",
         "Angkor Wat",
         "Prang Temple",
+        "Bakong",
         ]
 
 laos_facts = [
@@ -587,6 +621,7 @@ egypt_facts = [
         "Pyramid of Djoser",
         "The Bent Pyramid",
         "Heracleion",
+        "Temple of Isis",
         ]
 
 iran_facts = [
@@ -601,6 +636,7 @@ iraq_facts = [
         "Babylon",
         "Ctesiphon",
         "Ziggurat of Ur",
+        "Hatra",
         ]
 
 saudi_arabia_facts = [
@@ -629,6 +665,7 @@ united_arab_emirates_facts = [
         "Constellation Brands",
         "The Wine Group",
         "Moma",
+        "Eywind Earle - Hillside Magic",
         ]
 
 israel_facts = [
@@ -675,6 +712,8 @@ china_facts = [
         "Tomb of the General",
         "Shi Cheng",
         "The Ancient Underwater City in Fuxian Lake",
+        "Datong Art Museum",
+        "Dongfengyun",
         ] 
 
 japan_facts = [
@@ -1016,6 +1055,7 @@ nauru_facts = [
 
 new_zealand_facts = [
         "Red, blue",
+        "Milford Sound Waterfalls",
         ]
 
 samoa_facts = [
