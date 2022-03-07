@@ -199,6 +199,11 @@ peru_data = [
         "Lord of Miracles",
         "Machu Picchu",
         "The Huaca Pucllana",
+        "Salineras de Maras",
+        "Waqrapukara".
+        "Maukallaqta",
+        "Puka Pukara",
+        "TamboMachay",
         ]
 
 suriname_data = [
@@ -595,6 +600,7 @@ cambodia_data = [
         "Angkor Wat",
         "Prang Temple",
         "Bakong",
+        "Ta Prohm",
         ]
 
 laos_data = [
@@ -631,6 +637,7 @@ iran_data = [
         "Green, white and red",
         "Persepolis",
         "Chogha Zanbil",
+        "Persepolis",
         ]
 
 iraq_data = [
@@ -674,6 +681,7 @@ united_arab_emirates_data = [
 israel_data = [
         "Blue and white",
         "Atlit-Yaam",
+        "Masada",
         ]
 
 lebanon_data = [
@@ -718,6 +726,8 @@ china_data = [
         "Datong Art Museum",
         "Dongfengyun",
         "Xu Bing - Book from the Sky",
+        "The Yangshan Quary",
+        "The Forbidden City",
         ] 
 
 japan_data = [
@@ -727,6 +737,7 @@ japan_data = [
         "The Yonaguni Ruins",
         "Mayumi Miyawaki - Blue Box",
         "Plaza in Kanagawa",
+        "Ishi no Hoden",
         ] 
 
 south_korea_data = [
