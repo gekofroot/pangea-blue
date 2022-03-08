@@ -135,6 +135,7 @@ united_states_data = [
         "Shag - Black Kitten",
         "Paige Bradley - Expansion",
         "Ginerva - Hiram Powers",
+        "Geisel Library",
         ]
 
 guatemala_data = [
@@ -173,6 +174,7 @@ colombia_data = [
         "The country's name is pronounced and spelled Colombia, not Columbia",
         "Amazon river",
         "Medellin Botanical Garden",
+        "Lost City of Teyuna",
         ]
 
 ecuador_data = [
@@ -204,6 +206,7 @@ peru_data = [
         "Maukallaqta",
         "Puka Pukara",
         "TamboMachay",
+        "Huaca Pucllana",
         ]
 
 suriname_data = [
@@ -252,6 +255,7 @@ france_data = [
         "The Louvre",
         "Arles Amphitheatre",
         "Chateau de Gourdon",
+        "Chateau de Chantilly",
         ]
 
 italy_data = [
@@ -363,6 +367,7 @@ ireland_data = [
         "The country is home to more than 30,000 castles and ruins",
         "Powerscout Estate",
         "Kylemore Abbey",
+        "Dun Aonghasa",
         ]
 
 croatia_data = [
@@ -825,6 +830,8 @@ south_sudan_data = [
 libya_data = [
         "White, red, black and green",
         "The Tadrart Acacus",
+        "Ghadames",
+        "Leptis Magna",
         ]
 
 south_africa_data = [
