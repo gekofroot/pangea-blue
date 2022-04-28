@@ -202,7 +202,7 @@ peru_data = [
         "Machu Picchu",
         "The Huaca Pucllana",
         "Salineras de Maras",
-        "Waqrapukara".
+        "Waqrapukara",
         "Maukallaqta",
         "Puka Pukara",
         "TamboMachay",
